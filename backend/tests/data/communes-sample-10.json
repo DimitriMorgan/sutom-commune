@@ -1,0 +1,92 @@
+[
+  {
+    "nom": "Paris",
+    "code": "75056",
+    "codesPostaux": ["75001", "75002", "75003", "75004", "75005"],
+    "codeDepartement": "75",
+    "codeRegion": "11",
+    "population": 2140000,
+    "centre": { "type": "Point", "coordinates": [2.3522, 48.8566] }
+  },
+  {
+    "nom": "Lyon",
+    "code": "69123",
+    "codesPostaux": ["69001", "69002", "69003"],
+    "codeDepartement": "69",
+    "codeRegion": "84",
+    "population": 518635,
+    "centre": { "type": "Point", "coordinates": [4.8357, 45.764] }
+  },
+  {
+    "nom": "Marseille",
+    "code": "13055",
+    "codesPostaux": ["13001"],
+    "codeDepartement": "13",
+    "codeRegion": "93",
+    "population": 873076,
+    "centre": { "type": "Point", "coordinates": [5.3698, 43.2965] }
+  },
+  {
+    "nom": "Honfleur",
+    "code": "14333",
+    "codesPostaux": ["14600"],
+    "codeDepartement": "14",
+    "codeRegion": "28",
+    "population": 7060,
+    "centre": { "type": "Point", "coordinates": [0.236, 49.4197] }
+  },
+  {
+    "nom": "Brest",
+    "code": "29019",
+    "codesPostaux": ["29200"],
+    "codeDepartement": "29",
+    "codeRegion": "53",
+    "population": 139163,
+    "centre": { "type": "Point", "coordinates": [-4.4861, 48.3904] }
+  },
+  {
+    "nom": "Strasbourg",
+    "code": "67482",
+    "codesPostaux": ["67000"],
+    "codeDepartement": "67",
+    "codeRegion": "44",
+    "population": 287228,
+    "centre": { "type": "Point", "coordinates": [7.7521, 48.5734] }
+  },
+  {
+    "nom": "Saint-Étienne",
+    "code": "42218",
+    "codesPostaux": ["42000"],
+    "codeDepartement": "42",
+    "codeRegion": "84",
+    "population": 172565,
+    "centre": { "type": "Point", "coordinates": [4.39, 45.4397] }
+  },
+  {
+    "nom": "Aix-en-Provence",
+    "code": "13001",
+    "codesPostaux": ["13080", "13090", "13100"],
+    "codeDepartement": "13",
+    "codeRegion": "93",
+    "population": 145325,
+    "centre": { "type": "Point", "coordinates": [5.4474, 43.5263] }
+  },
+  {
+    "nom": "L'Île-Rousse",
+    "code": "2B134",
+    "codesPostaux": ["20220"],
+    "codeDepartement": "2B",
+    "codeRegion": "94",
+    "population": 3403,
+    "centre": { "type": "Point", "coordinates": [8.9379, 42.6354] }
+  },
+  {
+    "nom": "Néris-les-Bains",
+    "code": "03195",
+    "codesPostaux": ["03310"],
+    "codeDepartement": "03",
+    "codeRegion": "84",
+    "population": 2532,
+    "centre": { "type": "Point", "coordinates": [2.6622, 46.2867] }
+  }
+]
