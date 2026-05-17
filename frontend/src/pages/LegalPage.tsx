@@ -4,8 +4,14 @@ import { setSeo } from '../seo';
 export function LegalPage() {
   useEffect(() => {
     setSeo({
-      title: 'Mentions légales — Sutom-Commune',
-      description: 'Mentions légales, cookies et politique de confidentialité du site Sutom-Commune.',
+      title: 'Mentions légales et politique de confidentialité — Sutom-Commune',
+      description:
+        'Mentions légales de Sutom-Commune : éditeur, hébergement, cookies, RGPD, licences des données et fonds de carte.',
+      path: '/mentions-legales',
+      breadcrumbs: [
+        { name: 'Accueil', path: '/' },
+        { name: 'Mentions légales', path: '/mentions-legales' },
+      ],
     });
   }, []);
 

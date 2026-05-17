@@ -4,6 +4,7 @@ import { Loader2 } from 'lucide-react';
 import { api } from '../api/client';
 import type { PuzzleToday } from '../api/types';
 import { setSeo } from '../seo';
+import { formatDateLong } from '../i18n';
 import { GameBoard } from '../components/GameBoard';
 import type { LayoutContext } from '../components/AppLayout';
 
@@ -14,13 +15,33 @@ export function TodayPage() {
 
   useEffect(() => {
     setSeo({
-      title: 'Sutom-Commune — Le jeu quotidien des communes de France',
+      title: "Sutom-Commune — Énigme du jour : devinez la commune française mystère",
       description:
-        "Devinez la commune française mystère du jour en 6 essais. Distance, direction, indices : un défi géo pour les passionnés.",
+        "Devinez la commune française mystère du jour en 6 essais. Distance à vol d'oiseau, direction cardinale et indices contextuels progressifs (population, climat, patrimoine, première lettre).",
+      path: '/',
+      breadcrumbs: [{ name: 'Accueil', path: '/' }],
     });
     api
       .getToday()
-      .then(setPuzzle)
+      .then((p) => {
+        setPuzzle(p);
+        // Enrichit le SEO une fois qu'on connaît la région/département
+        setSeo({
+          title: `Énigme #${p.puzzleNumber} du ${formatDateLong(p.puzzleDate)} — Sutom-Commune`,
+          description: `Devinez la commune française du jour (région ${p.regionName}, département ${p.departmentName}) en 6 essais. Distance, direction, indices progressifs.`,
+          path: '/',
+          breadcrumbs: [{ name: 'Accueil', path: '/' }],
+          extraJsonLd: {
+            '@context': 'https://schema.org',
+            '@type': 'Game',
+            '@id': `https://sutom-commune.fr/#puzzle-${p.puzzleNumber}`,
+            name: `Énigme Sutom-Commune #${p.puzzleNumber}`,
+            datePublished: p.puzzleDate,
+            inLanguage: 'fr-FR',
+            isPartOf: { '@id': 'https://sutom-commune.fr/#game' },
+          },
+        });
+      })
       .catch((err: unknown) => setError(err instanceof Error ? err.message : 'erreur'));
   }, []);
 
@@ -34,8 +55,19 @@ export function TodayPage() {
 
   if (!puzzle) {
     return (
-      <div className="flex justify-center py-12">
-        <Loader2 className="animate-spin text-atlas-ocre" />
+      <div className="space-y-4" aria-busy="true">
+        <header className="space-y-1">
+          <p className="text-xs uppercase tracking-wider text-atlas-ink/60">Énigme du jour</p>
+          <h1 className="font-serif text-3xl text-atlas-navy">
+            Quelle commune se cache ici ?
+          </h1>
+          <p className="text-sm text-atlas-ink/70">
+            Chargement de l'énigme du jour…
+          </p>
+        </header>
+        <div className="flex justify-center py-8">
+          <Loader2 className="animate-spin text-atlas-ocre" aria-label="Chargement" />
+        </div>
       </div>
     );
   }

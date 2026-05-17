@@ -2,28 +2,67 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>Sutom-Commune — Le jeu quotidien des communes de France</title>
     <meta
       name="description"
-      content="Devinez la commune française mystère du jour en 6 essais. Distance, direction, indices : un défi géo pour les passionnés."
+      content="Devinez la commune française mystère du jour en 6 essais. Distance, direction, indices : un défi géo quotidien pour les amateurs de cartes et de géographie."
     />
     <meta
-      name="robots"
-      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+      name="keywords"
+      content="sutom commune, worldle français, jeu géographie France, commune mystère, jeu quotidien, wordle géo, deviner commune"
     />
-    <meta name="theme-color" content="#1a3a5c" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="Sutom-Commune" />
     <meta name="application-name" content="Sutom-Commune" />
+    <meta name="apple-mobile-web-app-title" content="Sutom-Commune" />
+    <meta name="theme-color" content="#f3e8cf" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14202d" media="(prefers-color-scheme: dark)" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="canonical" href="https://sutom-commune.fr/" />
+    <link rel="alternate" hreflang="fr" href="https://sutom-commune.fr/" />
+    <link rel="alternate" hreflang="x-default" href="https://sutom-commune.fr/" />
+
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Sutom-Commune" />
     <meta property="og:title" content="Sutom-Commune — Le jeu quotidien des communes de France" />
-    <meta
-      property="og:description"
-      content="Devinez la commune française mystère du jour en 6 essais. Distance, direction, indices : un défi géo pour les passionnés."
+    <meta property="og:description" content="Devinez la commune française mystère du jour en 6 essais." />
+    <meta property="og:url" content="https://sutom-commune.fr/" />
+    <meta property="og:image" content="https://sutom-commune.fr/og-default.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sutom-Commune — jeu quotidien des communes françaises" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sutom-Commune — Le jeu quotidien des communes de France" />
+    <meta name="twitter:description" content="Devinez la commune française mystère du jour en 6 essais." />
+    <meta name="twitter:image" content="https://sutom-commune.fr/og-default.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://tile.openstreetmap.org" />
+    <link rel="dns-prefetch" href="https://geo.api.gouv.fr" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;700;900&display=swap"
     />
-    <title>Sutom-Commune — Le jeu quotidien des communes de France</title>
-    <script type="application/ld+json">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script id="ldjson-website" type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
@@ -33,32 +72,72 @@
             "url": "https://sutom-commune.fr/",
             "name": "Sutom-Commune",
             "inLanguage": "fr-FR",
-            "description": "Devinez la commune française mystère du jour en 6 essais."
+            "description": "Devinez la commune française mystère du jour en 6 essais.",
+            "publisher": { "@id": "https://sutom-commune.fr/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://sutom-commune.fr/#organization",
+            "name": "Sutom-Commune",
+            "url": "https://sutom-commune.fr/",
+            "logo": "https://sutom-commune.fr/favicon.svg"
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://sutom-commune.fr/#app",
+            "name": "Sutom-Commune",
+            "url": "https://sutom-commune.fr/",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "Web",
+            "browserRequirements": "Requires JavaScript. Requires HTML5.",
+            "inLanguage": "fr-FR",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
           },
           {
             "@type": "Game",
+            "@id": "https://sutom-commune.fr/#game",
             "name": "Sutom-Commune",
-            "description": "Jeu quotidien gratuit pour deviner une commune française en 6 essais grâce à distance, direction et indices contextuels.",
+            "description": "Jeu quotidien gratuit pour deviner une commune française en 6 essais grâce à distance, direction et indices contextuels (population, climat, patrimoine).",
             "url": "https://sutom-commune.fr/",
             "genre": "Geography puzzle",
-            "applicationCategory": "Game",
-            "operatingSystem": "Web",
+            "audience": { "@type": "PeopleAudience", "audienceType": "Grand public francophone" },
             "inLanguage": "fr-FR",
             "isAccessibleForFree": true,
-            "creator": { "@type": "Organization", "name": "Sutom-Commune" }
+            "isPartOf": { "@id": "https://sutom-commune.fr/#website" }
           }
         ]
       }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <script id="ldjson-page" type="application/ld+json"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Fallback HTML : visible avant l'hydratation et pour les crawlers JS-light. -->
+      <header>
+        <h1>Sutom-Commune — devinez la commune française du jour</h1>
+        <p>
+          Jeu quotidien gratuit type Wordle pour deviner une commune française mystère en 6 essais,
+          avec distance à vol d'oiseau, direction cardinale et indices contextuels progressifs.
+        </p>
+      </header>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="/archive">Archive des énigmes</a></li>
+          <li><a href="/comment-jouer">Comment jouer</a></li>
+          <li><a href="/a-propos">À propos</a></li>
+          <li><a href="/mentions-legales">Mentions légales</a></li>
+        </ul>
+      </nav>
+      <noscript>
+        <p>
+          Pour jouer, activez JavaScript. Le site reste consultable sans :
+          <a href="/archive">archive des énigmes</a>,
+          <a href="/comment-jouer">règles du jeu</a>,
+          <a href="/a-propos">à propos</a>.
+        </p>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

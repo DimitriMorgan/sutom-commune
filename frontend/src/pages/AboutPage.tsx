@@ -4,14 +4,20 @@ import { setSeo } from '../seo';
 export function AboutPage() {
   useEffect(() => {
     setSeo({
-      title: 'À propos — Sutom-Commune',
-      description: "Présentation du projet Sutom-Commune, ses sources de données et sa philosophie.",
+      title: 'À propos de Sutom-Commune — sources, philosophie, contact',
+      description:
+        "Sutom-Commune est un jeu quotidien gratuit pour explorer la géographie française. Données geo.api.gouv.fr (Etalab), cartes OpenStreetMap, aucun pisteur tiers.",
+      path: '/a-propos',
+      breadcrumbs: [
+        { name: 'Accueil', path: '/' },
+        { name: 'À propos', path: '/a-propos' },
+      ],
     });
   }, []);
 
   return (
     <article className="prose-atlas space-y-4">
-      <h1 className="font-serif text-4xl text-atlas-navy">À propos</h1>
+      <h1 className="font-serif text-4xl text-atlas-navy">À propos de Sutom-Commune</h1>
       <p>
         <strong>Sutom-Commune</strong> est un jeu quotidien gratuit pour explorer la géographie
         française, à mi-chemin entre <em>Worldle</em> (distance + direction) et{' '}

@@ -12,9 +12,14 @@ export function ArchivePage() {
 
   useEffect(() => {
     setSeo({
-      title: 'Archive des énigmes — Sutom-Commune',
+      title: 'Archive des énigmes Sutom-Commune — rejouez les 60 derniers jours',
       description:
-        'Retrouvez les énigmes passées de Sutom-Commune : les 30 derniers jours sont rejouables sans impact sur votre streak.',
+        "Toutes les énigmes Sutom-Commune passées. Rejouez les 60 derniers jours sans casser votre série du jour. Chaque commune française mystère + sa solution révélée.",
+      path: '/archive',
+      breadcrumbs: [
+        { name: 'Accueil', path: '/' },
+        { name: 'Archive', path: '/archive' },
+      ],
     });
 
     const today = new Date();
@@ -25,7 +30,35 @@ export function ArchivePage() {
 
     api
       .getArchive(from, to)
-      .then((r) => setEntries(r.entries))
+      .then((r) => {
+        setEntries(r.entries);
+        if (r.entries.length > 0) {
+          setSeo({
+            title: 'Archive des énigmes Sutom-Commune — rejouez les 60 derniers jours',
+            description: `${r.entries.length} énigmes archivées : ${r.entries
+              .slice(0, 5)
+              .map((e) => e.commune.name)
+              .join(', ')}…`,
+            path: '/archive',
+            breadcrumbs: [
+              { name: 'Accueil', path: '/' },
+              { name: 'Archive', path: '/archive' },
+            ],
+            extraJsonLd: {
+              '@context': 'https://schema.org',
+              '@type': 'ItemList',
+              itemListOrder: 'https://schema.org/ItemListOrderDescending',
+              numberOfItems: r.entries.length,
+              itemListElement: r.entries.slice(0, 30).map((e, i) => ({
+                '@type': 'ListItem',
+                position: i + 1,
+                url: `https://sutom-commune.fr/archive/${e.puzzleDate}`,
+                name: `Énigme #${e.puzzleNumber} — ${e.commune.name}`,
+              })),
+            },
+          });
+        }
+      })
       .catch((err: unknown) => setError(err instanceof Error ? err.message : 'erreur'));
   }, []);
 
@@ -44,7 +77,7 @@ export function ArchivePage() {
   return (
     <article className="space-y-6">
       <header className="space-y-1">
-        <h1 className="font-serif text-4xl text-atlas-navy">Archive</h1>
+        <h1 className="font-serif text-4xl text-atlas-navy">Archive des énigmes</h1>
         <p className="text-sm text-atlas-ink/70">
           Les énigmes des jours passés. Rejouer une archive ne casse pas votre série du jour.
         </p>

@@ -4,15 +4,33 @@ import { setSeo } from '../seo';
 export function HowToPlayPage() {
   useEffect(() => {
     setSeo({
-      title: 'Comment jouer — Sutom-Commune',
+      title: 'Comment jouer à Sutom-Commune : règles complètes du jeu quotidien',
       description:
-        'Règles de Sutom-Commune : devinez la commune française du jour en 6 essais grâce à la distance, la direction et 5 indices contextuels.',
+        'Règles complètes de Sutom-Commune : devinez la commune française du jour en 6 essais grâce à la distance à vol d\'oiseau, la direction cardinale et 5 indices progressifs.',
+      path: '/comment-jouer',
+      breadcrumbs: [
+        { name: 'Accueil', path: '/' },
+        { name: 'Comment jouer', path: '/comment-jouer' },
+      ],
+      extraJsonLd: {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'Comment jouer à Sutom-Commune',
+        description: "Devinez la commune française du jour en 6 essais maximum.",
+        step: [
+          { '@type': 'HowToStep', position: 1, name: 'Lire la région et le département' },
+          { '@type': 'HowToStep', position: 2, name: 'Proposer une commune française' },
+          { '@type': 'HowToStep', position: 3, name: 'Lire la distance, la flèche et le tier coloré' },
+          { '@type': 'HowToStep', position: 4, name: 'Utiliser les indices progressifs (population, climat, patrimoine)' },
+          { '@type': 'HowToStep', position: 5, name: 'Partager la grille emoji style Wordle' },
+        ],
+      },
     });
   }, []);
 
   return (
     <article className="prose-atlas space-y-6">
-      <h1 className="font-serif text-4xl text-atlas-navy">Comment jouer</h1>
+      <h1 className="font-serif text-4xl text-atlas-navy">Comment jouer à Sutom-Commune</h1>
 
       <section className="space-y-2">
         <h2 className="font-serif text-2xl text-atlas-navy">1. L'énigme du jour</h2>

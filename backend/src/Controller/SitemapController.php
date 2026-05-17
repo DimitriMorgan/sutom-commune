@@ -22,7 +22,7 @@ final class SitemapController
     ) {
     }
 
-    #[Route('/api/sitemap.xml', name: 'sitemap', methods: ['GET'])]
+    #[Route('/sitemap.xml', name: 'sitemap', methods: ['GET'])]
     public function __invoke(): Response
     {
         $today = $this->clock->today();

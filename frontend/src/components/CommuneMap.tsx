@@ -1,101 +1,62 @@
-import { useEffect, useRef } from 'react';
-import maplibregl, { type Map as MapLibreMap, type Marker } from 'maplibre-gl';
-import 'maplibre-gl/dist/maplibre-gl.css';
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import type { GuessPathStep, PuzzleSolution } from '../api/types';
 
 /**
  * Carte centrée sur la France métropolitaine.
- * - Pins gris-bleu pour chaque essai
- * - Pin doré + trait pour la cible UNIQUEMENT si `solution` est fourni (game over)
- * - Tuiles raster OSM (libres, ODbL — attribution conservée par MapLibre par défaut)
+ * MapLibre GL JS est lazy-loadé (~200 ko gzip) seulement quand le composant
+ * entre dans le viewport — gain Lighthouse significatif sur la home.
  */
 type Props = {
   guessPath: GuessPathStep[];
   solution: PuzzleSolution | null;
 };
 
-const STYLE = {
-  version: 8,
-  sources: {
-    osm: {
-      type: 'raster',
-      tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-      tileSize: 256,
-      attribution: '© OpenStreetMap contributors',
-      maxzoom: 19,
-    },
-  },
-  layers: [{ id: 'osm', type: 'raster', source: 'osm' }],
-} as const;
+const InnerMap = lazy(() => import('./CommuneMapInner'));
 
-export function CommuneMap({ guessPath, solution }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const mapRef = useRef<MapLibreMap | null>(null);
-  const markersRef = useRef<Marker[]>([]);
+export function CommuneMap(props: Props) {
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (!containerRef.current || mapRef.current) return;
-    const map = new maplibregl.Map({
-      container: containerRef.current,
-      style: STYLE as unknown as maplibregl.StyleSpecification,
-      center: [2.5, 46.5],
-      zoom: 4.5,
-      attributionControl: { compact: true },
-    });
-    mapRef.current = map;
-    return () => {
-      map.remove();
-      mapRef.current = null;
-    };
-  }, []);
-
-  // Met à jour les markers à chaque changement de l'historique ou de la cible.
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map) return;
-
-    markersRef.current.forEach((m) => m.remove());
-    markersRef.current = [];
-
-    guessPath.forEach((step) => {
-      const el = document.createElement('div');
-      el.className = `w-3 h-3 rounded-full border-2 ${
-        step.isCorrect
-          ? 'bg-tier-green border-white'
-          : 'bg-atlas-navy/70 border-atlas-paper'
-      }`;
-      const marker = new maplibregl.Marker({ element: el })
-        .setLngLat([step.longitude, step.latitude])
-        .setPopup(new maplibregl.Popup({ offset: 12 }).setText(step.name))
-        .addTo(map);
-      markersRef.current.push(marker);
-    });
-
-    if (solution) {
-      const el = document.createElement('div');
-      el.className = 'w-4 h-4 rounded-full bg-atlas-ocre border-2 border-white shadow-lg';
-      el.setAttribute('data-testid', 'target-pin');
-      const marker = new maplibregl.Marker({ element: el })
-        .setLngLat([solution.longitude, solution.latitude])
-        .setPopup(new maplibregl.Popup({ offset: 14 }).setText(solution.name))
-        .addTo(map);
-      markersRef.current.push(marker);
-
-      // Recentre et zoom pour englober cible + dernier essai
-      const bounds = new maplibregl.LngLatBounds(
-        [solution.longitude, solution.latitude],
-        [solution.longitude, solution.latitude],
-      );
-      guessPath.forEach((s) => bounds.extend([s.longitude, s.latitude]));
-      map.fitBounds(bounds, { padding: 60, maxZoom: 10, duration: 600 });
+    if (!sentinelRef.current) return;
+    if (typeof IntersectionObserver === 'undefined') {
+      setVisible(true);
+      return;
     }
-  }, [guessPath, solution]);
+    const obs = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisible(true);
+          obs.disconnect();
+        }
+      },
+      { rootMargin: '200px' },
+    );
+    obs.observe(sentinelRef.current);
+    return () => obs.disconnect();
+  }, []);
 
   return (
     <div
-      ref={containerRef}
+      ref={sentinelRef}
       data-testid="commune-map"
-      className="w-full h-64 rounded-lg overflow-hidden border border-atlas-ocre/30"
-    />
+      className="w-full h-64 rounded-lg overflow-hidden border border-atlas-ocre/30 bg-atlas-paper/60"
+    >
+      {visible ? (
+        <Suspense fallback={<MapPlaceholder />}>
+          <InnerMap {...props} />
+        </Suspense>
+      ) : (
+        <MapPlaceholder />
+      )}
+    </div>
+  );
+}
+
+function MapPlaceholder() {
+  return (
+    <div className="w-full h-full flex items-center justify-center text-sm text-atlas-ink/40">
+      Carte de France
+    </div>
   );
 }

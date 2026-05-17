@@ -1,0 +1,14 @@
+{
+  "name": "Sutom-Commune",
+  "short_name": "Sutom-Commune",
+  "description": "Le jeu quotidien des communes de France",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f3e8cf",
+  "theme_color": "#1a3a5c",
+  "lang": "fr-FR",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

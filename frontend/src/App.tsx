@@ -1,11 +1,26 @@
+import { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AppLayout } from './components/AppLayout';
 import { TodayPage } from './pages/TodayPage';
-import { ArchivePage } from './pages/ArchivePage';
-import { ArchiveDetailPage } from './pages/ArchiveDetailPage';
-import { HowToPlayPage } from './pages/HowToPlayPage';
-import { AboutPage } from './pages/AboutPage';
-import { LegalPage } from './pages/LegalPage';
+
+// Routes secondaires chargées paresseusement pour réduire le bundle initial.
+const ArchivePage = lazy(() => import('./pages/ArchivePage').then((m) => ({ default: m.ArchivePage })));
+const ArchiveDetailPage = lazy(() =>
+  import('./pages/ArchiveDetailPage').then((m) => ({ default: m.ArchiveDetailPage })),
+);
+const HowToPlayPage = lazy(() => import('./pages/HowToPlayPage').then((m) => ({ default: m.HowToPlayPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
+const LegalPage = lazy(() => import('./pages/LegalPage').then((m) => ({ default: m.LegalPage })));
+
+function PageFallback() {
+  return (
+    <div className="flex justify-center py-12" aria-busy="true" aria-live="polite">
+      <span className="text-atlas-ink/60">Chargement…</span>
+    </div>
+  );
+}
+
+const wrap = (node: React.ReactNode) => <Suspense fallback={<PageFallback />}>{node}</Suspense>;
 
 const router = createBrowserRouter([
   {
@@ -13,11 +28,11 @@ const router = createBrowserRouter([
     element: <AppLayout />,
     children: [
       { index: true, element: <TodayPage /> },
-      { path: 'archive', element: <ArchivePage /> },
-      { path: 'archive/:date', element: <ArchiveDetailPage /> },
-      { path: 'comment-jouer', element: <HowToPlayPage /> },
-      { path: 'a-propos', element: <AboutPage /> },
-      { path: 'mentions-legales', element: <LegalPage /> },
+      { path: 'archive', element: wrap(<ArchivePage />) },
+      { path: 'archive/:date', element: wrap(<ArchiveDetailPage />) },
+      { path: 'comment-jouer', element: wrap(<HowToPlayPage />) },
+      { path: 'a-propos', element: wrap(<AboutPage />) },
+      { path: 'mentions-legales', element: wrap(<LegalPage />) },
     ],
   },
 ]);
