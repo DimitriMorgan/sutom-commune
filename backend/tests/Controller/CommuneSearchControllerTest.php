@@ -23,7 +23,7 @@ final class CommuneSearchControllerTest extends WebTestCase
 
         $em = $container->get(EntityManagerInterface::class);
         self::assertInstanceOf(EntityManagerInterface::class, $em);
-        $em->getConnection()->executeStatement('TRUNCATE TABLE commune');
+        $em->getConnection()->executeStatement('TRUNCATE TABLE guess_event, daily_puzzle, commune CASCADE');
 
         $importer = $container->get(CommuneImporter::class);
         self::assertInstanceOf(CommuneImporter::class, $importer);

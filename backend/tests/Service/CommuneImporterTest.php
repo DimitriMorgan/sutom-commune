@@ -36,7 +36,7 @@ final class CommuneImporterTest extends KernelTestCase
         self::assertInstanceOf(CommuneImporter::class, $importer);
         $this->importer = $importer;
 
-        $this->em->getConnection()->executeStatement('TRUNCATE TABLE commune');
+        $this->em->getConnection()->executeStatement('TRUNCATE TABLE guess_event, daily_puzzle, commune CASCADE');
     }
 
     public function testImportsTenCommunesFromFixture(): void
