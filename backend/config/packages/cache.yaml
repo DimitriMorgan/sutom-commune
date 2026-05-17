@@ -1,0 +1,3 @@
+framework:
+    cache:
+        # The "app" cache stores to the filesystem by default.

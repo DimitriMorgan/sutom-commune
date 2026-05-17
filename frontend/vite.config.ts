@@ -1,0 +1,27 @@
+/// <reference types="vitest/config" />
+
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite';
+import type { UserConfig } from 'vite';
+
+type VitestUserConfig = UserConfig & {
+  test: {
+    environment: string;
+    setupFiles: string;
+  };
+};
+
+const config: VitestUserConfig = {
+  plugins: [react(), tailwindcss()],
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+  },
+  test: {
+    environment: 'jsdom',
+    setupFiles: './src/test/setup.ts',
+  },
+};
+
+export default defineConfig(config);

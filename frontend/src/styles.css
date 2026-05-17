@@ -1,0 +1,37 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Atlas vintage palette — papier carte d'état-major */
+  --color-atlas-navy: #1a3a5c;
+  --color-atlas-sand: #f5ecd9;
+  --color-atlas-ocre: #c08b3a;
+  --color-atlas-moss: #4f6b3a;
+  --color-atlas-ink: #2a2520;
+  --color-atlas-paper: #faf5e8;
+
+  /* Proximity tiers (réutilisés par GuessRow et carte) */
+  --color-tier-green: #4f7a3a;
+  --color-tier-yellow: #d4b94a;
+  --color-tier-orange: #d97b3a;
+  --color-tier-red: #b23a3a;
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-atlas-navy: #d4e4f5;
+    --color-atlas-sand: #1a2230;
+    --color-atlas-ocre: #e0a458;
+    --color-atlas-moss: #8aac6a;
+    --color-atlas-ink: #f0e9d8;
+    --color-atlas-paper: #0f161f;
+  }
+}
+
+html,
+body {
+  background-color: var(--color-atlas-sand);
+  color: var(--color-atlas-ink);
+}

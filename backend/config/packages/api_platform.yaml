@@ -1,0 +1,19 @@
+api_platform:
+  title: Sutom-Commune API
+  version: 0.1.0
+  show_webby: false
+  mapping:
+    paths:
+      - '%kernel.project_dir%/src/Entity'
+      - '%kernel.project_dir%/src/ApiResource'
+  formats:
+    jsonld: ['application/ld+json']
+    json: ['application/json']
+  error_formats:
+    jsonproblem: ['application/problem+json']
+    jsonld: ['application/ld+json']
+  defaults:
+    stateless: true
+    pagination_items_per_page: 30
+    normalization_context:
+      skip_null_values: false

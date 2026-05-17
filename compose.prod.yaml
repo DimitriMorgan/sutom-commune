@@ -1,0 +1,81 @@
+services:
+  db:
+    image: postgres:17-alpine
+    container_name: sutom-commune-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - sutom_commune_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    networks:
+      - sutom_commune_internal
+
+  frontend-build:
+    build:
+      context: .
+      dockerfile: docker/frontend/Dockerfile.prod
+      args:
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL}
+        VITE_APP_NAME: ${VITE_APP_NAME}
+        VITE_SITE_URL: ${VITE_SITE_URL}
+    volumes:
+      - frontend_dist:/output
+    command: sh -lc "cp -r /app/dist/. /output/"
+    network_mode: none
+    restart: "no"
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend/Dockerfile.prod
+    container_name: sutom-commune-backend
+    restart: unless-stopped
+    environment:
+      APP_ENV: prod
+      APP_SECRET: ${APP_SECRET}
+      APP_DEBUG: 0
+      DATABASE_URL: ${DATABASE_URL}
+      CORS_ALLOW_ORIGIN: ${CORS_ALLOW_ORIGIN}
+      FRONTEND_URL: ${FRONTEND_URL}
+      DEFAULT_URI: ${DEFAULT_URI}
+    volumes:
+      - backend_var:/var/www/backend/var
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - sutom_commune_internal
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: sutom-commune-nginx
+    restart: unless-stopped
+    volumes:
+      - ./docker/nginx/prod.conf:/etc/nginx/conf.d/default.conf:ro
+      - frontend_dist:/var/www/frontend:ro
+    depends_on:
+      backend:
+        condition: service_started
+      frontend-build:
+        condition: service_completed_successfully
+    networks:
+      - sutom_commune_internal
+      - web
+
+networks:
+  sutom_commune_internal:
+    driver: bridge
+  web:
+    external: true
+
+volumes:
+  sutom_commune_postgres_data:
+  backend_var:
+  frontend_dist:
