@@ -59,6 +59,10 @@ export type GuessFeedback = {
   proximityTier?: ProximityTier;
   nextHint?: Hint;
   attemptsRemaining?: number;
+  guessLatitude?: number;
+  guessLongitude?: number;
+  guessName?: string;
+  guessCodeInsee?: string;
   solution?: PuzzleSolution;
   guessPath?: GuessPathStep[];
   shareGrid?: string;

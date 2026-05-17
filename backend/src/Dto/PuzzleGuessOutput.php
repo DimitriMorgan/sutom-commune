@@ -25,6 +25,13 @@ final readonly class PuzzleGuessOutput
         public ?string $proximityTier = null,
         public ?array $nextHint = null,
         public ?int $attemptsRemaining = null,
+        // Coordonnées de la commune PROPOSÉE (jamais celles de la cible) pour le pin
+        // sur la carte côté client. Sans danger anti-cheat : l'utilisateur les a déjà
+        // implicitement en proposant la commune.
+        public ?float $guessLatitude = null,
+        public ?float $guessLongitude = null,
+        public ?string $guessName = null,
+        public ?string $guessCodeInsee = null,
         public ?PuzzleSolution $solution = null,
         public ?array $guessPath = null,
         public ?string $shareGrid = null,

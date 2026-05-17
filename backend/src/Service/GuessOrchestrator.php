@@ -98,6 +98,10 @@ final class GuessOrchestrator
             proximityTier: $tier,
             nextHint: $nextHint,
             attemptsRemaining: self::MAX_ATTEMPTS - $attemptIndex,
+            guessLatitude: (float) $guess->getLatitude(),
+            guessLongitude: (float) $guess->getLongitude(),
+            guessName: $guess->getName(),
+            guessCodeInsee: $guess->getCodeInsee(),
         );
     }
 

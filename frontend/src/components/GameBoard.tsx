@@ -78,6 +78,8 @@ export function GameBoard({ puzzle, archived = false, onStreakChange }: Props) {
         bearingDegrees: feedback.bearingDegrees ?? 0,
         proximityTier: (feedback.proximityTier ?? 'red') as ProximityTier,
         isCorrect: feedback.isCorrect,
+        latitude: feedback.guessLatitude,
+        longitude: feedback.guessLongitude,
       };
 
       if (feedback.gameOver) {
@@ -201,10 +203,25 @@ export function GameBoard({ puzzle, archived = false, onStreakChange }: Props) {
   );
 }
 
-function buildGuessPathFromAttempts(_attempts: AttemptEntry[]): GuessPathStep[] {
-  // En cours de partie, on n'a pas les lat/long depuis le serveur (anti-cheat).
-  // La carte reste donc sans pins pendant le jeu — ils sont ajoutés en game over.
-  return [];
+function buildGuessPathFromAttempts(attempts: AttemptEntry[]): GuessPathStep[] {
+  // Pendant la partie : on a les coords du guess (renvoyées par /api/puzzle/guess)
+  // mais pas celles de la cible (anti-cheat). Les pins essais s'affichent donc déjà ;
+  // le pin doré de la cible n'apparaît qu'en game over.
+  return attempts
+    .filter((a): a is AttemptEntry & { latitude: number; longitude: number } =>
+      typeof a.latitude === 'number' && typeof a.longitude === 'number',
+    )
+    .map((a) => ({
+      codeInsee: a.codeInsee,
+      name: a.name,
+      latitude: a.latitude,
+      longitude: a.longitude,
+      distanceKm: a.distanceKm,
+      bearing: a.bearing,
+      bearingDegrees: a.bearingDegrees,
+      proximityTier: a.proximityTier,
+      isCorrect: a.isCorrect,
+    }));
 }
 
 export type { Streak };

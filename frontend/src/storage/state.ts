@@ -12,6 +12,8 @@ export type AttemptEntry = {
   bearingDegrees: number;
   proximityTier: ProximityTier;
   isCorrect: boolean;
+  latitude?: number;
+  longitude?: number;
 };
 
 export type GameState = {
