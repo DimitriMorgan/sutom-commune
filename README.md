@@ -103,6 +103,17 @@ Frontend :
 - `VITE_APP_NAME`
 - `VITE_SITE_URL` URL publique utilisée pour les balises canonical, Open Graph et données structurées.
 
+## Tests e2e (Playwright)
+
+```bash
+cd e2e
+npm install
+npx playwright install --with-deps chromium    # requiert sudo + apt (Debian/Ubuntu)
+npm test
+```
+
+Les tests pointent sur `BASE_URL` (défaut `http://localhost:5178`). Sur WSL/Alpine sans apt, installer manuellement `libnss3 libnspr4 libatk1.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2` puis `npx playwright install chromium`.
+
 ## Tests et qualité
 
 Hors Docker, après installation :

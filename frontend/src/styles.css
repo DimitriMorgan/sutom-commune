@@ -3,30 +3,59 @@
 @theme {
   /* Atlas vintage palette — papier carte d'état-major */
   --color-atlas-navy: #1a3a5c;
-  --color-atlas-sand: #f5ecd9;
-  --color-atlas-ocre: #c08b3a;
+  --color-atlas-sand: #f3e8cf;
+  --color-atlas-ocre: #b97a2a;
   --color-atlas-moss: #4f6b3a;
   --color-atlas-ink: #2a2520;
   --color-atlas-paper: #faf5e8;
 
-  /* Proximity tiers (réutilisés par GuessRow et carte) */
   --color-tier-green: #4f7a3a;
-  --color-tier-yellow: #d4b94a;
-  --color-tier-orange: #d97b3a;
-  --color-tier-red: #b23a3a;
+  --color-tier-yellow: #c69922;
+  --color-tier-orange: #cc6c2a;
+  --color-tier-red: #a53030;
 
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+
+  --animate-flip-in: flip-in 0.35s ease-out;
+  --animate-slide-in: slide-in 0.25s ease-out;
+}
+
+@keyframes flip-in {
+  from {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-atlas-navy: #d4e4f5;
-    --color-atlas-sand: #1a2230;
-    --color-atlas-ocre: #e0a458;
+    --color-atlas-navy: #cfe1f4;
+    --color-atlas-sand: #14202d;
+    --color-atlas-ocre: #d99553;
     --color-atlas-moss: #8aac6a;
-    --color-atlas-ink: #f0e9d8;
-    --color-atlas-paper: #0f161f;
+    --color-atlas-ink: #e9e0c8;
+    --color-atlas-paper: #1c2a3a;
+
+    --color-tier-green: #82b86b;
+    --color-tier-yellow: #e0c065;
+    --color-tier-orange: #e09464;
+    --color-tier-red: #d97070;
   }
 }
 
@@ -34,4 +63,28 @@ html,
 body {
   background-color: var(--color-atlas-sand);
   color: var(--color-atlas-ink);
+  font-family: var(--font-sans);
+}
+
+body {
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(185, 122, 42, 0.03) 0 2px,
+      transparent 2px 14px
+    );
+}
+
+.prose-atlas p {
+  line-height: 1.6;
+}
+.prose-atlas a {
+  color: var(--color-atlas-navy);
+  text-decoration: underline;
+}
+.prose-atlas code {
+  background-color: rgba(185, 122, 42, 0.12);
+  padding: 0.05rem 0.25rem;
+  border-radius: 3px;
+  font-size: 0.85em;
 }

@@ -1,0 +1,182 @@
+{
+  "75056": {
+    "specialite": "capitale, finance, tourisme et mode",
+    "patrimoine": ["Tour Eiffel", "Notre-Dame", "Louvre", "Champs-Élysées"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Paris",
+    "altitude": 35
+  },
+  "13055": {
+    "specialite": "port maritime, savon et bouillabaisse",
+    "patrimoine": ["Vieux-Port", "Notre-Dame-de-la-Garde", "Calanques"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Marseille",
+    "altitude": 12
+  },
+  "69123": {
+    "specialite": "gastronomie, soieries et industrie pharmaceutique",
+    "patrimoine": ["Vieux-Lyon", "Basilique de Fourvière", "Presqu'île"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Lyon",
+    "altitude": 173
+  },
+  "31555": {
+    "specialite": "aéronautique et industrie spatiale",
+    "patrimoine": ["Capitole", "Basilique Saint-Sernin", "Canal du Midi"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Toulouse",
+    "altitude": 146
+  },
+  "06088": {
+    "specialite": "tourisme, festival et parfumerie",
+    "patrimoine": ["Promenade des Anglais", "Vieille ville", "Colline du Château"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Nice",
+    "altitude": 14
+  },
+  "44109": {
+    "specialite": "construction navale et culture",
+    "patrimoine": ["Château des ducs de Bretagne", "Île de Nantes", "Machines de l'île"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Nantes",
+    "altitude": 27
+  },
+  "67482": {
+    "specialite": "institutions européennes et viticulture",
+    "patrimoine": ["Cathédrale Notre-Dame", "Petite France", "Parlement européen"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Strasbourg",
+    "altitude": 142
+  },
+  "34172": {
+    "specialite": "recherche médicale et viticulture",
+    "patrimoine": ["Place de la Comédie", "Cathédrale Saint-Pierre", "Jardin des plantes"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Montpellier",
+    "altitude": 27
+  },
+  "33063": {
+    "specialite": "viticulture (vins de Bordeaux) et port",
+    "patrimoine": ["Place de la Bourse", "Miroir d'eau", "Cathédrale Saint-André"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Bordeaux",
+    "altitude": 6
+  },
+  "59350": {
+    "specialite": "textile et services",
+    "patrimoine": ["Grand-Place", "Vieille Bourse", "Palais des Beaux-Arts"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Lille",
+    "altitude": 17
+  },
+  "35238": {
+    "specialite": "numérique et tertiaire",
+    "patrimoine": ["Parlement de Bretagne", "Portes Mordelaises", "Place des Lices"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Rennes",
+    "altitude": 30
+  },
+  "51454": {
+    "specialite": "champagne et cathédrale gothique",
+    "patrimoine": ["Cathédrale Notre-Dame de Reims", "Palais du Tau", "Caves de champagne"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Reims",
+    "altitude": 83
+  },
+  "42218": {
+    "specialite": "design industriel et cycle",
+    "patrimoine": ["Site Le Corbusier", "Cité du design", "Musée d'art moderne"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Saint-%C3%89tienne",
+    "altitude": 516
+  },
+  "76351": {
+    "specialite": "port industriel et raffinerie",
+    "patrimoine": ["Église Saint-Joseph", "Cathédrale Notre-Dame", "Centre reconstruit Perret"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Le_Havre",
+    "altitude": 4
+  },
+  "38185": {
+    "specialite": "recherche scientifique et noix",
+    "patrimoine": ["Bastille de Grenoble", "Musée de Grenoble", "Téléphérique"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Grenoble",
+    "altitude": 214
+  },
+  "21231": {
+    "specialite": "viticulture (Bourgogne) et moutarde",
+    "patrimoine": ["Palais des ducs de Bourgogne", "Cathédrale Saint-Bénigne", "Musée des Beaux-Arts"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Dijon",
+    "altitude": 245
+  },
+  "29019": {
+    "specialite": "marine nationale et construction navale",
+    "patrimoine": ["Château de Brest", "Pont de Recouvrance", "Océanopolis"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Brest",
+    "altitude": 35
+  },
+  "14333": {
+    "specialite": "tourisme et pêche",
+    "patrimoine": ["Vieux Bassin", "Maisons à colombages", "Église Sainte-Catherine"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Honfleur",
+    "altitude": 15
+  },
+  "74010": {
+    "specialite": "tourisme lacustre et industrie de précision",
+    "patrimoine": ["Vieille ville", "Château d'Annecy", "Lac d'Annecy"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Annecy",
+    "altitude": 447
+  },
+  "13001": {
+    "specialite": "université, calissons et thermes",
+    "patrimoine": ["Cours Mirabeau", "Cathédrale Saint-Sauveur", "Atelier Cézanne"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Aix-en-Provence",
+    "altitude": 200
+  },
+  "84007": {
+    "specialite": "festival et viticulture des Côtes du Rhône",
+    "patrimoine": ["Palais des Papes", "Pont d'Avignon", "Remparts"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Avignon",
+    "altitude": 23
+  },
+  "57463": {
+    "specialite": "siège du Centre Pompidou-Metz",
+    "patrimoine": ["Cathédrale Saint-Étienne", "Centre Pompidou-Metz", "Porte des Allemands"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Metz",
+    "altitude": 173
+  },
+  "54395": {
+    "specialite": "ducs de Lorraine et Art nouveau",
+    "patrimoine": ["Place Stanislas", "Porte de la Craffe", "Musée de l'École de Nancy"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Nancy",
+    "altitude": 212
+  },
+  "63113": {
+    "specialite": "pneumatique et thermalisme",
+    "patrimoine": ["Cathédrale Notre-Dame-de-l'Assomption", "Place de Jaude", "Vulcania"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Clermont-Ferrand",
+    "altitude": 396
+  },
+  "11069": {
+    "specialite": "tourisme médiéval et viticulture",
+    "patrimoine": ["Cité médiévale", "Château comtal", "Pont vieux"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Carcassonne",
+    "altitude": 110
+  },
+  "17300": {
+    "specialite": "port de plaisance et tourisme",
+    "patrimoine": ["Tours de La Rochelle", "Vieux-Port", "Aquarium"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/La_Rochelle",
+    "altitude": 4
+  },
+  "37261": {
+    "specialite": "vins de Loire et tertiaire",
+    "patrimoine": ["Cathédrale Saint-Gatien", "Place Plumereau", "Château de Tours"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Tours",
+    "altitude": 57
+  },
+  "45234": {
+    "specialite": "logistique et vinaigre",
+    "patrimoine": ["Cathédrale Sainte-Croix", "Maison de Jeanne d'Arc", "Quais de Loire"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Orl%C3%A9ans",
+    "altitude": 100
+  },
+  "35288": {
+    "specialite": "tourisme balnéaire et pêche",
+    "patrimoine": ["Intra-Muros", "Remparts", "Fort National"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Saint-Malo",
+    "altitude": 5
+  },
+  "13004": {
+    "specialite": "patrimoine antique et Provence",
+    "patrimoine": ["Arènes d'Arles", "Théâtre antique", "Cloître Saint-Trophime"],
+    "wikipediaUrl": "https://fr.wikipedia.org/wiki/Arles",
+    "altitude": 13
+  }
+}

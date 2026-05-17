@@ -1,0 +1,5240 @@
+[
+    {
+        "nom": "Bourg-en-Bresse",
+        "code": "01053",
+        "codesPostaux": [
+            "01000"
+        ],
+        "codeDepartement": "01",
+        "codeRegion": "84",
+        "population": 42372,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.2469,
+                46.2027
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Quentin",
+        "code": "02691",
+        "codesPostaux": [
+            "02100"
+        ],
+        "codeDepartement": "02",
+        "codeRegion": "32",
+        "population": 52813,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.279,
+                49.8475
+            ]
+        }
+    },
+    {
+        "nom": "Montluçon",
+        "code": "03185",
+        "codesPostaux": [
+            "03100"
+        ],
+        "codeDepartement": "03",
+        "codeRegion": "84",
+        "population": 33147,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.608,
+                46.3428
+            ]
+        }
+    },
+    {
+        "nom": "Gap",
+        "code": "05061",
+        "codesPostaux": [
+            "05000"
+        ],
+        "codeDepartement": "05",
+        "codeRegion": "93",
+        "population": 41293,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.0616,
+                44.5797
+            ]
+        }
+    },
+    {
+        "nom": "Antibes",
+        "code": "06004",
+        "codesPostaux": [
+            "06160",
+            "06600"
+        ],
+        "codeDepartement": "06",
+        "codeRegion": "93",
+        "population": 77637,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.1048,
+                43.5823
+            ]
+        }
+    },
+    {
+        "nom": "Cagnes-sur-Mer",
+        "code": "06027",
+        "codesPostaux": [
+            "06800"
+        ],
+        "codeDepartement": "06",
+        "codeRegion": "93",
+        "population": 53354,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.1502,
+                43.6712
+            ]
+        }
+    },
+    {
+        "nom": "Cannes",
+        "code": "06029",
+        "codesPostaux": [
+            "06150",
+            "06400"
+        ],
+        "codeDepartement": "06",
+        "codeRegion": "93",
+        "population": 74350,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.0152,
+                43.5454
+            ]
+        }
+    },
+    {
+        "nom": "Le Cannet",
+        "code": "06030",
+        "codesPostaux": [
+            "06110"
+        ],
+        "codeDepartement": "06",
+        "codeRegion": "93",
+        "population": 41938,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.001,
+                43.5745
+            ]
+        }
+    },
+    {
+        "nom": "Grasse",
+        "code": "06069",
+        "codesPostaux": [
+            "06130",
+            "06520"
+        ],
+        "codeDepartement": "06",
+        "codeRegion": "93",
+        "population": 50970,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.937,
+                43.656
+            ]
+        }
+    },
+    {
+        "nom": "Menton",
+        "code": "06083",
+        "codesPostaux": [
+            "06500"
+        ],
+        "codeDepartement": "06",
+        "codeRegion": "93",
+        "population": 30604,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.498,
+                43.7961
+            ]
+        }
+    },
+    {
+        "nom": "Nice",
+        "code": "06088",
+        "codesPostaux": [
+            "06000",
+            "06100",
+            "06200",
+            "06300"
+        ],
+        "codeDepartement": "06",
+        "codeRegion": "93",
+        "population": 357737,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.2528,
+                43.7032
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Laurent-du-Var",
+        "code": "06123",
+        "codesPostaux": [
+            "06700"
+        ],
+        "codeDepartement": "06",
+        "codeRegion": "93",
+        "population": 32172,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.1822,
+                43.6865
+            ]
+        }
+    },
+    {
+        "nom": "Charleville-Mézières",
+        "code": "08105",
+        "codesPostaux": [
+            "08000"
+        ],
+        "codeDepartement": "08",
+        "codeRegion": "44",
+        "population": 45560,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.7304,
+                49.7802
+            ]
+        }
+    },
+    {
+        "nom": "Troyes",
+        "code": "10387",
+        "codesPostaux": [
+            "10000"
+        ],
+        "codeDepartement": "10",
+        "codeRegion": "44",
+        "population": 62088,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.0761,
+                48.2924
+            ]
+        }
+    },
+    {
+        "nom": "Carcassonne",
+        "code": "11069",
+        "codesPostaux": [
+            "11000"
+        ],
+        "codeDepartement": "11",
+        "codeRegion": "76",
+        "population": 46080,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3491,
+                43.2078
+            ]
+        }
+    },
+    {
+        "nom": "Narbonne",
+        "code": "11262",
+        "codesPostaux": [
+            "11100"
+        ],
+        "codeDepartement": "11",
+        "codeRegion": "76",
+        "population": 57587,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.0337,
+                43.1493
+            ]
+        }
+    },
+    {
+        "nom": "Aix-en-Provence",
+        "code": "13001",
+        "codesPostaux": [
+            "13080",
+            "13090",
+            "13100",
+            "13290",
+            "13540"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 149695,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.3879,
+                43.536
+            ]
+        }
+    },
+    {
+        "nom": "Arles",
+        "code": "13004",
+        "codesPostaux": [
+            "13104",
+            "13123",
+            "13129",
+            "13200",
+            "13280"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 51811,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.6513,
+                43.5441
+            ]
+        }
+    },
+    {
+        "nom": "Aubagne",
+        "code": "13005",
+        "codesPostaux": [
+            "13400"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 47529,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.5643,
+                43.2904
+            ]
+        }
+    },
+    {
+        "nom": "La Ciotat",
+        "code": "13028",
+        "codesPostaux": [
+            "13600"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 38477,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.6175,
+                43.1882
+            ]
+        }
+    },
+    {
+        "nom": "Istres",
+        "code": "13047",
+        "codesPostaux": [
+            "13118",
+            "13800"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 44292,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.9477,
+                43.5455
+            ]
+        }
+    },
+    {
+        "nom": "Marignane",
+        "code": "13054",
+        "codesPostaux": [
+            "13700"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 33692,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.2178,
+                43.4218
+            ]
+        }
+    },
+    {
+        "nom": "Marseille",
+        "code": "13055",
+        "codesPostaux": [
+            "13001",
+            "13002",
+            "13003",
+            "13004",
+            "13005",
+            "13006",
+            "13007",
+            "13008",
+            "13009",
+            "13010",
+            "13011",
+            "13012",
+            "13013",
+            "13014",
+            "13015",
+            "13016"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 886040,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.3806,
+                43.2803
+            ]
+        }
+    },
+    {
+        "nom": "Martigues",
+        "code": "13056",
+        "codesPostaux": [
+            "13117",
+            "13500"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 48298,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.0451,
+                43.3839
+            ]
+        }
+    },
+    {
+        "nom": "Salon-de-Provence",
+        "code": "13103",
+        "codesPostaux": [
+            "13300"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 44194,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.049,
+                43.643
+            ]
+        }
+    },
+    {
+        "nom": "Vitrolles",
+        "code": "13117",
+        "codesPostaux": [
+            "13127"
+        ],
+        "codeDepartement": "13",
+        "codeRegion": "93",
+        "population": 36758,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.2656,
+                43.4509
+            ]
+        }
+    },
+    {
+        "nom": "Caen",
+        "code": "14118",
+        "codesPostaux": [
+            "14000"
+        ],
+        "codeDepartement": "14",
+        "codeRegion": "28",
+        "population": 109400,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.3722,
+                49.1846
+            ]
+        }
+    },
+    {
+        "nom": "Angoulême",
+        "code": "16015",
+        "codesPostaux": [
+            "16000"
+        ],
+        "codeDepartement": "16",
+        "codeRegion": "75",
+        "population": 41908,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.145,
+                45.6458
+            ]
+        }
+    },
+    {
+        "nom": "La Rochelle",
+        "code": "17300",
+        "codesPostaux": [
+            "17000"
+        ],
+        "codeDepartement": "17",
+        "codeRegion": "75",
+        "population": 79851,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.1765,
+                46.162
+            ]
+        }
+    },
+    {
+        "nom": "Bourges",
+        "code": "18033",
+        "codesPostaux": [
+            "18000"
+        ],
+        "codeDepartement": "18",
+        "codeRegion": "24",
+        "population": 64186,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3983,
+                47.078
+            ]
+        }
+    },
+    {
+        "nom": "Brive-la-Gaillarde",
+        "code": "19031",
+        "codesPostaux": [
+            "19100"
+        ],
+        "codeDepartement": "19",
+        "codeRegion": "75",
+        "population": 47095,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.5144,
+                45.145
+            ]
+        }
+    },
+    {
+        "nom": "Dijon",
+        "code": "21231",
+        "codesPostaux": [
+            "21000"
+        ],
+        "codeDepartement": "21",
+        "codeRegion": "27",
+        "population": 161830,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.0322,
+                47.3319
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Brieuc",
+        "code": "22278",
+        "codesPostaux": [
+            "22000"
+        ],
+        "codeDepartement": "22",
+        "codeRegion": "53",
+        "population": 44364,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -2.7657,
+                48.5108
+            ]
+        }
+    },
+    {
+        "nom": "Besançon",
+        "code": "25056",
+        "codesPostaux": [
+            "25000"
+        ],
+        "codeDepartement": "25",
+        "codeRegion": "27",
+        "population": 118489,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.0123,
+                47.2602
+            ]
+        }
+    },
+    {
+        "nom": "Montélimar",
+        "code": "26198",
+        "codesPostaux": [
+            "26200"
+        ],
+        "codeDepartement": "26",
+        "codeRegion": "84",
+        "population": 40595,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.7454,
+                44.5545
+            ]
+        }
+    },
+    {
+        "nom": "Romans-sur-Isère",
+        "code": "26281",
+        "codesPostaux": [
+            "26100"
+        ],
+        "codeDepartement": "26",
+        "codeRegion": "84",
+        "population": 33464,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.0477,
+                45.0611
+            ]
+        }
+    },
+    {
+        "nom": "Valence",
+        "code": "26362",
+        "codesPostaux": [
+            "26000"
+        ],
+        "codeDepartement": "26",
+        "codeRegion": "84",
+        "population": 64458,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.9164,
+                44.9234
+            ]
+        }
+    },
+    {
+        "nom": "Évreux",
+        "code": "27229",
+        "codesPostaux": [
+            "27000"
+        ],
+        "codeDepartement": "27",
+        "codeRegion": "28",
+        "population": 49360,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.1406,
+                49.018
+            ]
+        }
+    },
+    {
+        "nom": "Chartres",
+        "code": "28085",
+        "codesPostaux": [
+            "28000"
+        ],
+        "codeDepartement": "28",
+        "codeRegion": "24",
+        "population": 38324,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.5046,
+                48.4481
+            ]
+        }
+    },
+    {
+        "nom": "Dreux",
+        "code": "28134",
+        "codesPostaux": [
+            "28100"
+        ],
+        "codeDepartement": "28",
+        "codeRegion": "24",
+        "population": 31543,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.3578,
+                48.7482
+            ]
+        }
+    },
+    {
+        "nom": "Brest",
+        "code": "29019",
+        "codesPostaux": [
+            "29200"
+        ],
+        "codeDepartement": "29",
+        "codeRegion": "53",
+        "population": 142346,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -4.4996,
+                48.4085
+            ]
+        }
+    },
+    {
+        "nom": "Quimper",
+        "code": "29232",
+        "codesPostaux": [
+            "29000"
+        ],
+        "codeDepartement": "29",
+        "codeRegion": "53",
+        "population": 64385,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -4.0972,
+                47.9982
+            ]
+        }
+    },
+    {
+        "nom": "Ajaccio",
+        "code": "2A004",
+        "codesPostaux": [
+            "20000",
+            "20090",
+            "20167"
+        ],
+        "codeDepartement": "2A",
+        "codeRegion": "94",
+        "population": 76320,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                8.7058,
+                41.9228
+            ]
+        }
+    },
+    {
+        "nom": "Bastia",
+        "code": "2B033",
+        "codesPostaux": [
+            "20200",
+            "20600"
+        ],
+        "codeDepartement": "2B",
+        "codeRegion": "94",
+        "population": 46867,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                9.424,
+                42.6861
+            ]
+        }
+    },
+    {
+        "nom": "Alès",
+        "code": "30007",
+        "codesPostaux": [
+            "30100"
+        ],
+        "codeDepartement": "30",
+        "codeRegion": "76",
+        "population": 46125,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.0905,
+                44.125
+            ]
+        }
+    },
+    {
+        "nom": "Nîmes",
+        "code": "30189",
+        "codesPostaux": [
+            "30000",
+            "30900"
+        ],
+        "codeDepartement": "30",
+        "codeRegion": "76",
+        "population": 151839,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.3429,
+                43.8322
+            ]
+        }
+    },
+    {
+        "nom": "Colomiers",
+        "code": "31149",
+        "codesPostaux": [
+            "31770"
+        ],
+        "codeDepartement": "31",
+        "codeRegion": "76",
+        "population": 40882,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.3245,
+                43.6116
+            ]
+        }
+    },
+    {
+        "nom": "Toulouse",
+        "code": "31555",
+        "codesPostaux": [
+            "31000",
+            "31100",
+            "31200",
+            "31300",
+            "31400",
+            "31500"
+        ],
+        "codeDepartement": "31",
+        "codeRegion": "76",
+        "population": 514819,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.4328,
+                43.6007
+            ]
+        }
+    },
+    {
+        "nom": "Tournefeuille",
+        "code": "31557",
+        "codesPostaux": [
+            "31170"
+        ],
+        "codeDepartement": "31",
+        "codeRegion": "76",
+        "population": 30168,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.3338,
+                43.5747
+            ]
+        }
+    },
+    {
+        "nom": "Bègles",
+        "code": "33039",
+        "codesPostaux": [
+            "33130"
+        ],
+        "codeDepartement": "33",
+        "codeRegion": "75",
+        "population": 31831,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.5485,
+                44.803
+            ]
+        }
+    },
+    {
+        "nom": "Bordeaux",
+        "code": "33063",
+        "codesPostaux": [
+            "33000",
+            "33100",
+            "33200",
+            "33300",
+            "33800"
+        ],
+        "codeDepartement": "33",
+        "codeRegion": "75",
+        "population": 267991,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.5848,
+                44.8624
+            ]
+        }
+    },
+    {
+        "nom": "Mérignac",
+        "code": "33281",
+        "codesPostaux": [
+            "33700"
+        ],
+        "codeDepartement": "33",
+        "codeRegion": "75",
+        "population": 78090,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.682,
+                44.8313
+            ]
+        }
+    },
+    {
+        "nom": "Pessac",
+        "code": "33318",
+        "codesPostaux": [
+            "33600"
+        ],
+        "codeDepartement": "33",
+        "codeRegion": "75",
+        "population": 67339,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.681,
+                44.786
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Médard-en-Jalles",
+        "code": "33449",
+        "codesPostaux": [
+            "33160"
+        ],
+        "codeDepartement": "33",
+        "codeRegion": "75",
+        "population": 32910,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.7823,
+                44.8861
+            ]
+        }
+    },
+    {
+        "nom": "Talence",
+        "code": "33522",
+        "codesPostaux": [
+            "33400"
+        ],
+        "codeDepartement": "33",
+        "codeRegion": "75",
+        "population": 46338,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.5918,
+                44.8061
+            ]
+        }
+    },
+    {
+        "nom": "Villenave-d'Ornon",
+        "code": "33550",
+        "codesPostaux": [
+            "33140"
+        ],
+        "codeDepartement": "33",
+        "codeRegion": "75",
+        "population": 42545,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.5523,
+                44.7736
+            ]
+        }
+    },
+    {
+        "nom": "Béziers",
+        "code": "34032",
+        "codesPostaux": [
+            "34500"
+        ],
+        "codeDepartement": "34",
+        "codeRegion": "76",
+        "population": 81545,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.2342,
+                43.3481
+            ]
+        }
+    },
+    {
+        "nom": "Montpellier",
+        "code": "34172",
+        "codesPostaux": [
+            "34000",
+            "34070",
+            "34080",
+            "34090"
+        ],
+        "codeDepartement": "34",
+        "codeRegion": "76",
+        "population": 310240,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.8742,
+                43.61
+            ]
+        }
+    },
+    {
+        "nom": "Sète",
+        "code": "34301",
+        "codesPostaux": [
+            "34200"
+        ],
+        "codeDepartement": "34",
+        "codeRegion": "76",
+        "population": 45337,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.6441,
+                43.3844
+            ]
+        }
+    },
+    {
+        "nom": "Rennes",
+        "code": "35238",
+        "codesPostaux": [
+            "35000",
+            "35200",
+            "35700"
+        ],
+        "codeDepartement": "35",
+        "codeRegion": "53",
+        "population": 230890,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.6884,
+                48.1159
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Malo",
+        "code": "35288",
+        "codesPostaux": [
+            "35400"
+        ],
+        "codeDepartement": "35",
+        "codeRegion": "53",
+        "population": 47439,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -2.0066,
+                48.6465
+            ]
+        }
+    },
+    {
+        "nom": "Châteauroux",
+        "code": "36044",
+        "codesPostaux": [
+            "36000"
+        ],
+        "codeDepartement": "36",
+        "codeRegion": "24",
+        "population": 42963,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.6903,
+                46.8023
+            ]
+        }
+    },
+    {
+        "nom": "Joué-lès-Tours",
+        "code": "37122",
+        "codesPostaux": [
+            "37300"
+        ],
+        "codeDepartement": "37",
+        "codeRegion": "24",
+        "population": 38423,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.6544,
+                47.3374
+            ]
+        }
+    },
+    {
+        "nom": "Tours",
+        "code": "37261",
+        "codesPostaux": [
+            "37000",
+            "37100",
+            "37200"
+        ],
+        "codeDepartement": "37",
+        "codeRegion": "24",
+        "population": 139259,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.6949,
+                47.3943
+            ]
+        }
+    },
+    {
+        "nom": "Bourgoin-Jallieu",
+        "code": "38053",
+        "codesPostaux": [
+            "38300"
+        ],
+        "codeDepartement": "38",
+        "codeRegion": "84",
+        "population": 30151,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.2747,
+                45.6025
+            ]
+        }
+    },
+    {
+        "nom": "Échirolles",
+        "code": "38151",
+        "codesPostaux": [
+            "38130"
+        ],
+        "codeDepartement": "38",
+        "codeRegion": "84",
+        "population": 37491,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.7148,
+                45.1441
+            ]
+        }
+    },
+    {
+        "nom": "Grenoble",
+        "code": "38185",
+        "codesPostaux": [
+            "38000",
+            "38100"
+        ],
+        "codeDepartement": "38",
+        "codeRegion": "84",
+        "population": 156140,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.7155,
+                45.1842
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Martin-d'Hères",
+        "code": "38421",
+        "codesPostaux": [
+            "38400"
+        ],
+        "codeDepartement": "38",
+        "codeRegion": "84",
+        "population": 37695,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.7646,
+                45.1782
+            ]
+        }
+    },
+    {
+        "nom": "Vienne",
+        "code": "38544",
+        "codesPostaux": [
+            "38200"
+        ],
+        "codeDepartement": "38",
+        "codeRegion": "84",
+        "population": 31778,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.8803,
+                45.5221
+            ]
+        }
+    },
+    {
+        "nom": "Mont-de-Marsan",
+        "code": "40192",
+        "codesPostaux": [
+            "40000"
+        ],
+        "codeDepartement": "40",
+        "codeRegion": "75",
+        "population": 31592,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.5009,
+                43.8931
+            ]
+        }
+    },
+    {
+        "nom": "Blois",
+        "code": "41018",
+        "codesPostaux": [
+            "41000"
+        ],
+        "codeDepartement": "41",
+        "codeRegion": "24",
+        "population": 47219,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.3049,
+                47.5813
+            ]
+        }
+    },
+    {
+        "nom": "Roanne",
+        "code": "42187",
+        "codesPostaux": [
+            "42300"
+        ],
+        "codeDepartement": "42",
+        "codeRegion": "84",
+        "population": 35409,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.0797,
+                46.0443
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Chamond",
+        "code": "42207",
+        "codesPostaux": [
+            "42400"
+        ],
+        "codeDepartement": "42",
+        "codeRegion": "84",
+        "population": 35646,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.5082,
+                45.4687
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Étienne",
+        "code": "42218",
+        "codesPostaux": [
+            "42000",
+            "42100",
+            "42230"
+        ],
+        "codeDepartement": "42",
+        "codeRegion": "84",
+        "population": 173136,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.3665,
+                45.4241
+            ]
+        }
+    },
+    {
+        "nom": "Nantes",
+        "code": "44109",
+        "codesPostaux": [
+            "44000",
+            "44100",
+            "44200",
+            "44300"
+        ],
+        "codeDepartement": "44",
+        "codeRegion": "52",
+        "population": 327734,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.5603,
+                47.2382
+            ]
+        }
+    },
+    {
+        "nom": "Rezé",
+        "code": "44143",
+        "codesPostaux": [
+            "44400"
+        ],
+        "codeDepartement": "44",
+        "codeRegion": "52",
+        "population": 43556,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.5573,
+                47.1733
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Herblain",
+        "code": "44162",
+        "codesPostaux": [
+            "44800"
+        ],
+        "codeDepartement": "44",
+        "codeRegion": "52",
+        "population": 50973,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.6306,
+                47.2246
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Nazaire",
+        "code": "44184",
+        "codesPostaux": [
+            "44600"
+        ],
+        "codeDepartement": "44",
+        "codeRegion": "52",
+        "population": 74568,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -2.2392,
+                47.2768
+            ]
+        }
+    },
+    {
+        "nom": "Orléans",
+        "code": "45234",
+        "codesPostaux": [
+            "45000",
+            "45100"
+        ],
+        "codeDepartement": "45",
+        "codeRegion": "24",
+        "population": 116357,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.9122,
+                47.8734
+            ]
+        }
+    },
+    {
+        "nom": "Agen",
+        "code": "47001",
+        "codesPostaux": [
+            "47000"
+        ],
+        "codeDepartement": "47",
+        "codeRegion": "75",
+        "population": 32801,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.6302,
+                44.201
+            ]
+        }
+    },
+    {
+        "nom": "Angers",
+        "code": "49007",
+        "codesPostaux": [
+            "49000",
+            "49100"
+        ],
+        "codeDepartement": "49",
+        "codeRegion": "52",
+        "population": 159022,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.5629,
+                47.4819
+            ]
+        }
+    },
+    {
+        "nom": "Cholet",
+        "code": "49099",
+        "codesPostaux": [
+            "49300"
+        ],
+        "codeDepartement": "49",
+        "codeRegion": "52",
+        "population": 54404,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.875,
+                47.0358
+            ]
+        }
+    },
+    {
+        "nom": "Cherbourg-en-Cotentin",
+        "code": "50129",
+        "codesPostaux": [
+            "50100",
+            "50110",
+            "50120",
+            "50130",
+            "50460",
+            "50470"
+        ],
+        "codeDepartement": "50",
+        "codeRegion": "28",
+        "population": 78258,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.6356,
+                49.6277
+            ]
+        }
+    },
+    {
+        "nom": "Châlons-en-Champagne",
+        "code": "51108",
+        "codesPostaux": [
+            "51000"
+        ],
+        "codeDepartement": "51",
+        "codeRegion": "44",
+        "population": 42971,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.3801,
+                48.9656
+            ]
+        }
+    },
+    {
+        "nom": "Reims",
+        "code": "51454",
+        "codesPostaux": [
+            "51100"
+        ],
+        "codeDepartement": "51",
+        "codeRegion": "44",
+        "population": 177674,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.0551,
+                49.2535
+            ]
+        }
+    },
+    {
+        "nom": "Laval",
+        "code": "53130",
+        "codesPostaux": [
+            "53000"
+        ],
+        "codeDepartement": "53",
+        "codeRegion": "52",
+        "population": 49400,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.7692,
+                48.0578
+            ]
+        }
+    },
+    {
+        "nom": "Nancy",
+        "code": "54395",
+        "codesPostaux": [
+            "54000",
+            "54100"
+        ],
+        "codeDepartement": "54",
+        "codeRegion": "44",
+        "population": 103671,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.1734,
+                48.6881
+            ]
+        }
+    },
+    {
+        "nom": "Lorient",
+        "code": "56121",
+        "codesPostaux": [
+            "56100"
+        ],
+        "codeDepartement": "56",
+        "codeRegion": "53",
+        "population": 58329,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -3.3799,
+                47.7494
+            ]
+        }
+    },
+    {
+        "nom": "Vannes",
+        "code": "56260",
+        "codesPostaux": [
+            "56000"
+        ],
+        "codeDepartement": "56",
+        "codeRegion": "53",
+        "population": 55790,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -2.7485,
+                47.6577
+            ]
+        }
+    },
+    {
+        "nom": "Metz",
+        "code": "57463",
+        "codesPostaux": [
+            "57000",
+            "57050",
+            "57070"
+        ],
+        "codeDepartement": "57",
+        "codeRegion": "44",
+        "population": 122572,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.1962,
+                49.1048
+            ]
+        }
+    },
+    {
+        "nom": "Thionville",
+        "code": "57672",
+        "codesPostaux": [
+            "57100"
+        ],
+        "codeDepartement": "57",
+        "codeRegion": "44",
+        "population": 42658,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.1443,
+                49.3718
+            ]
+        }
+    },
+    {
+        "nom": "Nevers",
+        "code": "58194",
+        "codesPostaux": [
+            "58000"
+        ],
+        "codeDepartement": "58",
+        "codeRegion": "27",
+        "population": 33085,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.1598,
+                46.9852
+            ]
+        }
+    },
+    {
+        "nom": "Villeneuve-d'Ascq",
+        "code": "59009",
+        "codesPostaux": [
+            "59491",
+            "59493",
+            "59650"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 62868,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.1619,
+                50.6362
+            ]
+        }
+    },
+    {
+        "nom": "Cambrai",
+        "code": "59122",
+        "codesPostaux": [
+            "59400"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 31134,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.2413,
+                50.1722
+            ]
+        }
+    },
+    {
+        "nom": "Douai",
+        "code": "59178",
+        "codesPostaux": [
+            "59500"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 40250,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.1004,
+                50.3785
+            ]
+        }
+    },
+    {
+        "nom": "Dunkerque",
+        "code": "59183",
+        "codesPostaux": [
+            "59140",
+            "59240",
+            "59279",
+            "59430",
+            "59640"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 86263,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3431,
+                51.0183
+            ]
+        }
+    },
+    {
+        "nom": "Lille",
+        "code": "59350",
+        "codesPostaux": [
+            "59000",
+            "59160",
+            "59260",
+            "59777",
+            "59800"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 238246,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.0468,
+                50.6311
+            ]
+        }
+    },
+    {
+        "nom": "Marcq-en-Barœul",
+        "code": "59378",
+        "codesPostaux": [
+            "59700"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 40184,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.1006,
+                50.6793
+            ]
+        }
+    },
+    {
+        "nom": "Roubaix",
+        "code": "59512",
+        "codesPostaux": [
+            "59100"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 98286,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.1843,
+                50.6887
+            ]
+        }
+    },
+    {
+        "nom": "Tourcoing",
+        "code": "59599",
+        "codesPostaux": [
+            "59200"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 98772,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.1577,
+                50.721
+            ]
+        }
+    },
+    {
+        "nom": "Valenciennes",
+        "code": "59606",
+        "codesPostaux": [
+            "59300"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 43468,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.5142,
+                50.362
+            ]
+        }
+    },
+    {
+        "nom": "Wattrelos",
+        "code": "59650",
+        "codesPostaux": [
+            "59150"
+        ],
+        "codeDepartement": "59",
+        "codeRegion": "32",
+        "population": 40847,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.2159,
+                50.7125
+            ]
+        }
+    },
+    {
+        "nom": "Beauvais",
+        "code": "60057",
+        "codesPostaux": [
+            "60000"
+        ],
+        "codeDepartement": "60",
+        "codeRegion": "32",
+        "population": 55550,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.0877,
+                49.4425
+            ]
+        }
+    },
+    {
+        "nom": "Compiègne",
+        "code": "60159",
+        "codesPostaux": [
+            "60200"
+        ],
+        "codeDepartement": "60",
+        "codeRegion": "32",
+        "population": 40761,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.8547,
+                49.4006
+            ]
+        }
+    },
+    {
+        "nom": "Creil",
+        "code": "60175",
+        "codesPostaux": [
+            "60100"
+        ],
+        "codeDepartement": "60",
+        "codeRegion": "32",
+        "population": 36301,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4841,
+                49.2557
+            ]
+        }
+    },
+    {
+        "nom": "Arras",
+        "code": "62041",
+        "codesPostaux": [
+            "62000"
+        ],
+        "codeDepartement": "62",
+        "codeRegion": "32",
+        "population": 42875,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.7679,
+                50.2893
+            ]
+        }
+    },
+    {
+        "nom": "Boulogne-sur-Mer",
+        "code": "62160",
+        "codesPostaux": [
+            "62200"
+        ],
+        "codeDepartement": "62",
+        "codeRegion": "32",
+        "population": 40539,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.6062,
+                50.7303
+            ]
+        }
+    },
+    {
+        "nom": "Calais",
+        "code": "62193",
+        "codesPostaux": [
+            "62100"
+        ],
+        "codeDepartement": "62",
+        "codeRegion": "32",
+        "population": 67571,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.869,
+                50.9523
+            ]
+        }
+    },
+    {
+        "nom": "Lens",
+        "code": "62498",
+        "codesPostaux": [
+            "62300"
+        ],
+        "codeDepartement": "62",
+        "codeRegion": "32",
+        "population": 32920,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.8191,
+                50.4395
+            ]
+        }
+    },
+    {
+        "nom": "Liévin",
+        "code": "62510",
+        "codesPostaux": [
+            "62800"
+        ],
+        "codeDepartement": "62",
+        "codeRegion": "32",
+        "population": 30063,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.7702,
+                50.4231
+            ]
+        }
+    },
+    {
+        "nom": "Clermont-Ferrand",
+        "code": "63113",
+        "codesPostaux": [
+            "63000",
+            "63100"
+        ],
+        "codeDepartement": "63",
+        "codeRegion": "84",
+        "population": 146351,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.1127,
+                45.787
+            ]
+        }
+    },
+    {
+        "nom": "Anglet",
+        "code": "64024",
+        "codesPostaux": [
+            "64600"
+        ],
+        "codeDepartement": "64",
+        "codeRegion": "75",
+        "population": 43271,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.5193,
+                43.4893
+            ]
+        }
+    },
+    {
+        "nom": "Bayonne",
+        "code": "64102",
+        "codesPostaux": [
+            "64100"
+        ],
+        "codeDepartement": "64",
+        "codeRegion": "75",
+        "population": 54306,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.4611,
+                43.4844
+            ]
+        }
+    },
+    {
+        "nom": "Pau",
+        "code": "64445",
+        "codesPostaux": [
+            "64000"
+        ],
+        "codeDepartement": "64",
+        "codeRegion": "75",
+        "population": 80441,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.3435,
+                43.3219
+            ]
+        }
+    },
+    {
+        "nom": "Tarbes",
+        "code": "65440",
+        "codesPostaux": [
+            "65000"
+        ],
+        "codeDepartement": "65",
+        "codeRegion": "76",
+        "population": 44399,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.0653,
+                43.2387
+            ]
+        }
+    },
+    {
+        "nom": "Perpignan",
+        "code": "66136",
+        "codesPostaux": [
+            "66000",
+            "66100"
+        ],
+        "codeDepartement": "66",
+        "codeRegion": "76",
+        "population": 121616,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.9045,
+                42.699
+            ]
+        }
+    },
+    {
+        "nom": "Haguenau",
+        "code": "67180",
+        "codesPostaux": [
+            "67500"
+        ],
+        "codeDepartement": "67",
+        "codeRegion": "44",
+        "population": 36391,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.8213,
+                48.8388
+            ]
+        }
+    },
+    {
+        "nom": "Schiltigheim",
+        "code": "67447",
+        "codesPostaux": [
+            "67300"
+        ],
+        "codeDepartement": "67",
+        "codeRegion": "44",
+        "population": 34708,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.7511,
+                48.6118
+            ]
+        }
+    },
+    {
+        "nom": "Strasbourg",
+        "code": "67482",
+        "codesPostaux": [
+            "67000",
+            "67100",
+            "67200"
+        ],
+        "codeDepartement": "67",
+        "codeRegion": "44",
+        "population": 293771,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.7621,
+                48.5691
+            ]
+        }
+    },
+    {
+        "nom": "Colmar",
+        "code": "68066",
+        "codesPostaux": [
+            "68000"
+        ],
+        "codeDepartement": "68",
+        "codeRegion": "44",
+        "population": 66970,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.3924,
+                48.1115
+            ]
+        }
+    },
+    {
+        "nom": "Mulhouse",
+        "code": "68224",
+        "codesPostaux": [
+            "68100",
+            "68200"
+        ],
+        "codeDepartement": "68",
+        "codeRegion": "44",
+        "population": 104978,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                7.3255,
+                47.7526
+            ]
+        }
+    },
+    {
+        "nom": "Bron",
+        "code": "69029",
+        "codesPostaux": [
+            "69500"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 42982,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.9116,
+                45.7355
+            ]
+        }
+    },
+    {
+        "nom": "Caluire-et-Cuire",
+        "code": "69034",
+        "codesPostaux": [
+            "69300"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 43597,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.8494,
+                45.7986
+            ]
+        }
+    },
+    {
+        "nom": "Lyon",
+        "code": "69123",
+        "codesPostaux": [
+            "69001",
+            "69002",
+            "69003",
+            "69004",
+            "69005",
+            "69006",
+            "69007",
+            "69008",
+            "69009"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 519127,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.8351,
+                45.758
+            ]
+        }
+    },
+    {
+        "nom": "Oullins-Pierre-Bénite",
+        "code": "69149",
+        "codesPostaux": [
+            "69310",
+            "69600"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 38168,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.8112,
+                45.708
+            ]
+        }
+    },
+    {
+        "nom": "Vaulx-en-Velin",
+        "code": "69256",
+        "codesPostaux": [
+            "69120"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 53069,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.925,
+                45.7776
+            ]
+        }
+    },
+    {
+        "nom": "Vénissieux",
+        "code": "69259",
+        "codesPostaux": [
+            "69200"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 65502,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.8805,
+                45.7012
+            ]
+        }
+    },
+    {
+        "nom": "Villefranche-sur-Saône",
+        "code": "69264",
+        "codesPostaux": [
+            "69400"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 36172,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.726,
+                45.9837
+            ]
+        }
+    },
+    {
+        "nom": "Villeurbanne",
+        "code": "69266",
+        "codesPostaux": [
+            "69100"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 163684,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.8898,
+                45.7719
+            ]
+        }
+    },
+    {
+        "nom": "Meyzieu",
+        "code": "69282",
+        "codesPostaux": [
+            "69330"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 36687,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.0114,
+                45.7785
+            ]
+        }
+    },
+    {
+        "nom": "Rillieux-la-Pape",
+        "code": "69286",
+        "codesPostaux": [
+            "69140"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 31389,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.895,
+                45.8265
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Priest",
+        "code": "69290",
+        "codesPostaux": [
+            "69800"
+        ],
+        "codeDepartement": "69",
+        "codeRegion": "84",
+        "population": 49229,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.9474,
+                45.7014
+            ]
+        }
+    },
+    {
+        "nom": "Chalon-sur-Saône",
+        "code": "71076",
+        "codesPostaux": [
+            "71100"
+        ],
+        "codeDepartement": "71",
+        "codeRegion": "27",
+        "population": 45102,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.8509,
+                46.7896
+            ]
+        }
+    },
+    {
+        "nom": "Mâcon",
+        "code": "71270",
+        "codesPostaux": [
+            "71000"
+        ],
+        "codeDepartement": "71",
+        "codeRegion": "27",
+        "population": 35177,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.8083,
+                46.3265
+            ]
+        }
+    },
+    {
+        "nom": "Le Mans",
+        "code": "72181",
+        "codesPostaux": [
+            "72000",
+            "72100"
+        ],
+        "codeDepartement": "72",
+        "codeRegion": "52",
+        "population": 146249,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.1957,
+                47.9819
+            ]
+        }
+    },
+    {
+        "nom": "Aix-les-Bains",
+        "code": "73008",
+        "codesPostaux": [
+            "73100"
+        ],
+        "codeDepartement": "73",
+        "codeRegion": "84",
+        "population": 32406,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.9035,
+                45.6943
+            ]
+        }
+    },
+    {
+        "nom": "Chambéry",
+        "code": "73065",
+        "codesPostaux": [
+            "73000"
+        ],
+        "codeDepartement": "73",
+        "codeRegion": "84",
+        "population": 59964,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.9064,
+                45.5822
+            ]
+        }
+    },
+    {
+        "nom": "Annecy",
+        "code": "74010",
+        "codesPostaux": [
+            "74000",
+            "74370",
+            "74600",
+            "74940",
+            "74960"
+        ],
+        "codeDepartement": "74",
+        "codeRegion": "84",
+        "population": 132117,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.1264,
+                45.9024
+            ]
+        }
+    },
+    {
+        "nom": "Annemasse",
+        "code": "74012",
+        "codesPostaux": [
+            "74100"
+        ],
+        "codeDepartement": "74",
+        "codeRegion": "84",
+        "population": 37628,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.2476,
+                46.189
+            ]
+        }
+    },
+    {
+        "nom": "Thonon-les-Bains",
+        "code": "74281",
+        "codesPostaux": [
+            "74200"
+        ],
+        "codeDepartement": "74",
+        "codeRegion": "84",
+        "population": 37928,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.4776,
+                46.3745
+            ]
+        }
+    },
+    {
+        "nom": "Paris",
+        "code": "75056",
+        "codesPostaux": [
+            "75001",
+            "75002",
+            "75003",
+            "75004",
+            "75005",
+            "75006",
+            "75007",
+            "75008",
+            "75009",
+            "75010",
+            "75011",
+            "75012",
+            "75013",
+            "75014",
+            "75015",
+            "75016",
+            "75017",
+            "75018",
+            "75019",
+            "75020",
+            "75116"
+        ],
+        "codeDepartement": "75",
+        "codeRegion": "11",
+        "population": 2103778,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.347,
+                48.8589
+            ]
+        }
+    },
+    {
+        "nom": "Le Havre",
+        "code": "76351",
+        "codesPostaux": [
+            "76600",
+            "76610",
+            "76620"
+        ],
+        "codeDepartement": "76",
+        "codeRegion": "28",
+        "population": 166687,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.1312,
+                49.4958
+            ]
+        }
+    },
+    {
+        "nom": "Rouen",
+        "code": "76540",
+        "codesPostaux": [
+            "76000",
+            "76100"
+        ],
+        "codeDepartement": "76",
+        "codeRegion": "28",
+        "population": 117662,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.0912,
+                49.4412
+            ]
+        }
+    },
+    {
+        "nom": "Chelles",
+        "code": "77108",
+        "codesPostaux": [
+            "77500"
+        ],
+        "codeDepartement": "77",
+        "codeRegion": "11",
+        "population": 54620,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5954,
+                48.8845
+            ]
+        }
+    },
+    {
+        "nom": "Meaux",
+        "code": "77284",
+        "codesPostaux": [
+            "77100"
+        ],
+        "codeDepartement": "77",
+        "codeRegion": "11",
+        "population": 56905,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.9035,
+                48.9573
+            ]
+        }
+    },
+    {
+        "nom": "Melun",
+        "code": "77288",
+        "codesPostaux": [
+            "77000"
+        ],
+        "codeDepartement": "77",
+        "codeRegion": "11",
+        "population": 45995,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.6552,
+                48.5421
+            ]
+        }
+    },
+    {
+        "nom": "Pontault-Combault",
+        "code": "77373",
+        "codesPostaux": [
+            "77340"
+        ],
+        "codeDepartement": "77",
+        "codeRegion": "11",
+        "population": 39096,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.6173,
+                48.7885
+            ]
+        }
+    },
+    {
+        "nom": "Savigny-le-Temple",
+        "code": "77445",
+        "codesPostaux": [
+            "77176"
+        ],
+        "codeDepartement": "77",
+        "codeRegion": "11",
+        "population": 31148,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5759,
+                48.5846
+            ]
+        }
+    },
+    {
+        "nom": "Chatou",
+        "code": "78146",
+        "codesPostaux": [
+            "78400"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 30598,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.1502,
+                48.8964
+            ]
+        }
+    },
+    {
+        "nom": "Le Chesnay-Rocquencourt",
+        "code": "78158",
+        "codesPostaux": [
+            "78150"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 30689,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.1188,
+                48.8285
+            ]
+        }
+    },
+    {
+        "nom": "Conflans-Sainte-Honorine",
+        "code": "78172",
+        "codesPostaux": [
+            "78700"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 36958,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.0992,
+                49.0016
+            ]
+        }
+    },
+    {
+        "nom": "Houilles",
+        "code": "78311",
+        "codesPostaux": [
+            "78800"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 33983,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.1866,
+                48.9266
+            ]
+        }
+    },
+    {
+        "nom": "Mantes-la-Jolie",
+        "code": "78361",
+        "codesPostaux": [
+            "78200"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 43526,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.6918,
+                48.9961
+            ]
+        }
+    },
+    {
+        "nom": "Montigny-le-Bretonneux",
+        "code": "78423",
+        "codesPostaux": [
+            "78180"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 32465,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.0252,
+                48.7776
+            ]
+        }
+    },
+    {
+        "nom": "Les Mureaux",
+        "code": "78440",
+        "codesPostaux": [
+            "78130"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 34632,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.911,
+                48.9877
+            ]
+        }
+    },
+    {
+        "nom": "Plaisir",
+        "code": "78490",
+        "codesPostaux": [
+            "78370"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 31811,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.9483,
+                48.8129
+            ]
+        }
+    },
+    {
+        "nom": "Poissy",
+        "code": "78498",
+        "codesPostaux": [
+            "78300"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 40983,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.025,
+                48.9241
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Germain-en-Laye",
+        "code": "78551",
+        "codesPostaux": [
+            "78100",
+            "78112"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 45931,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.1052,
+                48.931
+            ]
+        }
+    },
+    {
+        "nom": "Sartrouville",
+        "code": "78586",
+        "codesPostaux": [
+            "78500"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 52763,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.1744,
+                48.9374
+            ]
+        }
+    },
+    {
+        "nom": "Trappes",
+        "code": "78621",
+        "codesPostaux": [
+            "78190"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 34689,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.9964,
+                48.7738
+            ]
+        }
+    },
+    {
+        "nom": "Versailles",
+        "code": "78646",
+        "codesPostaux": [
+            "78000"
+        ],
+        "codeDepartement": "78",
+        "codeRegion": "11",
+        "population": 84095,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.1191,
+                48.8039
+            ]
+        }
+    },
+    {
+        "nom": "Niort",
+        "code": "79191",
+        "codesPostaux": [
+            "79000"
+        ],
+        "codeDepartement": "79",
+        "codeRegion": "75",
+        "population": 59854,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -0.4613,
+                46.3274
+            ]
+        }
+    },
+    {
+        "nom": "Amiens",
+        "code": "80021",
+        "codesPostaux": [
+            "80000",
+            "80080",
+            "80090"
+        ],
+        "codeDepartement": "80",
+        "codeRegion": "32",
+        "population": 136449,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2847,
+                49.8987
+            ]
+        }
+    },
+    {
+        "nom": "Albi",
+        "code": "81004",
+        "codesPostaux": [
+            "81000"
+        ],
+        "codeDepartement": "81",
+        "codeRegion": "76",
+        "population": 51290,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.1323,
+                43.929
+            ]
+        }
+    },
+    {
+        "nom": "Castres",
+        "code": "81065",
+        "codesPostaux": [
+            "81100"
+        ],
+        "codeDepartement": "81",
+        "codeRegion": "76",
+        "population": 42505,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2448,
+                43.6132
+            ]
+        }
+    },
+    {
+        "nom": "Montauban",
+        "code": "82121",
+        "codesPostaux": [
+            "82000"
+        ],
+        "codeDepartement": "82",
+        "codeRegion": "76",
+        "population": 62945,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.3646,
+                44.0217
+            ]
+        }
+    },
+    {
+        "nom": "Draguignan",
+        "code": "83050",
+        "codesPostaux": [
+            "83300"
+        ],
+        "codeDepartement": "83",
+        "codeRegion": "93",
+        "population": 40826,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.4651,
+                43.5346
+            ]
+        }
+    },
+    {
+        "nom": "Fréjus",
+        "code": "83061",
+        "codesPostaux": [
+            "83370",
+            "83600"
+        ],
+        "codeDepartement": "83",
+        "codeRegion": "93",
+        "population": 59719,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.7848,
+                43.4553
+            ]
+        }
+    },
+    {
+        "nom": "Hyères",
+        "code": "83069",
+        "codesPostaux": [
+            "83400"
+        ],
+        "codeDepartement": "83",
+        "codeRegion": "93",
+        "population": 55858,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.2357,
+                43.1139
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Raphaël",
+        "code": "83118",
+        "codesPostaux": [
+            "83530",
+            "83700"
+        ],
+        "codeDepartement": "83",
+        "codeRegion": "93",
+        "population": 37113,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.8483,
+                43.4582
+            ]
+        }
+    },
+    {
+        "nom": "La Seyne-sur-Mer",
+        "code": "83126",
+        "codesPostaux": [
+            "83500"
+        ],
+        "codeDepartement": "83",
+        "codeRegion": "93",
+        "population": 63732,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.8789,
+                43.0837
+            ]
+        }
+    },
+    {
+        "nom": "Six-Fours-les-Plages",
+        "code": "83129",
+        "codesPostaux": [
+            "83140"
+        ],
+        "codeDepartement": "83",
+        "codeRegion": "93",
+        "population": 37109,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.8079,
+                43.0843
+            ]
+        }
+    },
+    {
+        "nom": "Toulon",
+        "code": "83137",
+        "codesPostaux": [
+            "83000",
+            "83100",
+            "83200"
+        ],
+        "codeDepartement": "83",
+        "codeRegion": "93",
+        "population": 179116,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.9334,
+                43.1364
+            ]
+        }
+    },
+    {
+        "nom": "Avignon",
+        "code": "84007",
+        "codesPostaux": [
+            "84000",
+            "84140"
+        ],
+        "codeDepartement": "84",
+        "codeRegion": "93",
+        "population": 92188,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                4.8333,
+                43.9416
+            ]
+        }
+    },
+    {
+        "nom": "Carpentras",
+        "code": "84031",
+        "codesPostaux": [
+            "84200"
+        ],
+        "codeDepartement": "84",
+        "codeRegion": "93",
+        "population": 31619,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                5.0584,
+                44.0629
+            ]
+        }
+    },
+    {
+        "nom": "La Roche-sur-Yon",
+        "code": "85191",
+        "codesPostaux": [
+            "85000"
+        ],
+        "codeDepartement": "85",
+        "codeRegion": "52",
+        "population": 54849,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.4162,
+                46.6659
+            ]
+        }
+    },
+    {
+        "nom": "Les Sables-d'Olonne",
+        "code": "85194",
+        "codesPostaux": [
+            "85100",
+            "85180",
+            "85340"
+        ],
+        "codeDepartement": "85",
+        "codeRegion": "52",
+        "population": 49603,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.7611,
+                46.5264
+            ]
+        }
+    },
+    {
+        "nom": "Châtellerault",
+        "code": "86066",
+        "codesPostaux": [
+            "86100"
+        ],
+        "codeDepartement": "86",
+        "codeRegion": "75",
+        "population": 31003,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.5583,
+                46.8147
+            ]
+        }
+    },
+    {
+        "nom": "Poitiers",
+        "code": "86194",
+        "codesPostaux": [
+            "86000"
+        ],
+        "codeDepartement": "86",
+        "codeRegion": "75",
+        "population": 89916,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.3715,
+                46.5846
+            ]
+        }
+    },
+    {
+        "nom": "Limoges",
+        "code": "87085",
+        "codesPostaux": [
+            "87000",
+            "87100",
+            "87280"
+        ],
+        "codeDepartement": "87",
+        "codeRegion": "75",
+        "population": 129937,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                1.226,
+                45.8567
+            ]
+        }
+    },
+    {
+        "nom": "Épinal",
+        "code": "88160",
+        "codesPostaux": [
+            "88000"
+        ],
+        "codeDepartement": "88",
+        "codeRegion": "44",
+        "population": 32251,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.4867,
+                48.1637
+            ]
+        }
+    },
+    {
+        "nom": "Auxerre",
+        "code": "89024",
+        "codesPostaux": [
+            "89000",
+            "89290"
+        ],
+        "codeDepartement": "89",
+        "codeRegion": "27",
+        "population": 35097,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                3.5821,
+                47.7939
+            ]
+        }
+    },
+    {
+        "nom": "Belfort",
+        "code": "90010",
+        "codesPostaux": [
+            "90000"
+        ],
+        "codeDepartement": "90",
+        "codeRegion": "27",
+        "population": 45912,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.841,
+                47.6458
+            ]
+        }
+    },
+    {
+        "nom": "Athis-Mons",
+        "code": "91027",
+        "codesPostaux": [
+            "91200"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 36613,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3848,
+                48.7093
+            ]
+        }
+    },
+    {
+        "nom": "Corbeil-Essonnes",
+        "code": "91174",
+        "codesPostaux": [
+            "91100"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 54471,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4646,
+                48.5973
+            ]
+        }
+    },
+    {
+        "nom": "Draveil",
+        "code": "91201",
+        "codesPostaux": [
+            "91210"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 30098,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4249,
+                48.6777
+            ]
+        }
+    },
+    {
+        "nom": "Évry-Courcouronnes",
+        "code": "91228",
+        "codesPostaux": [
+            "91000",
+            "91080"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 66919,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4313,
+                48.6287
+            ]
+        }
+    },
+    {
+        "nom": "Massy",
+        "code": "91377",
+        "codesPostaux": [
+            "91300"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 51729,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2696,
+                48.7263
+            ]
+        }
+    },
+    {
+        "nom": "Palaiseau",
+        "code": "91477",
+        "codesPostaux": [
+            "91120"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 37471,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2293,
+                48.7155
+            ]
+        }
+    },
+    {
+        "nom": "Ris-Orangis",
+        "code": "91521",
+        "codesPostaux": [
+            "91130"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 31189,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4104,
+                48.6457
+            ]
+        }
+    },
+    {
+        "nom": "Sainte-Geneviève-des-Bois",
+        "code": "91549",
+        "codesPostaux": [
+            "91700"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 35438,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3272,
+                48.643
+            ]
+        }
+    },
+    {
+        "nom": "Savigny-sur-Orge",
+        "code": "91589",
+        "codesPostaux": [
+            "91600"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 37601,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3493,
+                48.6851
+            ]
+        }
+    },
+    {
+        "nom": "Vigneux-sur-Seine",
+        "code": "91657",
+        "codesPostaux": [
+            "91270"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 31466,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4274,
+                48.7021
+            ]
+        }
+    },
+    {
+        "nom": "Viry-Châtillon",
+        "code": "91687",
+        "codesPostaux": [
+            "91170"
+        ],
+        "codeDepartement": "91",
+        "codeRegion": "11",
+        "population": 30838,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3758,
+                48.6662
+            ]
+        }
+    },
+    {
+        "nom": "Antony",
+        "code": "92002",
+        "codesPostaux": [
+            "92160"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 64263,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2976,
+                48.7507
+            ]
+        }
+    },
+    {
+        "nom": "Asnières-sur-Seine",
+        "code": "92004",
+        "codesPostaux": [
+            "92600"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 93941,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2935,
+                48.9181
+            ]
+        }
+    },
+    {
+        "nom": "Bagneux",
+        "code": "92007",
+        "codesPostaux": [
+            "92220"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 44572,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3093,
+                48.798
+            ]
+        }
+    },
+    {
+        "nom": "Boulogne-Billancourt",
+        "code": "92012",
+        "codesPostaux": [
+            "92100"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 119019,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2429,
+                48.8375
+            ]
+        }
+    },
+    {
+        "nom": "Châtenay-Malabry",
+        "code": "92019",
+        "codesPostaux": [
+            "92290"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 35825,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2603,
+                48.7697
+            ]
+        }
+    },
+    {
+        "nom": "Châtillon",
+        "code": "92020",
+        "codesPostaux": [
+            "92320"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 36705,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2887,
+                48.8031
+            ]
+        }
+    },
+    {
+        "nom": "Clamart",
+        "code": "92023",
+        "codesPostaux": [
+            "92140"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 58576,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2518,
+                48.7957
+            ]
+        }
+    },
+    {
+        "nom": "Clichy",
+        "code": "92024",
+        "codesPostaux": [
+            "92110"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 64410,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3041,
+                48.9041
+            ]
+        }
+    },
+    {
+        "nom": "Colombes",
+        "code": "92025",
+        "codesPostaux": [
+            "92700"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 91053,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2469,
+                48.9218
+            ]
+        }
+    },
+    {
+        "nom": "Courbevoie",
+        "code": "92026",
+        "codesPostaux": [
+            "92400"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 82902,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2574,
+                48.8976
+            ]
+        }
+    },
+    {
+        "nom": "La Garenne-Colombes",
+        "code": "92035",
+        "codesPostaux": [
+            "92250"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 30197,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2437,
+                48.9071
+            ]
+        }
+    },
+    {
+        "nom": "Gennevilliers",
+        "code": "92036",
+        "codesPostaux": [
+            "92230"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 50979,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.288,
+                48.9319
+            ]
+        }
+    },
+    {
+        "nom": "Issy-les-Moulineaux",
+        "code": "92040",
+        "codesPostaux": [
+            "92130"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 67669,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2628,
+                48.824
+            ]
+        }
+    },
+    {
+        "nom": "Levallois-Perret",
+        "code": "92044",
+        "codesPostaux": [
+            "92300"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 68092,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2874,
+                48.8946
+            ]
+        }
+    },
+    {
+        "nom": "Malakoff",
+        "code": "92046",
+        "codesPostaux": [
+            "92240"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 30557,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2943,
+                48.817
+            ]
+        }
+    },
+    {
+        "nom": "Meudon",
+        "code": "92048",
+        "codesPostaux": [
+            "92190",
+            "92360"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 46334,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2288,
+                48.8028
+            ]
+        }
+    },
+    {
+        "nom": "Montrouge",
+        "code": "92049",
+        "codesPostaux": [
+            "92120"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 46324,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3163,
+                48.8159
+            ]
+        }
+    },
+    {
+        "nom": "Nanterre",
+        "code": "92050",
+        "codesPostaux": [
+            "92000"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 97783,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2018,
+                48.8974
+            ]
+        }
+    },
+    {
+        "nom": "Neuilly-sur-Seine",
+        "code": "92051",
+        "codesPostaux": [
+            "92200"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 59538,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2651,
+                48.8862
+            ]
+        }
+    },
+    {
+        "nom": "Puteaux",
+        "code": "92062",
+        "codesPostaux": [
+            "92800"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 44002,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2384,
+                48.8824
+            ]
+        }
+    },
+    {
+        "nom": "Rueil-Malmaison",
+        "code": "92063",
+        "codesPostaux": [
+            "92500"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 82874,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.1806,
+                48.8717
+            ]
+        }
+    },
+    {
+        "nom": "Suresnes",
+        "code": "92073",
+        "codesPostaux": [
+            "92150"
+        ],
+        "codeDepartement": "92",
+        "codeRegion": "11",
+        "population": 48956,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2183,
+                48.871
+            ]
+        }
+    },
+    {
+        "nom": "Aubervilliers",
+        "code": "93001",
+        "codesPostaux": [
+            "93300"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 88365,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3886,
+                48.9128
+            ]
+        }
+    },
+    {
+        "nom": "Aulnay-sous-Bois",
+        "code": "93005",
+        "codesPostaux": [
+            "93600"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 87599,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4918,
+                48.9457
+            ]
+        }
+    },
+    {
+        "nom": "Bagnolet",
+        "code": "93006",
+        "codesPostaux": [
+            "93170"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 43086,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4252,
+                48.8671
+            ]
+        }
+    },
+    {
+        "nom": "Le Blanc-Mesnil",
+        "code": "93007",
+        "codesPostaux": [
+            "93150"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 62376,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4576,
+                48.9372
+            ]
+        }
+    },
+    {
+        "nom": "Bobigny",
+        "code": "93008",
+        "codesPostaux": [
+            "93000"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 56927,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4432,
+                48.9073
+            ]
+        }
+    },
+    {
+        "nom": "Bondy",
+        "code": "93010",
+        "codesPostaux": [
+            "93140"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 50595,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4846,
+                48.9036
+            ]
+        }
+    },
+    {
+        "nom": "La Courneuve",
+        "code": "93027",
+        "codesPostaux": [
+            "93120"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 47167,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3986,
+                48.9341
+            ]
+        }
+    },
+    {
+        "nom": "Drancy",
+        "code": "93029",
+        "codesPostaux": [
+            "93700"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 72390,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4446,
+                48.925
+            ]
+        }
+    },
+    {
+        "nom": "Épinay-sur-Seine",
+        "code": "93031",
+        "codesPostaux": [
+            "93800"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 52833,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3172,
+                48.9544
+            ]
+        }
+    },
+    {
+        "nom": "Gagny",
+        "code": "93032",
+        "codesPostaux": [
+            "93220"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 42313,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.545,
+                48.8826
+            ]
+        }
+    },
+    {
+        "nom": "Livry-Gargan",
+        "code": "93046",
+        "codesPostaux": [
+            "93190"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 47228,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5351,
+                48.9184
+            ]
+        }
+    },
+    {
+        "nom": "Montreuil",
+        "code": "93048",
+        "codesPostaux": [
+            "93100"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 111934,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4491,
+                48.8637
+            ]
+        }
+    },
+    {
+        "nom": "Neuilly-sur-Marne",
+        "code": "93050",
+        "codesPostaux": [
+            "93330"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 39800,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5419,
+                48.8645
+            ]
+        }
+    },
+    {
+        "nom": "Noisy-le-Grand",
+        "code": "93051",
+        "codesPostaux": [
+            "93160"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 72978,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.556,
+                48.8327
+            ]
+        }
+    },
+    {
+        "nom": "Noisy-le-Sec",
+        "code": "93053",
+        "codesPostaux": [
+            "93130"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 45510,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4578,
+                48.8917
+            ]
+        }
+    },
+    {
+        "nom": "Pantin",
+        "code": "93055",
+        "codesPostaux": [
+            "93500"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 61929,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4085,
+                48.9006
+            ]
+        }
+    },
+    {
+        "nom": "Romainville",
+        "code": "93063",
+        "codesPostaux": [
+            "93230"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 37152,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4391,
+                48.8849
+            ]
+        }
+    },
+    {
+        "nom": "Rosny-sous-Bois",
+        "code": "93064",
+        "codesPostaux": [
+            "93110"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 47180,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4872,
+                48.8744
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Denis",
+        "code": "93066",
+        "codesPostaux": [
+            "93200",
+            "93210",
+            "93380"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 149077,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3657,
+                48.9378
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Ouen-sur-Seine",
+        "code": "93070",
+        "codesPostaux": [
+            "93400"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 53615,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3329,
+                48.9118
+            ]
+        }
+    },
+    {
+        "nom": "Sevran",
+        "code": "93071",
+        "codesPostaux": [
+            "93270"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 52535,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5311,
+                48.9378
+            ]
+        }
+    },
+    {
+        "nom": "Stains",
+        "code": "93072",
+        "codesPostaux": [
+            "93240"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 41388,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3868,
+                48.9578
+            ]
+        }
+    },
+    {
+        "nom": "Tremblay-en-France",
+        "code": "93073",
+        "codesPostaux": [
+            "93290"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 38348,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5481,
+                48.9744
+            ]
+        }
+    },
+    {
+        "nom": "Villepinte",
+        "code": "93078",
+        "codesPostaux": [
+            "93420"
+        ],
+        "codeDepartement": "93",
+        "codeRegion": "11",
+        "population": 41470,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5323,
+                48.956
+            ]
+        }
+    },
+    {
+        "nom": "Alfortville",
+        "code": "94002",
+        "codesPostaux": [
+            "94140"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 45531,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4214,
+                48.7963
+            ]
+        }
+    },
+    {
+        "nom": "Cachan",
+        "code": "94016",
+        "codesPostaux": [
+            "94230"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 31103,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3318,
+                48.7914
+            ]
+        }
+    },
+    {
+        "nom": "Champigny-sur-Marne",
+        "code": "94017",
+        "codesPostaux": [
+            "94500"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 78072,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5206,
+                48.8173
+            ]
+        }
+    },
+    {
+        "nom": "Choisy-le-Roi",
+        "code": "94022",
+        "codesPostaux": [
+            "94600"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 45946,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4202,
+                48.7635
+            ]
+        }
+    },
+    {
+        "nom": "Créteil",
+        "code": "94028",
+        "codesPostaux": [
+            "94000"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 93397,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4523,
+                48.7845
+            ]
+        }
+    },
+    {
+        "nom": "Fontenay-sous-Bois",
+        "code": "94033",
+        "codesPostaux": [
+            "94120"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 53757,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4736,
+                48.8503
+            ]
+        }
+    },
+    {
+        "nom": "L'Haÿ-les-Roses",
+        "code": "94038",
+        "codesPostaux": [
+            "94240"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 31188,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3416,
+                48.7777
+            ]
+        }
+    },
+    {
+        "nom": "Ivry-sur-Seine",
+        "code": "94041",
+        "codesPostaux": [
+            "94200"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 65064,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3872,
+                48.8125
+            ]
+        }
+    },
+    {
+        "nom": "Maisons-Alfort",
+        "code": "94046",
+        "codesPostaux": [
+            "94700"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 56799,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.44,
+                48.8017
+            ]
+        }
+    },
+    {
+        "nom": "Nogent-sur-Marne",
+        "code": "94052",
+        "codesPostaux": [
+            "94130"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 32455,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4811,
+                48.837
+            ]
+        }
+    },
+    {
+        "nom": "Le Perreux-sur-Marne",
+        "code": "94058",
+        "codesPostaux": [
+            "94170"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 35260,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5045,
+                48.8433
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Maur-des-Fossés",
+        "code": "94068",
+        "codesPostaux": [
+            "94100",
+            "94210"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 76572,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4921,
+                48.7999
+            ]
+        }
+    },
+    {
+        "nom": "Thiais",
+        "code": "94073",
+        "codesPostaux": [
+            "94320"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 32918,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3869,
+                48.7605
+            ]
+        }
+    },
+    {
+        "nom": "Villejuif",
+        "code": "94076",
+        "codesPostaux": [
+            "94800"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 60183,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3603,
+                48.7934
+            ]
+        }
+    },
+    {
+        "nom": "Villeneuve-Saint-Georges",
+        "code": "94078",
+        "codesPostaux": [
+            "94190"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 36221,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4493,
+                48.7389
+            ]
+        }
+    },
+    {
+        "nom": "Villiers-sur-Marne",
+        "code": "94079",
+        "codesPostaux": [
+            "94350"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 33162,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.5482,
+                48.8278
+            ]
+        }
+    },
+    {
+        "nom": "Vincennes",
+        "code": "94080",
+        "codesPostaux": [
+            "94300"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 48193,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4383,
+                48.8471
+            ]
+        }
+    },
+    {
+        "nom": "Vitry-sur-Seine",
+        "code": "94081",
+        "codesPostaux": [
+            "94400"
+        ],
+        "codeDepartement": "94",
+        "codeRegion": "11",
+        "population": 93963,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3951,
+                48.7893
+            ]
+        }
+    },
+    {
+        "nom": "Argenteuil",
+        "code": "95018",
+        "codesPostaux": [
+            "95100"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 106130,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2478,
+                48.9501
+            ]
+        }
+    },
+    {
+        "nom": "Bezons",
+        "code": "95063",
+        "codesPostaux": [
+            "95870"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 36434,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2147,
+                48.925
+            ]
+        }
+    },
+    {
+        "nom": "Cergy",
+        "code": "95127",
+        "codesPostaux": [
+            "95000",
+            "95800"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 70906,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.0455,
+                49.0373
+            ]
+        }
+    },
+    {
+        "nom": "Franconville",
+        "code": "95252",
+        "codesPostaux": [
+            "95130"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 37754,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.2235,
+                48.9879
+            ]
+        }
+    },
+    {
+        "nom": "Garges-lès-Gonesse",
+        "code": "95268",
+        "codesPostaux": [
+            "95140"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 41791,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4035,
+                48.9696
+            ]
+        }
+    },
+    {
+        "nom": "Goussainville",
+        "code": "95280",
+        "codesPostaux": [
+            "95190"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 31301,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4683,
+                49.0266
+            ]
+        }
+    },
+    {
+        "nom": "Herblay-sur-Seine",
+        "code": "95306",
+        "codesPostaux": [
+            "95220"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 31779,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.1556,
+                49.0052
+            ]
+        }
+    },
+    {
+        "nom": "Pontoise",
+        "code": "95500",
+        "codesPostaux": [
+            "95000",
+            "95300"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 31970,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.0996,
+                49.0488
+            ]
+        }
+    },
+    {
+        "nom": "Sarcelles",
+        "code": "95585",
+        "codesPostaux": [
+            "95200"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 59173,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.3858,
+                48.9925
+            ]
+        }
+    },
+    {
+        "nom": "Villiers-le-Bel",
+        "code": "95680",
+        "codesPostaux": [
+            "95400"
+        ],
+        "codeDepartement": "95",
+        "codeRegion": "11",
+        "population": 30053,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4036,
+                49.008
+            ]
+        }
+    },
+    {
+        "nom": "Les Abymes",
+        "code": "97101",
+        "codesPostaux": [
+            "97139",
+            "97142"
+        ],
+        "codeDepartement": "971",
+        "codeRegion": "01",
+        "population": 51055,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -61.4967,
+                16.2678
+            ]
+        }
+    },
+    {
+        "nom": "Baie-Mahault",
+        "code": "97103",
+        "codesPostaux": [
+            "97122"
+        ],
+        "codeDepartement": "971",
+        "codeRegion": "01",
+        "population": 30924,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -61.5951,
+                16.2498
+            ]
+        }
+    },
+    {
+        "nom": "Fort-de-France",
+        "code": "97209",
+        "codesPostaux": [
+            "97200",
+            "97234"
+        ],
+        "codeDepartement": "972",
+        "codeRegion": "02",
+        "population": 75506,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -61.0686,
+                14.6492
+            ]
+        }
+    },
+    {
+        "nom": "Le Lamentin",
+        "code": "97213",
+        "codesPostaux": [
+            "97232"
+        ],
+        "codeDepartement": "972",
+        "codeRegion": "02",
+        "population": 39400,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -60.9923,
+                14.6231
+            ]
+        }
+    },
+    {
+        "nom": "Cayenne",
+        "code": "97302",
+        "codesPostaux": [
+            "97300"
+        ],
+        "codeDepartement": "973",
+        "codeRegion": "03",
+        "population": 62675,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -52.3319,
+                4.9464
+            ]
+        }
+    },
+    {
+        "nom": "Matoury",
+        "code": "97307",
+        "codesPostaux": [
+            "97351"
+        ],
+        "codeDepartement": "973",
+        "codeRegion": "03",
+        "population": 36512,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -52.3498,
+                4.8281
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Laurent-du-Maroni",
+        "code": "97311",
+        "codesPostaux": [
+            "97320"
+        ],
+        "codeDepartement": "973",
+        "codeRegion": "03",
+        "population": 54429,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -54.0105,
+                4.9478
+            ]
+        }
+    },
+    {
+        "nom": "Le Port",
+        "code": "97407",
+        "codesPostaux": [
+            "97420"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 33969,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.3038,
+                -20.9459
+            ]
+        }
+    },
+    {
+        "nom": "La Possession",
+        "code": "97408",
+        "codesPostaux": [
+            "97419"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 36568,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.3918,
+                -20.9965
+            ]
+        }
+    },
+    {
+        "nom": "Saint-André",
+        "code": "97409",
+        "codesPostaux": [
+            "97440"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 58885,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.6374,
+                -20.9568
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Benoît",
+        "code": "97410",
+        "codesPostaux": [
+            "97437",
+            "97470"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 38604,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.6313,
+                -21.0887
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Denis",
+        "code": "97411",
+        "codesPostaux": [
+            "97400",
+            "97417",
+            "97490"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 155634,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.4444,
+                -20.9434
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Joseph",
+        "code": "97412",
+        "codesPostaux": [
+            "97480"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 39207,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.644,
+                -21.2921
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Leu",
+        "code": "97413",
+        "codesPostaux": [
+            "97416",
+            "97424",
+            "97436"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 36163,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.3432,
+                -21.1816
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Louis",
+        "code": "97414",
+        "codesPostaux": [
+            "97421",
+            "97450"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 54941,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.4224,
+                -21.2254
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Paul",
+        "code": "97415",
+        "codesPostaux": [
+            "97411",
+            "97422",
+            "97423",
+            "97434",
+            "97435",
+            "97460"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 108088,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.3402,
+                -21.0366
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Pierre",
+        "code": "97416",
+        "codesPostaux": [
+            "97410",
+            "97432"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 85038,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.5044,
+                -21.309
+            ]
+        }
+    },
+    {
+        "nom": "Sainte-Marie",
+        "code": "97418",
+        "codesPostaux": [
+            "97438"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 37093,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.5234,
+                -20.9463
+            ]
+        }
+    },
+    {
+        "nom": "Le Tampon",
+        "code": "97422",
+        "codesPostaux": [
+            "97418",
+            "97430"
+        ],
+        "codeDepartement": "974",
+        "codeRegion": "04",
+        "population": 82579,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                55.5701,
+                -21.225
+            ]
+        }
+    },
+    {
+        "nom": "Koungou",
+        "code": "97610",
+        "codesPostaux": [
+            "97600"
+        ],
+        "codeDepartement": "976",
+        "codeRegion": "06",
+        "population": 32156,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                45.1912,
+                -12.7417
+            ]
+        }
+    },
+    {
+        "nom": "Mamoudzou",
+        "code": "97611",
+        "codesPostaux": [
+            "97600",
+            "97605"
+        ],
+        "codeDepartement": "976",
+        "codeRegion": "06",
+        "population": 71437,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                45.1964,
+                -12.7875
+            ]
+        }
+    },
+    {
+        "nom": "Saint-Martin",
+        "code": "97801",
+        "codesPostaux": [
+            "97150"
+        ],
+        "codeDepartement": "978",
+        "codeRegion": "978",
+        "population": 31160,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -63.062,
+                18.0855
+            ]
+        }
+    },
+    {
+        "nom": "Dumbéa",
+        "code": "98805",
+        "codesPostaux": [
+            "98835"
+        ],
+        "codeDepartement": "988",
+        "codeRegion": "988",
+        "population": 34926,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                166.497,
+                -22.1337
+            ]
+        }
+    },
+    {
+        "nom": "Nouméa",
+        "code": "98818",
+        "codesPostaux": [
+            "98800"
+        ],
+        "codeDepartement": "988",
+        "codeRegion": "988",
+        "population": 85976,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                166.4076,
+                -22.3363
+            ]
+        }
+    },
+    {
+        "nom": "Barcelonnette",
+        "code": "04019",
+        "codesPostaux": [
+            "04400"
+        ],
+        "codeDepartement": "04",
+        "codeRegion": "93",
+        "population": 2518,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.6463,
+                44.3751
+            ]
+        }
+    },
+    {
+        "nom": "Briançon",
+        "code": "05023",
+        "codesPostaux": [
+            "05100"
+        ],
+        "codeDepartement": "05",
+        "codeRegion": "93",
+        "population": 11411,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                6.6536,
+                44.8995
+            ]
+        }
+    },
+    {
+        "nom": "Honfleur",
+        "code": "14333",
+        "codesPostaux": [
+            "14600"
+        ],
+        "codeDepartement": "14",
+        "codeRegion": "28",
+        "population": 6640,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.2297,
+                49.4086
+            ]
+        }
+    },
+    {
+        "nom": "Aurillac",
+        "code": "15014",
+        "codesPostaux": [
+            "15000"
+        ],
+        "codeDepartement": "15",
+        "codeRegion": "84",
+        "population": 26214,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                2.4416,
+                44.9281
+            ]
+        }
+    },
+    {
+        "nom": "L'Île-Rousse",
+        "code": "2B134",
+        "codesPostaux": [
+            "20220"
+        ],
+        "codeDepartement": "2B",
+        "codeRegion": "94",
+        "population": 3231,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                8.9364,
+                42.6344
+            ]
+        }
+    },
+    {
+        "nom": "Pontorson",
+        "code": "50410",
+        "codesPostaux": [
+            "50170"
+        ],
+        "codeDepartement": "50",
+        "codeRegion": "28",
+        "population": 4280,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                -1.462,
+                48.5612
+            ]
+        }
+    },
+    {
+        "nom": "Longny les Villages",
+        "code": "61230",
+        "codesPostaux": [
+            "61290"
+        ],
+        "codeDepartement": "61",
+        "codeRegion": "28",
+        "population": 2811,
+        "centre": {
+            "type": "Point",
+            "coordinates": [
+                0.8033,
+                48.5419
+            ]
+        }
+    }
+]

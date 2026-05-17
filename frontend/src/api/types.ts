@@ -1,0 +1,76 @@
+export type ProximityTier = 'green' | 'yellow' | 'orange' | 'red';
+
+export type BearingLabel = 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW';
+
+export type PuzzleToday = {
+  puzzleNumber: number;
+  puzzleDate: string;
+  regionName: string;
+  departmentName: string;
+  departmentCode: string;
+  theme: string | null;
+  maxAttempts: number;
+};
+
+export type Hint = {
+  key: 'population' | 'climate' | 'specialite' | 'patrimoine' | 'first_letter';
+  label: string;
+  value: string;
+};
+
+export type CommuneSearchResult = {
+  id: string;
+  codeInsee: string;
+  name: string;
+  departmentName: string;
+  departmentCode: string;
+};
+
+export type GuessPathStep = {
+  codeInsee: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+  distanceKm: number;
+  bearing: BearingLabel;
+  bearingDegrees: number;
+  proximityTier: ProximityTier;
+  isCorrect: boolean;
+};
+
+export type PuzzleSolution = {
+  codeInsee: string;
+  name: string;
+  departmentName: string;
+  departmentCode: string;
+  latitude: number;
+  longitude: number;
+  population: number;
+  patrimoine: string[];
+  wikipediaUrl: string | null;
+};
+
+export type GuessFeedback = {
+  isCorrect: boolean;
+  gameOver: boolean;
+  distanceKm?: number;
+  bearing?: BearingLabel;
+  bearingDegrees?: number;
+  proximityTier?: ProximityTier;
+  nextHint?: Hint;
+  attemptsRemaining?: number;
+  solution?: PuzzleSolution;
+  guessPath?: GuessPathStep[];
+  shareGrid?: string;
+};
+
+export type ArchiveEntry = {
+  puzzleNumber: number;
+  puzzleDate: string;
+  commune: {
+    codeInsee: string;
+    name: string;
+    departmentName: string;
+    departmentCode: string;
+  };
+};
