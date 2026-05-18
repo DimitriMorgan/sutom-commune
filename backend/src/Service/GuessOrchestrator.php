@@ -47,11 +47,7 @@ final class GuessOrchestrator
         }
         $expectedAttempt = \count($history) + 1;
         if ($attemptIndex !== $expectedAttempt) {
-            throw new InvalidGuessException(sprintf(
-                'attemptIndex incohérent : attendu %d, reçu %d.',
-                $expectedAttempt,
-                $attemptIndex,
-            ));
+            throw new InvalidGuessException(sprintf('attemptIndex incohérent : attendu %d, reçu %d.', $expectedAttempt, $attemptIndex));
         }
 
         $guess = $this->communeRepo->findOneByCodeInsee($guessCodeInsee);

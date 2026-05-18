@@ -58,7 +58,7 @@ final class DailyPuzzleRepository extends ServiceEntityRepository
      */
     public function findArchive(\DateTimeImmutable $from, \DateTimeImmutable $to): array
     {
-        /** @var list<DailyPuzzle> */
+        /* @var list<DailyPuzzle> */
         return $this->createQueryBuilder('p')
             ->where('p.puzzleDate BETWEEN :from AND :to')
             ->orderBy('p.puzzleDate', 'DESC')

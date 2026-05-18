@@ -1,25 +1,46 @@
 # Sutom-Commune — reste à faire & pistes d'amélioration
 
-État au 2026-05-18, 8 commits, app jouable end-to-end (http://localhost:8081, http://localhost:5178).
-**Tests : 97 PHPUnit / 12 Vitest / tsc strict, tous verts.**
+État au 2026-05-19. App jouable end-to-end (http://localhost:8081, http://localhost:5178).
+**Tests : 121 PHPUnit / 22 Vitest / tsc strict / phpstan L8 / cs-fix / eslint — tous verts, 0 deprecation.**
 
 ---
 
-## 🎯 Priorité — finir la DoD du brief
+## ✅ Fait cette session
+
+### Anti-spoil archive + UX
+- `PuzzleArchiveController` : liste limitée à 3 par défaut (paramètre `?limit=` borné à 60), n'expose plus `name`/`codeInsee` — uniquement région et département. Rejouer une archive ne donne aucun indice supplémentaire vs ce que voit un nouveau joueur.
+- `ArchivePage` : nouvelle UI « Commune mystère + Région · Département (code) », SEO/JSON-LD ajustés (pas de noms de communes dans les meta-descriptions).
+- `HintsPanel` : la région s'affiche d'entrée, le département est révélé après la 1ʳᵉ tentative (placeholder « — révélé au 1ᵉʳ essai — »).
+- `GameBoard` : grille 2 colonnes à partir de `lg:` — énigme à gauche, carte à droite et **sticky** ; mobile garde l'ordre actuel (carte en bas).
+- `CommuneMap` : taille augmentée (`h-72 sm:h-80 lg:h-[640px]`), accepte un `className` override.
+
+### Qualité de code
+- `php-cs-fixer` : 0 diff (16 fichiers normalisés au passage).
+- `phpstan` level 8 : 0 erreur (7 résolues : `RegionsAndDepartments` `@var` redondant, `PuzzleTodayController::$clock` mort, `SelectTodayPuzzleCommand` `?->X ?? Y`, `ImportCommunesCommand` `@var mixed`, `CommuneSearchControllerTest` return type, `DailyPuzzleSelectorTest` assertion tautologique).
+- `eslint` : 0 warning (`PuzzleSolution` import mort retiré).
+- **19 deprecations PHPUnit → 0** : `DistanceCalculator::bearingToCompass` utilise désormais `fmod()` au lieu du `%` sur float.
+
+### Couverture tests
+- **PHPUnit** : +24 tests fonctionnels (121 au total, 543 assertions).
+  - `AnalyticsControllerTest` : whitelist de types, filtrage des events invalides, anonymisation IP via SessionHasher.
+  - `OgImageControllerTest` : nom révélé pour les archives, masqué pour le jour, cache 30j vs 1h, 404 pour énigme inconnue.
+  - `SitemapControllerTest` : XML bien formé, pages statiques + entrées d'archive, cache 1h.
+  - `StatsTodayControllerTest` : 404 sans énigme, sessions distinctes comptées, pas de fuite cible, cache 60s.
+  - `PuzzleArchiveControllerTest` : limit=3 par défaut, anti-spoil (pas de name/codeInsee), tri DESC, validation dates, anti-cheat detail.
+- **Vitest** : +8 tests (22 au total).
+  - `GuessInput.test.tsx` : debounce 200ms, ignore les requêtes < 2 chars, abort de la requête précédente quand on continue à taper.
+  - `CommuneMap.test.tsx` : guess pins visibles pendant la partie, target pin masqué tant que `solution=null`, dévoilé en gameOver.
+  - `TodayPage.test.tsx` : flow complet — load → région visible / dept masqué → essai raté → dept dévoilé + indice → essai gagnant → modal + pin cible. `MapInner` stubbé pour éviter MapLibre/WebGL.
+
+---
+
+## 🎯 Reste à faire — DoD
 
 | # | Item | Détail / commande |
 |---|---|---|
-| 1 | **PHPStan level 8 sans erreur** | `make lint` jamais exécuté. À lancer : `docker compose exec backend php -d memory_limit=512M vendor/bin/phpstan analyse`. Corriger toutes les remontées (probablement quelques `mixed` à typer dans Controllers + DataFixtures). |
-| 2 | **PHP CS Fixer sans diff** | `make cs-fix` jamais exécuté. À faire avant chaque commit (ou en pre-commit hook). |
-| 3 | **ESLint sans warning** | `make lint` côté front non testé. Lancer `docker compose exec frontend sh -lc 'npx eslint .'`. |
-| 4 | **Lighthouse mobile ≥ 90** | Jamais audité. Test : `npx lighthouse http://localhost:8081 --view --form-factor=mobile`. Cibles probables si manque : LCP (carte lazy déjà OK), CLS (vérifier images), TBT (bundle size — code splitting fait), a11y (skip-link fait, vérifier contraste tier-yellow). |
-| 5 | **19 deprecations PHPUnit** | Suite à PHP 8.4 / PHPUnit 12. Faire tourner `phpunit --display-deprecations` et corriger. Probablement des `Doctrine\DBAL\*` ou `Symfony\Bridge\*` à mettre à jour. |
-| 6 | **GuessInput tests Vitest** | Brief demande `GuessInput.test.tsx` : autocomplete + debounce 200ms + abort previous request. Pas écrit. Mocker `api.searchCommunes` avec `vi.useFakeTimers()`. |
-| 7 | **CommuneMap tests Vitest** | Brief demande : "pin target masqué tant que gameOver false". Lazy-load complique le test → mock l'import dynamique ou test le wrapper directement. |
-| 8 | **TodayPage flow complet** | Brief demande un test fonctionnel React du flow complet. À écrire avec MSW pour mocker l'API. |
-| 9 | **Tests pour endpoints non testés** | AnalyticsController, OgImageController, SitemapController, PuzzleArchiveController, StatsTodayController — aucun test fonctionnel. Couverture cible brief = 80% sur Service/ et Controller/. |
-| 10 | **Playwright runnable** | `sudo apt install libnss3 libnspr4 libatk1.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2` puis `cd e2e && npx playwright install chromium && npm test`. |
-| 11 | **Enrichissement étendu** | 30/295 communes enrichies. Brief vise 500. Compléter `backend/src/DataFixtures/data/communes-enrichment.json` — 2-3h de travail manuel à partir de Wikipedia. |
+| 1 | **Lighthouse mobile ≥ 90** | Jamais audité. `lighthouse` pas installé : `npx lighthouse http://localhost:8081 --view --form-factor=mobile` depuis l'hôte. Cibles probables si manque : LCP (carte lazy déjà OK), CLS (vérifier images), TBT (code splitting fait), a11y (skip-link OK, vérifier contraste tier-yellow). |
+| 2 | **Playwright runnable** | `sudo apt install libnss3 libnspr4 libatk1.0-0 libcups2 libdrm2 libxkbcommon0 libxcomposite1 libxdamage1 libxfixes3 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2` puis `cd e2e && npx playwright install chromium && npm test`. |
+| 3 | **Enrichissement étendu** | 30/295 communes enrichies. Brief vise 500. Compléter `backend/src/DataFixtures/data/communes-enrichment.json` — 2-3h de travail manuel à partir de Wikipedia. |
 
 ---
 
@@ -42,7 +63,7 @@
 ## 🏗️ Qualité code / production-readiness
 
 ### Backend
-- [ ] **ext-intl** dans `docker/backend/Dockerfile` (dev). Actuellement intl seulement en prod. J'ai contourné dans `OgImageController::formatDateFr` (mapping manuel), mais si on ajoute `Symfony\Component\Intl\Locales` ou similaire ça cassera.
+- [ ] **ext-intl** dans `docker/backend/Dockerfile` (dev). Actuellement intl seulement en prod. Contourné dans `OgImageController::formatDateFr` (mapping manuel), mais si on ajoute `Symfony\Component\Intl\Locales` ou similaire ça cassera.
 - [ ] **Rate limiting** sur `/api/puzzle/guess` (anti-spam) et `/api/communes/search` (anti-DDoS). Symfony Rate Limiter bundle.
 - [ ] **Validation côté Symfony Validator** sur les bodies JSON (actuellement validation manuelle dans les controllers).
 - [ ] **Migration purge analytics > 90 jours** (RGPD) : commande cron `app:analytics:purge`.
@@ -68,7 +89,7 @@
 
 ### Doc
 - [ ] **README** à mettre à jour avec les endpoints récents (`/api/og/...`, `/sitemap.xml`, `/api/analytics/events`) + section déploiement prod complète.
-- [ ] **CLAUDE.md** ou **AGENTS.md** : récap des conventions du projet pour les futures sessions Claude (palette atlas vintage, anti-cheat ne JAMAIS le casser, sessionHash règle, etc.).
+- [ ] **CLAUDE.md** ou **AGENTS.md** : récap des conventions du projet pour les futures sessions Claude (palette atlas vintage, anti-cheat ne JAMAIS le casser, sessionHash règle, archive anti-spoil règle, etc.).
 
 ---
 
@@ -79,7 +100,7 @@
 | P1 | **Champ `theme` exploité** | DailyPuzzle a `theme` nullable mais jamais set. Brief mentionne "Bord de mer", "Stations thermales". Ajouter un type `WeeklyTheme` + un sélecteur thématique au selector. |
 | P2 | **Dimanche = "spécial chef-lieu"** | Brief le demande, actuellement même règle que mer/jeu. Ajouter dans `DailyPuzzleSelector::candidatesFor` une condition `is_chef_lieu` (à dériver des codes département où `code_insee === department_code . '001'` ou via une whitelist). |
 | P3 | **Mode défi entre amis** (URL partagée) | Brief refuse "multijoueur", mais une URL `?puzzle=20260518` pour rejouer une énigme spécifique entre amis sans casser le streak du jour = compromis. |
-| P4 | **Stats du jour visibles** | `/api/stats/today` existe mais aucun composant frontend ne l'affiche. Ajouter dans ResultModal "X joueurs ont déjà résolu cette énigme (moyenne Y essais)". |
+| P4 | **Stats du jour visibles** | `/api/stats/today` existe et est désormais testé, mais aucun composant frontend ne l'affiche. Ajouter dans ResultModal "X joueurs ont déjà résolu cette énigme (moyenne Y essais)". |
 | P5 | **Mode dark toggle explicite** | Actuellement uniquement `prefers-color-scheme`. Ajouter un toggle pour override + sauver en localStorage. |
 | P6 | **EN locale** | i18n.ts prêt en structure mais FR only. Ajouter `en-US` pour ouvrir à diaspora + traduction des communes (juste les UI strings ; les noms communes restent FR). |
 | P7 | **Notification quand la nouvelle énigme tombe** | Brief refuse "notifications push" — alternative : badge `<title>` qui flash "Nouvelle énigme !" quand minuit Paris passe. |
@@ -96,21 +117,24 @@
    curl -s http://localhost:8081/api/health
    ```
 
-2. **Lancer lint + qualité** (à fixer en premier) :
+2. **Quality gate complet (devrait être tout vert)** :
    ```bash
-   make lint   # phpstan + eslint
-   make cs-fix # php-cs-fixer
-   ```
-   → travailler les erreurs jusqu'à zéro.
+   docker compose --env-file .env exec backend sh -lc \
+     'vendor/bin/phpunit && \
+      php -d memory_limit=512M vendor/bin/phpstan analyse --no-progress && \
+      php -d memory_limit=512M vendor/bin/php-cs-fixer fix --dry-run'
 
-3. **Lancer Lighthouse** (priorité brief) :
+   docker compose --env-file .env exec frontend sh -lc \
+     'cd /app && npx tsc --noEmit && npx eslint src/ && npx vitest run'
+   ```
+
+3. **Lancer Lighthouse** (prochaine priorité DoD) :
    ```bash
    npx lighthouse http://localhost:8081 --form-factor=mobile --view
    ```
-   → traiter les items qui font tomber sous 90.
 
 4. **Choisir un axe** :
-   - **DoD finition** : items 1-10 ci-dessus
+   - **DoD finition** : Lighthouse, Playwright (sudo apt), enrichissement communes
    - **SEO max** : S1 (pre-rendering) ou S3 (pages /commune/{slug})
    - **Prod ready** : tile cache OSM + scripts deploy + CI
 
@@ -120,51 +144,4 @@
    - API docs : http://localhost:8081/api/docs
    - Sitemap : http://localhost:8081/sitemap.xml
    - OG image : http://localhost:8081/api/og/puzzle/2026-05-18.svg
-
-6. **Git** : 8 commits propres, dernier = `2a73949 step SEO`. Travailler par branche (`git checkout -b feat/lighthouse`) puis merge.
-
----
-
-## 🗂️ Récap fichiers ajoutés cette session
-
-```
-backend/src/
-├── ApiResource/HealthResource.php
-├── Command/{ImportCommunes,SelectTodayPuzzle}Command.php
-├── Controller/{CommuneSearch,PuzzleToday,PuzzleGuess,PuzzleArchive,StatsToday,Analytics,OgImage,Sitemap}Controller.php
-├── DataFixtures/{Commune,DailyPuzzle}Fixtures.php + data/{communes-dev-sample,communes-enrichment}.json
-├── Dto/{Health,CommuneSearchResult,PuzzleToday,PuzzleGuess,GuessPathStep,PuzzleSolution}Output.php
-├── Entity/{Commune,DailyPuzzle,GuessEvent,AnalyticsEvent}.php
-├── Enum/{Climate,Difficulty}.php
-├── Repository/* (4 repos)
-├── Service/{Clock,SessionHasher,NameNormalizer,RegionsAndDepartments,
-│            CommuneImporter,DistanceCalculator,ProximityTierResolver,HintProvider,
-│            ShareGridGenerator,DailyPuzzleSelector,GuessOrchestrator,InvalidGuessException,ImportSummary}.php
-├── State/HealthProvider.php
-└── ValueObject/{Coordinates,DistanceAndBearing}.php
-
-backend/migrations/Version2026051{7210000,8000000,8100000}.php
-
-backend/tests/
-├── Controller/{CommuneSearch,PuzzleAntiCheat,PuzzleGuess}ControllerTest.php
-├── Enum/DifficultyTest.php
-├── Service/{NameNormalizer,CommuneImporter,DistanceCalculator,ProximityTier,HintProvider,
-│           ShareGrid,DailyPuzzleSelector}Test.php
-└── data/communes-sample-10.json
-
-frontend/src/
-├── App.tsx (router lazy)
-├── analytics.ts (batch + sendBeacon)
-├── i18n.ts, seo.ts (étendu)
-├── api/{client,types}.ts
-├── components/{AppLayout,AppHeader,AppFooter,StreakBadge,HowToPlayModal,
-│              GuessInput,GuessRow,HintsPanel,CommuneMap,CommuneMapInner,
-│              GameBoard,ResultModal,ShareButton}.tsx
-├── pages/{Today,Archive,ArchiveDetail,HowToPlay,About,Legal}Page.tsx
-├── storage/state.ts (+ tests)
-└── test/setup.ts
-
-frontend/public/{favicon.svg, og-default.svg, manifest.webmanifest, robots.txt}
-
-e2e/{playwright.config.ts, tests/golden-path.spec.ts}
-```
+   - Archive (3 dernières, anti-spoil) : http://localhost:8081/api/puzzle/archive

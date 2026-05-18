@@ -134,7 +134,19 @@ final class CommuneSearchControllerTest extends WebTestCase
         self::assertArrayHasKey('results', $decoded);
         self::assertIsArray($decoded['results']);
 
-        return $decoded;
+        // Reconstruction explicite pour satisfaire le type de retour : on garantit
+        // list<array<string, string>> en typant chaque clé/valeur des résultats.
+        $results = [];
+        foreach (array_values($decoded['results']) as $row) {
+            self::assertIsArray($row);
+            $typed = [];
+            foreach ($row as $key => $value) {
+                $typed[(string) $key] = (string) $value;
+            }
+            $results[] = $typed;
+        }
+
+        return ['results' => $results];
     }
 
     /**
@@ -144,6 +156,6 @@ final class CommuneSearchControllerTest extends WebTestCase
     {
         $payload = $this->search($q);
 
-        return array_values(array_map(static fn (array $r): string => (string) $r['name'], $payload['results']));
+        return array_values(array_map(static fn (array $r): string => $r['name'], $payload['results']));
     }
 }

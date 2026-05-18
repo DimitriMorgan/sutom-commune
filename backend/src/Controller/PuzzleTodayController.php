@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Dto\PuzzleTodayOutput;
-use App\Service\Clock;
 use App\Service\DailyPuzzleSelector;
 use App\Service\GuessOrchestrator;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -15,7 +14,6 @@ final class PuzzleTodayController
 {
     public function __construct(
         private readonly DailyPuzzleSelector $selector,
-        private readonly Clock $clock,
     ) {
     }
 

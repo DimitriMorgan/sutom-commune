@@ -22,10 +22,18 @@ type Props = {
   regionName: string;
   departmentName: string;
   departmentCode: string;
+  /** Le département n'est dévoilé qu'après la 1ʳᵉ tentative pour éviter un spoil trop précoce. */
+  departmentRevealed: boolean;
   revealedHints: Hint[];
 };
 
-export function HintsPanel({ regionName, departmentName, departmentCode, revealedHints }: Props) {
+export function HintsPanel({
+  regionName,
+  departmentName,
+  departmentCode,
+  departmentRevealed,
+  revealedHints,
+}: Props) {
   const revealedByKey = new Map(revealedHints.map((h) => [h.key, h]));
 
   return (
@@ -35,10 +43,20 @@ export function HintsPanel({ regionName, departmentName, departmentCode, reveale
         <span className="font-medium text-atlas-navy">{regionName}</span>
       </div>
       <div className="flex justify-between items-baseline">
-        <span className="text-xs uppercase tracking-wider text-atlas-ink/60">Département</span>
-        <span className="font-medium text-atlas-navy">
-          {departmentName} ({departmentCode})
+        <span
+          className={`text-xs uppercase tracking-wider ${
+            departmentRevealed ? 'text-atlas-ink/60' : 'text-atlas-ink/30'
+          }`}
+        >
+          Département
         </span>
+        {departmentRevealed ? (
+          <span className="font-medium text-atlas-navy animate-slide-in">
+            {departmentName} ({departmentCode})
+          </span>
+        ) : (
+          <span className="text-right text-atlas-ink/25 italic">— révélé au 1ᵉʳ essai —</span>
+        )}
       </div>
       <hr className="border-atlas-ocre/20 my-2" />
       <ul className="space-y-1.5">

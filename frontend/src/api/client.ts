@@ -52,7 +52,7 @@ export const api = {
     return post<GuessFeedback>('/puzzle/guess', input);
   },
 
-  getArchive(from: string, to: string): Promise<{ entries: ArchiveEntry[] }> {
-    return get<{ entries: ArchiveEntry[] }>(`/puzzle/archive?from=${from}&to=${to}`);
+  getArchive(limit = 3): Promise<{ entries: ArchiveEntry[] }> {
+    return get<{ entries: ArchiveEntry[] }>(`/puzzle/archive?limit=${limit}`);
   },
 };

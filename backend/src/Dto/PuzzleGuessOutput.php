@@ -8,7 +8,7 @@ namespace App\Dto;
  * Réponse polymorphique de POST /api/puzzle/guess.
  * Champs présents/absents selon `gameOver` :
  *  - false : isCorrect=false, distanceKm/bearing/proximityTier/nextHint/attemptsRemaining
- *  - true  : isCorrect=true|false, solution, guessPath, shareGrid
+ *  - true  : isCorrect=true|false, solution, guessPath, shareGrid.
  */
 final readonly class PuzzleGuessOutput
 {

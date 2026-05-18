@@ -11,8 +11,8 @@ ENV APP_ENV=prod \
     APP_SECRET=build-time-secret \
     DATABASE_URL="postgresql://sutom_commune:sutom_commune@db:5432/sutom_commune?serverVersion=17&charset=utf8" \
     CORS_ALLOW_ORIGIN="^https://(www\\.)?sutom-commune\\.fr$" \
-    FRONTEND_URL="https://www.sutom-commune.fr" \
-    DEFAULT_URI="https://www.sutom-commune.fr"
+    FRONTEND_URL="https://www.sutom-commune.com" \
+    DEFAULT_URI="https://www.sutom-commune.com"
 
 WORKDIR /app
 

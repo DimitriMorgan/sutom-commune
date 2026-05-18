@@ -42,13 +42,13 @@ final class CommuneRepository extends ServiceEntityRepository
         $conn->executeStatement('SET LOCAL pg_trgm.similarity_threshold = 0.25');
 
         $sql = <<<'SQL'
-            SELECT id
-              FROM commune
-             WHERE name_normalized % :q
-          ORDER BY similarity(name_normalized, :q) DESC,
-                   population DESC
-             LIMIT :lim
-        SQL;
+                SELECT id
+                  FROM commune
+                 WHERE name_normalized % :q
+              ORDER BY similarity(name_normalized, :q) DESC,
+                       population DESC
+                 LIMIT :lim
+            SQL;
 
         $rows = $conn->executeQuery($sql, ['q' => $normalizedQuery, 'lim' => $limit])->fetchAllAssociative();
         if ([] === $rows) {

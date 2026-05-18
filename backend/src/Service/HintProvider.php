@@ -13,7 +13,7 @@ use App\Entity\Commune;
  *  - après essai 2 : climat (+ altitude si > 200 m)
  *  - après essai 3 : spécialité économique
  *  - après essai 4 : patrimoine (1-2 éléments)
- *  - après essai 5 : première lettre
+ *  - après essai 5 : première lettre.
  *
  * L'indice 0 (région + département) est inclus dans `/api/puzzle/today` à l'ouverture.
  */

@@ -16,7 +16,7 @@ export function AboutPage() {
   }, []);
 
   return (
-    <article className="prose-atlas space-y-4">
+    <article className="prose-atlas space-y-4 max-w-3xl mx-auto">
       <h1 className="font-serif text-4xl text-atlas-navy">À propos de Sutom-Commune</h1>
       <p>
         <strong>Sutom-Commune</strong> est un jeu quotidien gratuit pour explorer la géographie

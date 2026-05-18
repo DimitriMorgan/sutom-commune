@@ -15,7 +15,7 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 #[AsCommand(
     name: 'app:communes:import',
-    description: "Import / re-sync des communes françaises depuis geo.api.gouv.fr (idempotent, UPSERT par codeInsee)."
+    description: 'Import / re-sync des communes françaises depuis geo.api.gouv.fr (idempotent, UPSERT par codeInsee).'
 )]
 final class ImportCommunesCommand extends Command
 {
@@ -94,11 +94,7 @@ final class ImportCommunesCommand extends Command
             return null;
         }
 
-        /** @var mixed $payload */
         $payload = $response->toArray(false);
-        if (!\is_array($payload)) {
-            return null;
-        }
 
         return array_values(array_filter($payload, 'is_array'));
     }

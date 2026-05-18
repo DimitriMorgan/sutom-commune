@@ -35,6 +35,8 @@ final class SelectTodayPuzzleCommand extends Command
             return Command::FAILURE;
         }
 
+        $difficulty = $puzzle->getCommune()->getDifficulty();
+
         $io->success(sprintf(
             'Énigme #%d du %s : %s (%s, population %d, %s)',
             $puzzle->getPuzzleNumber(),
@@ -42,7 +44,7 @@ final class SelectTodayPuzzleCommand extends Command
             $puzzle->getCommune()->getName(),
             $puzzle->getCommune()->getDepartmentName(),
             $puzzle->getCommune()->getPopulation(),
-            $puzzle->getCommune()->getDifficulty()?->value ?? 'n/a',
+            null === $difficulty ? 'n/a' : $difficulty->value,
         ));
 
         return Command::SUCCESS;

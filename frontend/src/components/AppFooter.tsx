@@ -11,7 +11,7 @@ export function AppFooter() {
           <Link to="/comment-jouer" className="hover:text-atlas-navy">Comment jouer</Link>
           <Link to="/a-propos" className="hover:text-atlas-navy">À propos</Link>
           <Link to="/mentions-legales" className="hover:text-atlas-navy">Mentions légales</Link>
-          <a href="mailto:contact@sutom-commune.fr" className="hover:text-atlas-navy">Contact</a>
+          <a href="mailto:contact@sutom-commune.com" className="hover:text-atlas-navy">Contact</a>
         </nav>
       </div>
     </footer>

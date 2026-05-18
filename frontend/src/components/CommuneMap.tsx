@@ -9,11 +9,20 @@ import type { GuessPathStep, PuzzleSolution } from '../api/types';
 type Props = {
   guessPath: GuessPathStep[];
   solution: PuzzleSolution | null;
+  /** Override les dimensions du conteneur. Par défaut : haute sur desktop, modérée sur mobile. */
+  className?: string;
 };
 
 const InnerMap = lazy(() => import('./CommuneMapInner'));
 
-export function CommuneMap(props: Props) {
+// Sur lg+ on borne par le viewport (sticky-friendly) plutôt qu'une hauteur fixe :
+// avec la nouvelle largeur 6xl + ratio 1.7fr, la carte gagne déjà ~2× de surface
+// par rapport à l'ancienne. min-h garde une présence minimum, max-h évite que ça
+// dépasse l'écran et casse le comportement sticky.
+const DEFAULT_CLASS =
+  'w-full h-72 sm:h-80 lg:h-[calc(100vh-7rem)] lg:min-h-[760px] lg:max-h-[920px] rounded-lg overflow-hidden border border-atlas-ocre/30 bg-atlas-paper/60';
+
+export function CommuneMap({ className, ...props }: Props) {
   const sentinelRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -40,7 +49,7 @@ export function CommuneMap(props: Props) {
     <div
       ref={sentinelRef}
       data-testid="commune-map"
-      className="w-full h-64 rounded-lg overflow-hidden border border-atlas-ocre/30 bg-atlas-paper/60"
+      className={className ?? DEFAULT_CLASS}
     >
       {visible ? (
         <Suspense fallback={<MapPlaceholder />}>

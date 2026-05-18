@@ -65,7 +65,8 @@ final class DistanceCalculator
     private function bearingToCompass(float $degrees): string
     {
         // Découpe en 8 secteurs de 45°, centrés sur N (NNE..NNW autour de 0°).
-        $index = (int) floor((($degrees + 22.5) % 360) / 45);
+        // fmod() évite la conversion float→int implicite dépréciée en PHP 8.4.
+        $index = (int) floor(fmod($degrees + 22.5, 360) / 45);
 
         return self::COMPASS[$index];
     }

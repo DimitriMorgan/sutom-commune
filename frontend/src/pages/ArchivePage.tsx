@@ -12,9 +12,9 @@ export function ArchivePage() {
 
   useEffect(() => {
     setSeo({
-      title: 'Archive des énigmes Sutom-Commune — rejouez les 60 derniers jours',
+      title: 'Archive des énigmes Sutom-Commune — les 3 dernières à rejouer',
       description:
-        "Toutes les énigmes Sutom-Commune passées. Rejouez les 60 derniers jours sans casser votre série du jour. Chaque commune française mystère + sa solution révélée.",
+        "Les 3 dernières énigmes Sutom-Commune à rejouer sans casser votre série du jour. Région et département révélés, le reste à deviner — aucun spoil de la commune mystère.",
       path: '/archive',
       breadcrumbs: [
         { name: 'Accueil', path: '/' },
@@ -22,23 +22,14 @@ export function ArchivePage() {
       ],
     });
 
-    const today = new Date();
-    const to = today.toISOString().slice(0, 10);
-    const fromDate = new Date(today);
-    fromDate.setDate(fromDate.getDate() - 60);
-    const from = fromDate.toISOString().slice(0, 10);
-
     api
-      .getArchive(from, to)
+      .getArchive(3)
       .then((r) => {
         setEntries(r.entries);
         if (r.entries.length > 0) {
           setSeo({
-            title: 'Archive des énigmes Sutom-Commune — rejouez les 60 derniers jours',
-            description: `${r.entries.length} énigmes archivées : ${r.entries
-              .slice(0, 5)
-              .map((e) => e.commune.name)
-              .join(', ')}…`,
+            title: 'Archive des énigmes Sutom-Commune — les 3 dernières à rejouer',
+            description: `${r.entries.length} énigmes récentes à rejouer (régions ${[...new Set(r.entries.map((e) => e.regionName))].join(', ')}). Identité de la commune mystère cachée pour ne pas spoiler.`,
             path: '/archive',
             breadcrumbs: [
               { name: 'Accueil', path: '/' },
@@ -49,11 +40,11 @@ export function ArchivePage() {
               '@type': 'ItemList',
               itemListOrder: 'https://schema.org/ItemListOrderDescending',
               numberOfItems: r.entries.length,
-              itemListElement: r.entries.slice(0, 30).map((e, i) => ({
+              itemListElement: r.entries.map((e, i) => ({
                 '@type': 'ListItem',
                 position: i + 1,
-                url: `https://sutom-commune.fr/archive/${e.puzzleDate}`,
-                name: `Énigme #${e.puzzleNumber} — ${e.commune.name}`,
+                url: `https://sutom-commune.com/archive/${e.puzzleDate}`,
+                name: `Énigme #${e.puzzleNumber} — ${e.regionName}`,
               })),
             },
           });
@@ -75,11 +66,13 @@ export function ArchivePage() {
   }
 
   return (
-    <article className="space-y-6">
+    <article className="space-y-6 max-w-3xl mx-auto">
       <header className="space-y-1">
         <h1 className="font-serif text-4xl text-atlas-navy">Archive des énigmes</h1>
         <p className="text-sm text-atlas-ink/70">
-          Les énigmes des jours passés. Rejouer une archive ne casse pas votre série du jour.
+          Les 3 dernières énigmes à rejouer. L'identité de la commune reste cachée — seuls
+          la région et le département sont indiqués pour éviter tout spoil. Rejouer une
+          archive ne casse pas votre série du jour.
         </p>
       </header>
 
@@ -94,9 +87,9 @@ export function ArchivePage() {
                 className="flex items-center justify-between p-3 hover:bg-atlas-sand transition-colors"
               >
                 <div>
-                  <p className="font-medium text-atlas-navy">{e.commune.name}</p>
-                  <p className="text-xs text-atlas-ink/60">
-                    {e.commune.departmentName} ({e.commune.departmentCode})
+                  <p className="font-medium text-atlas-navy">Commune mystère</p>
+                  <p className="text-xs text-atlas-ink/70">
+                    {e.regionName} · {e.departmentName} ({e.departmentCode})
                   </p>
                 </div>
                 <div className="text-right text-xs text-atlas-ink/70">

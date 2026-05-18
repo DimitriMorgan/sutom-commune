@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://sutom-commune.fr/sitemap.xml
+Sitemap: https://sutom-commune.com/sitemap.xml

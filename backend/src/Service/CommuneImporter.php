@@ -11,7 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 
 /**
  * Insert/update idempotent des communes depuis le format JSON renvoyé
- * par https://geo.api.gouv.fr/communes
+ * par https://geo.api.gouv.fr/communes.
  *
  * Chaque payload doit ressembler à :
  *  {
@@ -75,6 +75,7 @@ final class CommuneImporter
 
     /**
      * @param array<string, mixed> $payload
+     *
      * @return 'created'|'updated'|'skipped'
      */
     private function upsertOne(array $payload): string
@@ -145,6 +146,7 @@ final class CommuneImporter
     private function buildUniqueSlug(string $name, string $codeInsee): string
     {
         $base = $this->normalizer->slug($name);
+
         // 5 derniers caractères du code INSEE suffisent à désambiguïser.
         return $base.'-'.$codeInsee;
     }
@@ -172,6 +174,7 @@ final class CommuneImporter
 
     /**
      * @param mixed $value
+     *
      * @return list<string>
      */
     private function stringList(mixed $value): array

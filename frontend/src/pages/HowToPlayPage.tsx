@@ -29,7 +29,7 @@ export function HowToPlayPage() {
   }, []);
 
   return (
-    <article className="prose-atlas space-y-6">
+    <article className="prose-atlas space-y-6 max-w-3xl mx-auto">
       <h1 className="font-serif text-4xl text-atlas-navy">Comment jouer à Sutom-Commune</h1>
 
       <section className="space-y-2">

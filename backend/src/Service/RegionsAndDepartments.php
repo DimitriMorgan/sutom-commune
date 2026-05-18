@@ -14,7 +14,7 @@ use App\Enum\Climate;
  */
 final class RegionsAndDepartments
 {
-    /** @var array<string, string> code région → libellé */
+    /** code région → libellé */
     private const REGIONS = [
         '01' => 'Guadeloupe',
         '02' => 'Martinique',
@@ -36,7 +36,7 @@ final class RegionsAndDepartments
         '94' => 'Corse',
     ];
 
-    /** @var array<string, string> code département → libellé */
+    /** code département → libellé */
     private const DEPARTMENTS = [
         '01' => 'Ain', '02' => 'Aisne', '03' => 'Allier', '04' => 'Alpes-de-Haute-Provence',
         '05' => 'Hautes-Alpes', '06' => 'Alpes-Maritimes', '07' => 'Ardèche', '08' => 'Ardennes',

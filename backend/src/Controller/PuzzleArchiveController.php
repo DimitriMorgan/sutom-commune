@@ -15,14 +15,19 @@ use Symfony\Component\Routing\Attribute\Route;
 /**
  * Endpoints d'archive : liste des énigmes ≤ aujourd'hui + détail d'une énigme passée.
  *
- * /api/puzzle/archive renvoie un format léger (juste commune name + dept). La cible peut
- * être révélée car ces énigmes sont closes.
+ * /api/puzzle/archive : format léger volontairement anti-spoil — seuls la région et le
+ * département sont exposés (jamais le nom ni le code INSEE de la commune), pour que
+ * l'utilisateur puisse rejouer une énigme passée sans en connaître la solution.
+ * Limité aux 3 dernières énigmes par défaut.
  *
  * /api/puzzle/archive/{date} renvoie le même DTO public que /api/puzzle/today
  * (sans coordonnées) pour permettre le rejouage : la commune doit toujours être devinée.
  */
 final class PuzzleArchiveController
 {
+    private const DEFAULT_LIMIT = 3;
+    private const MAX_LIMIT = 60;
+
     public function __construct(
         private readonly DailyPuzzleRepository $puzzleRepo,
         private readonly Clock $clock,
@@ -34,7 +39,11 @@ final class PuzzleArchiveController
     {
         $today = $this->clock->today();
 
-        $fromStr = (string) $request->query->get('from', $today->modify('-30 days')->format('Y-m-d'));
+        $limit = max(1, min(self::MAX_LIMIT, (int) $request->query->get('limit', (string) self::DEFAULT_LIMIT)));
+
+        // On part d'une fenêtre large pour rester compatible avec d'éventuels appels from/to ;
+        // l'écrêtage à $limit garantit qu'on n'expose jamais plus que demandé.
+        $fromStr = (string) $request->query->get('from', $today->modify('-365 days')->format('Y-m-d'));
         $toStr = (string) $request->query->get('to', $today->format('Y-m-d'));
 
         $from = \DateTimeImmutable::createFromFormat('Y-m-d', $fromStr);
@@ -48,20 +57,21 @@ final class PuzzleArchiveController
             $to = $today;
         }
 
+        $puzzles = \array_slice($this->puzzleRepo->findArchive($from, $to), 0, $limit);
+
         $entries = array_map(function ($p) {
             $c = $p->getCommune();
 
+            // Anti-spoil : on n'expose ni name ni codeInsee dans la liste.
             return [
                 'puzzleNumber' => $p->getPuzzleNumber(),
                 'puzzleDate' => $p->getPuzzleDate()->format('Y-m-d'),
-                'commune' => [
-                    'codeInsee' => $c->getCodeInsee(),
-                    'name' => $c->getName(),
-                    'departmentName' => $c->getDepartmentName(),
-                    'departmentCode' => $c->getDepartmentCode(),
-                ],
+                'regionName' => $c->getRegionName(),
+                'regionCode' => $c->getRegionCode(),
+                'departmentName' => $c->getDepartmentName(),
+                'departmentCode' => $c->getDepartmentCode(),
             ];
-        }, $this->puzzleRepo->findArchive($from, $to));
+        }, $puzzles);
 
         return new JsonResponse(['entries' => $entries]);
     }

@@ -34,11 +34,11 @@ export function TodayPage() {
           extraJsonLd: {
             '@context': 'https://schema.org',
             '@type': 'Game',
-            '@id': `https://sutom-commune.fr/#puzzle-${p.puzzleNumber}`,
+            '@id': `https://sutom-commune.com/#puzzle-${p.puzzleNumber}`,
             name: `Énigme Sutom-Commune #${p.puzzleNumber}`,
             datePublished: p.puzzleDate,
             inLanguage: 'fr-FR',
-            isPartOf: { '@id': 'https://sutom-commune.fr/#game' },
+            isPartOf: { '@id': 'https://sutom-commune.com/#game' },
           },
         });
       })

@@ -82,35 +82,35 @@ final class OgImageController
         $stampColor = $past ? '#4f7a3a' : '#b97a2a';
 
         return <<<SVG
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  <defs>
-    <pattern id="grain" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-      <path d="M0 0 L14 14 M0 14 L14 0" stroke="#b97a2a" stroke-width="0.5" opacity="0.25"/>
-    </pattern>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#faf5e8"/>
-      <stop offset="100%" stop-color="#f3e8cf"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#grain)"/>
-  <rect x="50" y="50" width="1100" height="530" fill="none" stroke="#b97a2a" stroke-width="2" opacity="0.4"/>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+              <defs>
+                <pattern id="grain" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+                  <path d="M0 0 L14 14 M0 14 L14 0" stroke="#b97a2a" stroke-width="0.5" opacity="0.25"/>
+                </pattern>
+                <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#faf5e8"/>
+                  <stop offset="100%" stop-color="#f3e8cf"/>
+                </linearGradient>
+              </defs>
+              <rect width="1200" height="630" fill="url(#bg)"/>
+              <rect width="1200" height="630" fill="url(#grain)"/>
+              <rect x="50" y="50" width="1100" height="530" fill="none" stroke="#b97a2a" stroke-width="2" opacity="0.4"/>
 
-  <text x="90" y="130" font-family="Inter, sans-serif" font-size="32" fill="#1a3a5c" font-weight="600">Sutom-Commune</text>
-  <text x="90" y="170" font-family="Inter, sans-serif" font-size="22" fill="#4f6b3a">{$title} · {$subtitle}</text>
+              <text x="90" y="130" font-family="Inter, sans-serif" font-size="32" fill="#1a3a5c" font-weight="600">Sutom-Commune</text>
+              <text x="90" y="170" font-family="Inter, sans-serif" font-size="22" fill="#4f6b3a">{$title} · {$subtitle}</text>
 
-  <text x="600" y="370" text-anchor="middle" font-family="Georgia, serif" font-size="{$fontSize}" font-weight="700" fill="#1a3a5c">{$mainEsc}</text>
+              <text x="600" y="370" text-anchor="middle" font-family="Georgia, serif" font-size="{$fontSize}" font-weight="700" fill="#1a3a5c">{$mainEsc}</text>
 
-  <text x="600" y="450" text-anchor="middle" font-family="Inter, sans-serif" font-size="28" fill="#2a2520">{$sideText}</text>
+              <text x="600" y="450" text-anchor="middle" font-family="Inter, sans-serif" font-size="28" fill="#2a2520">{$sideText}</text>
 
-  <g transform="translate(1050,540)">
-    <rect x="-150" y="-30" width="150" height="40" rx="20" fill="{$stampColor}" opacity="0.15" stroke="{$stampColor}" stroke-width="2"/>
-    <text x="-75" y="-3" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="{$stampColor}">{$stamp}</text>
-  </g>
+              <g transform="translate(1050,540)">
+                <rect x="-150" y="-30" width="150" height="40" rx="20" fill="{$stampColor}" opacity="0.15" stroke="{$stampColor}" stroke-width="2"/>
+                <text x="-75" y="-3" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="600" fill="{$stampColor}">{$stamp}</text>
+              </g>
 
-  <text x="90" y="560" font-family="Inter, sans-serif" font-size="20" fill="#1a3a5c" opacity="0.7">sutom-commune.fr</text>
-</svg>
-SVG;
+              <text x="90" y="560" font-family="Inter, sans-serif" font-size="20" fill="#1a3a5c" opacity="0.7">sutom-commune.com</text>
+            </svg>
+            SVG;
     }
 
     private function formatDateFr(\DateTimeImmutable $date): string

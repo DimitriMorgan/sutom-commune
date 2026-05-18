@@ -7,7 +7,7 @@
  * statique embarque déjà un titre, une description, un h1 et la nav (cf. index.html).
  */
 
-const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://sutom-commune.fr').replace(/\/$/, '');
+const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://sutom-commune.com').replace(/\/$/, '');
 
 export type SeoOpts = {
   title: string;

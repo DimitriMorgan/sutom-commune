@@ -4,7 +4,7 @@ FRONTEND=$(DC) exec frontend
 BACK_PORT?=8000
 FRONT_PORT?=5174
 
-.PHONY: up dev dev-local down build logs sh-back sh-front composer-install npm-install db migrate fixtures communes-import test lint cs-fix
+.PHONY: up dev dev-local down build logs sh-back sh-front composer-install npm-install db migrate fixtures communes-import test lint cs-fix deploy
 
 up:
 	$(DC) up -d
@@ -64,3 +64,9 @@ lint:
 cs-fix:
 	$(BACKEND) vendor/bin/php-cs-fixer fix --sequential
 	$(FRONTEND) npm run format
+
+# Déploiement vers le VPS (rsync + ssh build + migrations + cache warm).
+# Pré-requis : alias SSH `vps` et `.env.prod` déjà présent côté VPS.
+# Voir scripts/deploy.sh pour le détail.
+deploy:
+	./scripts/deploy.sh

@@ -54,7 +54,7 @@ export function ArchiveDetailPage() {
           extraJsonLd: {
             '@context': 'https://schema.org',
             '@type': 'Game',
-            '@id': `https://sutom-commune.fr/archive/${date}#game`,
+            '@id': `https://sutom-commune.com/archive/${date}#game`,
             name: `Énigme Sutom-Commune #${r.puzzle.puzzleNumber}`,
             datePublished: date,
             inLanguage: 'fr-FR',
@@ -63,7 +63,7 @@ export function ArchiveDetailPage() {
               name: r.puzzle.regionName,
               containedInPlace: { '@type': 'Country', name: 'France' },
             },
-            isPartOf: { '@id': 'https://sutom-commune.fr/#game' },
+            isPartOf: { '@id': 'https://sutom-commune.com/#game' },
           },
         });
       })

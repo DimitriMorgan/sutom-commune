@@ -18,7 +18,7 @@ final class SitemapController
     public function __construct(
         private readonly DailyPuzzleRepository $puzzleRepo,
         private readonly Clock $clock,
-        private readonly string $siteUrl = 'https://sutom-commune.fr',
+        private readonly string $siteUrl = 'https://sutom-commune.com',
     ) {
     }
 
@@ -36,10 +36,12 @@ final class SitemapController
             ['loc' => $this->siteUrl.'/mentions-legales', 'changefreq' => 'yearly', 'priority' => '0.2'],
         ];
         foreach ($entries as $entry) {
+            // changefreq=monthly (et non never) : si on enrichit la page d'une commune
+            // archivée plus tard, Google a un signal pour revenir l'indexer.
             $urls[] = [
                 'loc' => $this->siteUrl.'/archive/'.$entry->getPuzzleDate()->format('Y-m-d'),
                 'lastmod' => $entry->getPuzzleDate()->format('Y-m-d'),
-                'changefreq' => 'never',
+                'changefreq' => 'monthly',
                 'priority' => '0.6',
             ];
         }

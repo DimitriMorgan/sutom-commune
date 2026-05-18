@@ -7,7 +7,6 @@ import type {
   GuessPathStep,
   Hint,
   ProximityTier,
-  PuzzleSolution,
   PuzzleToday,
 } from '../api/types';
 import { track } from '../analytics';
@@ -147,44 +146,55 @@ export function GameBoard({ puzzle, archived = false, onStreakChange }: Props) {
         </h1>
       </header>
 
-      <HintsPanel
-        regionName={puzzle.regionName}
-        departmentName={puzzle.departmentName}
-        departmentCode={puzzle.departmentCode}
-        revealedHints={state.revealedHints}
-      />
-
-      <div className="space-y-2">
-        {state.attempts.map((a, i) => (
-          <GuessRow key={`${a.codeInsee}-${i}`} attempt={a} />
-        ))}
-      </div>
-
-      {!state.completed ? (
-        <>
-          <GuessInput
-            onSubmit={submit}
-            disabled={busy}
-            attemptNumber={state.attempts.length + 1}
+      {/*
+        Mobile : tout s'empile (énigme puis carte au-dessous, comme avant).
+        Desktop ≥ lg : énigme à gauche, carte à droite (sticky pour rester visible).
+      */}
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.7fr)] gap-6 lg:items-start">
+        <div className="space-y-4 min-w-0">
+          <HintsPanel
+            regionName={puzzle.regionName}
+            departmentName={puzzle.departmentName}
+            departmentCode={puzzle.departmentCode}
+            departmentRevealed={state.attempts.length >= 1}
+            revealedHints={state.revealedHints}
           />
-          <p className="text-xs text-atlas-ink/60 text-right">
-            {remaining} essai{remaining > 1 ? 's' : ''} restant{remaining > 1 ? 's' : ''}
-          </p>
-          {error && <p className="text-sm text-red-700">{error}</p>}
-        </>
-      ) : (
-        <button
-          onClick={() => setShowResult(true)}
-          className="w-full bg-atlas-navy text-atlas-paper py-2.5 rounded-lg hover:bg-atlas-ocre transition-colors"
-        >
-          Voir le résultat
-        </button>
-      )}
 
-      <CommuneMap
-        guessPath={guessPath}
-        solution={state.completed && state.solution ? state.solution : null}
-      />
+          <div className="space-y-2">
+            {state.attempts.map((a, i) => (
+              <GuessRow key={`${a.codeInsee}-${i}`} attempt={a} />
+            ))}
+          </div>
+
+          {!state.completed ? (
+            <>
+              <GuessInput
+                onSubmit={submit}
+                disabled={busy}
+                attemptNumber={state.attempts.length + 1}
+              />
+              <p className="text-xs text-atlas-ink/60 text-right">
+                {remaining} essai{remaining > 1 ? 's' : ''} restant{remaining > 1 ? 's' : ''}
+              </p>
+              {error && <p className="text-sm text-red-700">{error}</p>}
+            </>
+          ) : (
+            <button
+              onClick={() => setShowResult(true)}
+              className="w-full bg-atlas-navy text-atlas-paper py-2.5 rounded-lg hover:bg-atlas-ocre transition-colors"
+            >
+              Voir le résultat
+            </button>
+          )}
+        </div>
+
+        <div className="lg:sticky lg:top-4">
+          <CommuneMap
+            guessPath={guessPath}
+            solution={state.completed && state.solution ? state.solution : null}
+          />
+        </div>
+      </div>
 
       {showResult && state.solution && state.shareGrid && (
         <ResultModal

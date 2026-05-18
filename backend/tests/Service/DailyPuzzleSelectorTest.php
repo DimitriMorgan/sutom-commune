@@ -95,7 +95,7 @@ final class DailyPuzzleSelectorTest extends KernelTestCase
         // Pré-existant : Paris utilisée il y a 100 jours.
         $past = new DailyPuzzle();
         $past
-            ->setPuzzleDate((new \DateTimeImmutable('2026-05-18'))->modify('-100 days'))
+            ->setPuzzleDate(new \DateTimeImmutable('2026-05-18')->modify('-100 days'))
             ->setCommune($only)
             ->setPuzzleNumber(1);
         $this->em->persist($past);
@@ -122,7 +122,11 @@ final class DailyPuzzleSelectorTest extends KernelTestCase
         $selector = $this->buildSelector(new FrozenClock(new \DateTimeImmutable('2026-05-18 12:00')));
         $puzzle = $selector->selectForDate(new \DateTimeImmutable('2026-05-18'));
 
-        self::assertNotNull($puzzle->getCommune());
+        // Le fallback doit piocher dans les Medium/Expert puisqu'aucune Easy n'existe.
+        self::assertContains(
+            $puzzle->getCommune()->getCodeInsee(),
+            ['14118', '14333'],
+        );
     }
 
     public function testPuzzleNumbersAreUniqueAndIncrementing(): void

@@ -12,7 +12,7 @@ namespace App\Service;
  *   🟧⬆️
  *   🟨↖️
  *   🟩✓
- *   https://sutom-commune.fr
+ *   https://sutom-commune.com.
  */
 final class ShareGridGenerator
 {
@@ -34,7 +34,7 @@ final class ShareGridGenerator
         'NW' => '↖️',
     ];
 
-    public function __construct(private readonly string $siteUrl = 'https://sutom-commune.fr')
+    public function __construct(private readonly string $siteUrl = 'https://sutom-commune.com')
     {
     }
 

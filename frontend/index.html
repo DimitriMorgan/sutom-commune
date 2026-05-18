@@ -23,9 +23,21 @@
     <meta name="color-scheme" content="light dark" />
     <meta name="format-detection" content="telephone=no" />
 
-    <link rel="canonical" href="https://sutom-commune.fr/" />
-    <link rel="alternate" hreflang="fr" href="https://sutom-commune.fr/" />
-    <link rel="alternate" hreflang="x-default" href="https://sutom-commune.fr/" />
+    <!--
+      Anti-FOUC : fond appliqué avant l'arrivée du bundle CSS (utile en dev où
+      Vite injecte le CSS via JS, et filet de secours en prod si le CSS tarde).
+      Palette atlas-sand / atlas-ink ; styles.css prend le relais au load.
+    -->
+    <style>
+      html, body { background: #f3e8cf; color: #2a2520; margin: 0; }
+      @media (prefers-color-scheme: dark) {
+        html, body { background: #14202d; color: #e6dfd1; }
+      }
+    </style>
+
+    <link rel="canonical" href="https://sutom-commune.com/" />
+    <link rel="alternate" hreflang="fr" href="https://sutom-commune.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://sutom-commune.com/" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
@@ -36,8 +48,8 @@
     <meta property="og:site_name" content="Sutom-Commune" />
     <meta property="og:title" content="Sutom-Commune — Le jeu quotidien des communes de France" />
     <meta property="og:description" content="Devinez la commune française mystère du jour en 6 essais." />
-    <meta property="og:url" content="https://sutom-commune.fr/" />
-    <meta property="og:image" content="https://sutom-commune.fr/og-default.svg" />
+    <meta property="og:url" content="https://sutom-commune.com/" />
+    <meta property="og:image" content="https://sutom-commune.com/og-default.svg" />
     <meta property="og:image:type" content="image/svg+xml" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -46,7 +58,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Sutom-Commune — Le jeu quotidien des communes de France" />
     <meta name="twitter:description" content="Devinez la commune française mystère du jour en 6 essais." />
-    <meta name="twitter:image" content="https://sutom-commune.fr/og-default.svg" />
+    <meta name="twitter:image" content="https://sutom-commune.com/og-default.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -68,25 +80,25 @@
         "@graph": [
           {
             "@type": "WebSite",
-            "@id": "https://sutom-commune.fr/#website",
-            "url": "https://sutom-commune.fr/",
+            "@id": "https://sutom-commune.com/#website",
+            "url": "https://sutom-commune.com/",
             "name": "Sutom-Commune",
             "inLanguage": "fr-FR",
             "description": "Devinez la commune française mystère du jour en 6 essais.",
-            "publisher": { "@id": "https://sutom-commune.fr/#organization" }
+            "publisher": { "@id": "https://sutom-commune.com/#organization" }
           },
           {
             "@type": "Organization",
-            "@id": "https://sutom-commune.fr/#organization",
+            "@id": "https://sutom-commune.com/#organization",
             "name": "Sutom-Commune",
-            "url": "https://sutom-commune.fr/",
-            "logo": "https://sutom-commune.fr/favicon.svg"
+            "url": "https://sutom-commune.com/",
+            "logo": "https://sutom-commune.com/favicon.svg"
           },
           {
             "@type": "WebApplication",
-            "@id": "https://sutom-commune.fr/#app",
+            "@id": "https://sutom-commune.com/#app",
             "name": "Sutom-Commune",
-            "url": "https://sutom-commune.fr/",
+            "url": "https://sutom-commune.com/",
             "applicationCategory": "GameApplication",
             "operatingSystem": "Web",
             "browserRequirements": "Requires JavaScript. Requires HTML5.",
@@ -96,20 +108,33 @@
           },
           {
             "@type": "Game",
-            "@id": "https://sutom-commune.fr/#game",
+            "@id": "https://sutom-commune.com/#game",
             "name": "Sutom-Commune",
             "description": "Jeu quotidien gratuit pour deviner une commune française en 6 essais grâce à distance, direction et indices contextuels (population, climat, patrimoine).",
-            "url": "https://sutom-commune.fr/",
+            "url": "https://sutom-commune.com/",
             "genre": "Geography puzzle",
             "audience": { "@type": "PeopleAudience", "audienceType": "Grand public francophone" },
             "inLanguage": "fr-FR",
             "isAccessibleForFree": true,
-            "isPartOf": { "@id": "https://sutom-commune.fr/#website" }
+            "isPartOf": { "@id": "https://sutom-commune.com/#website" }
           }
         ]
       }
     </script>
     <script id="ldjson-page" type="application/ld+json"></script>
+
+    <!--
+      Umami analytics (self-hosted relais + cloud). Substitution Vite : la valeur
+      de VITE_UMAMI_WEBSITE_ID dans .env est injectée au build. Si vide, le tag
+      reste présent mais Umami ignore silencieusement (aucun event envoyé).
+    -->
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="%VITE_UMAMI_WEBSITE_ID%"
+      data-host-url="https://api-gateway.umami.dev"
+      data-domains="sutom-commune.com,www.sutom-commune.com"
+    ></script>
   </head>
   <body>
     <div id="root">

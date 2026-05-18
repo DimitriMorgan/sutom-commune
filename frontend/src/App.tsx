@@ -11,6 +11,7 @@ const ArchiveDetailPage = lazy(() =>
 const HowToPlayPage = lazy(() => import('./pages/HowToPlayPage').then((m) => ({ default: m.HowToPlayPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
 const LegalPage = lazy(() => import('./pages/LegalPage').then((m) => ({ default: m.LegalPage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
 
 function PageFallback() {
   return (
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
       { path: 'comment-jouer', element: wrap(<HowToPlayPage />) },
       { path: 'a-propos', element: wrap(<AboutPage />) },
       { path: 'mentions-legales', element: wrap(<LegalPage />) },
+      { path: '*', element: wrap(<NotFoundPage />) },
     ],
   },
 ]);

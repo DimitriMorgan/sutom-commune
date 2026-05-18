@@ -68,13 +68,15 @@ export type GuessFeedback = {
   shareGrid?: string;
 };
 
+/**
+ * Entrée d'archive anti-spoil : on ne révèle que la région et le département,
+ * jamais le nom ni le code INSEE de la commune (sinon rejouer l'énigme n'a aucun intérêt).
+ */
 export type ArchiveEntry = {
   puzzleNumber: number;
   puzzleDate: string;
-  commune: {
-    codeInsee: string;
-    name: string;
-    departmentName: string;
-    departmentCode: string;
-  };
+  regionName: string;
+  regionCode: string;
+  departmentName: string;
+  departmentCode: string;
 };

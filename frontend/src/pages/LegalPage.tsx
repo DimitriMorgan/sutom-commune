@@ -16,12 +16,12 @@ export function LegalPage() {
   }, []);
 
   return (
-    <article className="prose-atlas space-y-6">
+    <article className="prose-atlas space-y-6 max-w-3xl mx-auto">
       <h1 className="font-serif text-4xl text-atlas-navy">Mentions légales</h1>
 
       <section className="space-y-2">
         <h2 className="font-serif text-2xl text-atlas-navy">Éditeur</h2>
-        <p>Sutom-Commune est un projet indépendant. Contact : contact@sutom-commune.fr.</p>
+        <p>Sutom-Commune est un projet indépendant. Contact : contact@sutom-commune.com.</p>
       </section>
 
       <section className="space-y-2">

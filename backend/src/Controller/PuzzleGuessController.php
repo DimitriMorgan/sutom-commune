@@ -67,6 +67,7 @@ final class PuzzleGuessController
 
     /**
      * @param array<string, mixed> $data
+     *
      * @return array<string, mixed>
      */
     private function stripNulls(array $data): array

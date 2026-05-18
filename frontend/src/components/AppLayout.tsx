@@ -29,7 +29,7 @@ export function AppLayout() {
       <main
         id="main-content"
         tabIndex={-1}
-        className="flex-1 max-w-3xl w-full mx-auto px-4 py-6 outline-none"
+        className="flex-1 max-w-3xl lg:max-w-6xl w-full mx-auto px-4 py-6 outline-none"
       >
         <Outlet context={{ refreshStreak }} />
       </main>

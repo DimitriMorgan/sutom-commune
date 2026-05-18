@@ -24,7 +24,7 @@ final class GuessEventRepository extends ServiceEntityRepository
      */
     public function findForSession(DailyPuzzle $puzzle, string $sessionHash): array
     {
-        /** @var list<GuessEvent> */
+        /* @var list<GuessEvent> */
         return $this->createQueryBuilder('e')
             ->where('e.puzzle = :p AND e.sessionHash = :s')
             ->orderBy('e.attemptIndex', 'ASC')
