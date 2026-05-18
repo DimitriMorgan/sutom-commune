@@ -32,4 +32,10 @@ ssh "${REMOTE_HOST}" "cd ${REMOTE_BASE} && docker compose -f compose.prod.yaml -
 
 ssh "${REMOTE_HOST}" "cd ${REMOTE_BASE} && docker compose -f compose.prod.yaml --env-file .env.prod exec -T backend php bin/console cache:warmup --env=prod"
 
+# Sélection idempotente de l'énigme du jour : couvre aussi le cas du passage de
+# minuit Europe/Paris si le deploy tombe pile à ce moment. Pré-requis : la table
+# 'commune' doit être seedée — voir README "Initialisation prod" pour
+# `app:communes:import` (one-shot, ~1-3 min).
+ssh "${REMOTE_HOST}" "cd ${REMOTE_BASE} && docker compose -f compose.prod.yaml --env-file .env.prod exec -T backend php bin/console app:puzzle:select-today"
+
 ssh "${REMOTE_HOST}" "cd ${REMOTE_BASE} && docker compose -f compose.prod.yaml --env-file .env.prod ps"

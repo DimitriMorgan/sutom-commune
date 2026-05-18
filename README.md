@@ -92,7 +92,7 @@ Backend :
 - `APP_ENV`
 - `APP_SECRET`
 - `DATABASE_URL`
-- `CORS_ALLOW_ORIGIN` regex des origines frontend autorisées. En production : `^https://(www\.)?sutom-commune\.fr$`.
+- `CORS_ALLOW_ORIGIN` regex des origines frontend autorisées. En production : `^https://(www\.)?sutom-commune\.com$`.
 - `FRONTEND_URL`
 - `DEFAULT_URI`
 - `POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD`
@@ -134,6 +134,38 @@ npm run lint
 ## Anti-cheat
 
 Les coordonnées GPS, le nom et les données sensibles de la commune cible ne sont **jamais** envoyés au client tant que `gameOver=false`. Un test fonctionnel critique vérifie l'absence de fuite sur `/api/puzzle/today`.
+
+## Déploiement prod
+
+```bash
+make deploy   # = scripts/deploy.sh : rsync + build + migrate + select-today + cache warm
+```
+
+Pré-requis côté VPS :
+- alias SSH `vps` dans `~/.ssh/config`
+- réseau Docker externe `web` créé (`docker network create web`)
+- reverse-proxy externe (Caddy/Traefik) sur le réseau `web` qui route `sutom-commune.com` → container `sutom-commune-nginx`
+- `.env.prod` rempli côté VPS (dérivé de `.env.prod.example` : `APP_SECRET` généré, mot de passe DB fort, `VITE_UMAMI_WEBSITE_ID` rempli depuis le dashboard Umami)
+
+### Initialisation prod (one-shot, après le premier `make deploy`)
+
+Le déploiement applique les migrations et tente de tirer l'énigme du jour, mais ne seed pas les communes — il faut les importer une fois depuis `geo.api.gouv.fr` :
+
+```bash
+ssh vps "cd /opt/projects/sutom-commune && \
+  docker compose -f compose.prod.yaml --env-file .env.prod exec -T backend \
+  php bin/console app:communes:import"
+```
+
+Idempotent (UPSERT par codeInsee), ~1-3 min selon la latence vers geo.api.gouv.fr. Une fois la table peuplée, `app:puzzle:select-today` (lancé par `deploy.sh`) trouvera des candidates.
+
+### Cron quotidien
+
+À mettre dans `crontab -e` sur le VPS pour que la nouvelle énigme tombe à minuit Europe/Paris sans dépendre d'un deploy :
+
+```cron
+5 0 * * * cd /opt/projects/sutom-commune && docker compose -f compose.prod.yaml --env-file .env.prod exec -T backend php bin/console app:puzzle:select-today >> /var/log/sutom-commune-cron.log 2>&1
+```
 
 ## Limites connues
 
