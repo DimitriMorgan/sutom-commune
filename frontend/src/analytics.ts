@@ -14,6 +14,26 @@ export type AnalyticsEvent =
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? '/api';
 const FLUSH_INTERVAL_MS = 2000;
 
+// Script Umami (cf. index.html). Présent uniquement après chargement du tag et
+// sur les domaines autorisés (data-domains) ; sinon window.umami est absent.
+declare global {
+  interface Window {
+    umami?: {
+      track: (eventName: string, eventData?: Record<string, unknown>) => void;
+    };
+  }
+}
+
+/** Pousse l'event custom vers Umami si le tracker est présent (best-effort). */
+function sendToUmami(type: string, payload: Record<string, unknown>): void {
+  if (typeof window === 'undefined' || !window.umami) return;
+  try {
+    window.umami.track(type, payload);
+  } catch {
+    // best-effort : on n'embête pas l'utilisateur
+  }
+}
+
 let buffer: Array<{ type: string; payload: Record<string, unknown> }> = [];
 let timer: number | null = null;
 
@@ -54,6 +74,9 @@ export function track(event: AnalyticsEvent): void {
 
   const { type, ...payload } = event;
   buffer.push({ type, payload: payload as Record<string, unknown> });
+
+  // Double envoi : Umami (dashboard cloud) en plus du backend maison.
+  sendToUmami(type, payload as Record<string, unknown>);
 
   if (timer !== null) return;
   timer = window.setTimeout(() => {
