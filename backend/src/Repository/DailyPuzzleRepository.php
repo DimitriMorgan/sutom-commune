@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Repository;
 
+use App\Entity\Commune;
 use App\Entity\DailyPuzzle;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
@@ -49,6 +50,28 @@ final class DailyPuzzleRepository extends ServiceEntityRepository
             ->getArrayResult();
 
         return array_values(array_unique(array_map(static fn (array $r): string => $r['codeInsee'], $rows)));
+    }
+
+    /**
+     * Apparitions PASSÉES d'une commune comme énigme (date < aujourd'hui strictement).
+     *
+     * Anti-spoil : on n'inclut JAMAIS l'énigme du jour ni une future. Si la commune
+     * est la cible d'aujourd'hui, la page /commune/{slug} ne doit pas le trahir — seules
+     * les apparitions déjà closes sont listées.
+     *
+     * @return list<DailyPuzzle>
+     */
+    public function findPastAppearancesForCommune(Commune $commune, \DateTimeImmutable $today): array
+    {
+        /* @var list<DailyPuzzle> */
+        return $this->createQueryBuilder('p')
+            ->where('p.commune = :commune')
+            ->andWhere('p.puzzleDate < :today')
+            ->orderBy('p.puzzleDate', 'DESC')
+            ->setParameter('commune', $commune)
+            ->setParameter('today', $today->setTime(0, 0))
+            ->getQuery()
+            ->getResult();
     }
 
     /**

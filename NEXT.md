@@ -46,17 +46,28 @@
 
 ## 🔍 SEO — pistes pour passer de "très bien" à "exceptionnel"
 
-| # | Item | Impact | Effort |
-|---|---|---|---|
-| S1 | **Pre-rendering au build** (`vite-plugin-prerender` ou `react-snap`) | 🔥 Gros gain : les pages /, /comment-jouer, /a-propos, /mentions-legales servies en HTML statique avec contenu hydraté. Bing/DDG/non-Googlebot voient tout. | Moyen — bloqué par même problème que Playwright (Chromium headless). Solution : pré-render dans la CI où apt-get marche. |
-| S2 | **SSR Symfony pour /archive/{date}** | Gros gain longue traîne. Servir le HTML pré-renderé avec nom commune + dpt + photo Wikipedia pour les bots, puis hydrater React. | Moyen — un controller Twig + détection User-Agent OU servir aux deux et hydrater. |
-| S3 | **Page individuelle par commune** `/commune/{slug}` | 🔥 295 pages longue traîne ("Honfleur", "Strasbourg", etc.) avec description, distance moyenne d'erreur, historique des fois où ça a été l'énigme, lien Wikipedia. | Moyen — controller + page React + sitemap update. |
-| S4 | **OG image PNG (vs SVG actuel)** | Quelques crawlers/messageries ne previewent pas le SVG (Slack par exemple). | Moyen — convertir via Imagick ou GD côté Symfony, ou utiliser Satori (Node) en build. |
-| S5 | **FAQ structurée Schema.org** | Sitelinks Google sur la home. | Faible — ajouter une section FAQ sur HowToPlay + `FAQPage` JSON-LD. |
-| S6 | **Web Vitals tracking** | Mesurer LCP/CLS/INP réels et envoyer à analytics. | Faible — `web-vitals` npm + endpoint analytics. |
-| S7 | **Sitemap index** | Pas critique (< 50k URLs aujourd'hui) mais propre si on génère beaucoup de pages /commune/* (S3). | Faible. |
-| S8 | **Pages éducatives** ("Top 10 villes les plus longues à deviner", "Géographie de la Normandie en 5 villes") | 🔥 Longue traîne forte + autorité. | Élevé — contenu rédactionnel. |
-| S9 | **Backlinks** | Inscription annuaires Wordle-likes (Worldle community, FR puzzle hubs, r/france). | Variable — hors tech. |
+> **Session 2026-06-02 — S3, S5, S6, S7 livrés** (quality gate vert : 131 PHPUnit / 25 Vitest / tsc / phpstan L8 / cs-fix / eslint). Détail en bas de section.
+
+| # | Item | Impact | Effort | État |
+|---|---|---|---|---|
+| S1 | **Pre-rendering au build** (`vite-plugin-prerender` ou `react-snap`) | 🔥 Gros gain : les pages /, /comment-jouer, /a-propos, /mentions-legales servies en HTML statique avec contenu hydraté. Bing/DDG/non-Googlebot voient tout. | Moyen — bloqué par même problème que Playwright (Chromium headless). Solution : pré-render dans la CI où apt-get marche. | ⏳ TODO (bloqué Chromium) |
+| S2 | **SSR Symfony pour /archive/{date}** | Gros gain longue traîne. Servir le HTML pré-renderé avec nom commune + dpt + photo Wikipedia pour les bots, puis hydrater React. | Moyen — un controller Twig + détection User-Agent OU servir aux deux et hydrater. | ⏳ TODO |
+| S3 | **Page individuelle par commune** `/commune/{slug}` | 🔥 295 pages longue traîne ("Honfleur", "Strasbourg", etc.) avec description, climat, patrimoine, historique des fois où ça a été l'énigme, lien Wikipedia. | Moyen — controller + page React + sitemap update. | ✅ FAIT |
+| S4 | **OG image PNG (vs SVG actuel)** | Quelques crawlers/messageries ne previewent pas le SVG (Slack par exemple). | Moyen — convertir via Imagick ou GD côté Symfony, ou utiliser Satori (Node) en build. | ⛔ BLOQUÉ — ni `imagick` ni `gd` dans le conteneur. Rebuild image Docker avec librsvg, ou rendu PNG via Satori (Node) au build. |
+| S5 | **FAQ structurée Schema.org** | Sitelinks Google sur la home. | Faible — ajouter une section FAQ sur HowToPlay + `FAQPage` JSON-LD. | ✅ FAIT |
+| S6 | **Web Vitals tracking** | Mesurer LCP/CLS/INP réels et envoyer à analytics. | Faible — `web-vitals` npm + endpoint analytics. | ✅ FAIT |
+| S7 | **Sitemap index** | Pas critique (< 50k URLs aujourd'hui) mais propre si on génère beaucoup de pages /commune/* (S3). | Faible. | ✅ FAIT |
+| S8 | **Pages éducatives** ("Top 10 villes les plus longues à deviner", "Géographie de la Normandie en 5 villes") | 🔥 Longue traîne forte + autorité. | Élevé — contenu rédactionnel. | ⏳ TODO |
+| S9 | **Backlinks** | Inscription annuaires Wordle-likes (Worldle community, FR puzzle hubs, r/france). | Variable — hors tech. | ⏳ TODO |
+
+### Détail livré cette session (2026-06-02)
+
+- **S3 — `/commune/{slug}`** : `CommuneDetailController` (`GET /api/commune/{slug}`, **singulier** pour ne pas collisionner avec `/api/communes/search`), DTO `CommuneDetail`, `CommuneRepository::findOneBySlug` + `findPlayableForSitemap`, `DailyPuzzleRepository::findPastAppearancesForCommune` (**anti-spoil : `puzzleDate < today` strict — l'énigme du jour ne fuite jamais**). 404 si slug inconnu **ou commune non jouable**. Front : `CommunePage.tsx` (fiche encyclopédique + JSON-LD `City`/`GeoCoordinates`), route `commune/:slug`, `api.getCommune`. 295 pages indexables.
+- **S5 — FAQ** : section FAQ visible + `FAQPage` JSON-LD (array `[HowTo, FAQPage]`) sur `/comment-jouer`.
+- **S6 — Web Vitals** : dep `web-vitals`, `webVitals.ts` (LCP/CLS/INP/TTFB/FCP) → `analytics.reportWebVital` (type `web_vitals` whitelisté backend), init **PROD only** via import dynamique dans `main.tsx`.
+- **S7 — Sitemap index** : `/sitemap.xml` devient un `<sitemapindex>` → `/sitemap-pages.xml` (statiques + archive) + `/sitemap-communes.xml` (295 communes). **Nginx** (`default.conf` + `prod.conf`) : route `~ ^/sitemap(-pages|-communes)?\.xml$` vers Symfony.
+
+> ⚠️ **Note WSL2/Docker** : éditer un fichier bind-monté (ex. `docker/nginx/*.conf`) casse le mount (l'inode est remplacé). Après modif : `docker compose --env-file .env up -d --force-recreate nginx` (un simple `restart` échoue avec "no such file or directory").
 
 ---
 

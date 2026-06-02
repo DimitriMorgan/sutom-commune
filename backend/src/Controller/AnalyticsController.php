@@ -25,6 +25,7 @@ final class AnalyticsController
         'puzzle_won',
         'puzzle_lost',
         'share_clicked',
+        'web_vitals',
     ];
 
     public function __construct(

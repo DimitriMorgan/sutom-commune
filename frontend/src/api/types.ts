@@ -68,6 +68,37 @@ export type GuessFeedback = {
   shareGrid?: string;
 };
 
+/** Apparition passée d'une commune comme énigme (jamais celle du jour — anti-spoil). */
+export type CommunePastAppearance = {
+  date: string;
+  puzzleNumber: number;
+};
+
+/**
+ * Fiche encyclopédique d'une commune jouable (page longue traîne /commune/{slug}).
+ * Faits publics uniquement ; `pastAppearances` exclut l'énigme du jour.
+ */
+export type CommuneDetail = {
+  slug: string;
+  codeInsee: string;
+  name: string;
+  postalCodes: string[];
+  departmentName: string;
+  departmentCode: string;
+  regionName: string;
+  regionCode: string;
+  latitude: number;
+  longitude: number;
+  population: number;
+  altitude: number | null;
+  climate: string;
+  patrimoine: string[];
+  specialite: string | null;
+  difficulty: string | null;
+  wikipediaUrl: string | null;
+  pastAppearances: CommunePastAppearance[];
+};
+
 /**
  * Entrée d'archive anti-spoil : on ne révèle que la région et le département,
  * jamais le nom ni le code INSEE de la commune (sinon rejouer l'énigme n'a aucun intérêt).

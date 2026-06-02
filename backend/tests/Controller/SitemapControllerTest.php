@@ -14,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 /**
- * Sitemap = pages statiques + entrées d'archive ≤ aujourd'hui.
+ * Sitemaps = index racine + sous-sitemap pages (statiques + archive) + sous-sitemap communes.
  * On vérifie le shape XML et le cache, pas le contenu textuel des routes.
  */
 final class SitemapControllerTest extends WebTestCase
@@ -61,7 +61,7 @@ final class SitemapControllerTest extends WebTestCase
         $em->flush();
     }
 
-    public function testServesValidXmlWithStaticAndArchiveUrls(): void
+    public function testIndexListsChildSitemaps(): void
     {
         $this->client->request('GET', '/sitemap.xml');
         $response = $this->client->getResponse();
@@ -69,27 +69,54 @@ final class SitemapControllerTest extends WebTestCase
         self::assertSame('application/xml; charset=utf-8', $response->headers->get('Content-Type'));
 
         $body = (string) $response->getContent();
-
-        // Parse XML strictement.
         $doc = new \DOMDocument();
         self::assertTrue($doc->loadXML($body), 'sitemap.xml doit être un XML bien formé');
+
+        $sitemaps = $doc->getElementsByTagName('sitemap');
+        self::assertSame(2, $sitemaps->length, 'index = 2 sous-sitemaps');
+        self::assertStringContainsString('<loc>https://sutom-commune.com/sitemap-pages.xml</loc>', $body);
+        self::assertStringContainsString('<loc>https://sutom-commune.com/sitemap-communes.xml</loc>', $body);
+    }
+
+    public function testPagesSitemapHasStaticAndArchiveUrls(): void
+    {
+        $this->client->request('GET', '/sitemap-pages.xml');
+        $response = $this->client->getResponse();
+        self::assertSame(200, $response->getStatusCode());
+
+        $body = (string) $response->getContent();
+        $doc = new \DOMDocument();
+        self::assertTrue($doc->loadXML($body), 'sitemap-pages.xml doit être un XML bien formé');
 
         $urls = $doc->getElementsByTagName('url');
         self::assertGreaterThanOrEqual(6, $urls->length, '5 statiques + ≥1 archive');
 
-        // Pages statiques attendues.
         foreach (['/', '/archive', '/comment-jouer', '/a-propos', '/mentions-legales'] as $path) {
             self::assertStringContainsString('<loc>https://sutom-commune.com'.$path.'</loc>', $body);
         }
-        // Archive seedée présente.
         self::assertStringContainsString('https://sutom-commune.com/archive/', $body);
     }
 
-    public function testIsPubliclyCacheable(): void
+    public function testCommunesSitemapHasPlayableCommuneUrls(): void
     {
-        $this->client->request('GET', '/sitemap.xml');
-        $cache = (string) $this->client->getResponse()->headers->get('Cache-Control');
-        self::assertStringContainsString('public', $cache);
-        self::assertStringContainsString('max-age=3600', $cache);
+        $this->client->request('GET', '/sitemap-communes.xml');
+        $response = $this->client->getResponse();
+        self::assertSame(200, $response->getStatusCode());
+
+        $body = (string) $response->getContent();
+        $doc = new \DOMDocument();
+        self::assertTrue($doc->loadXML($body), 'sitemap-communes.xml doit être un XML bien formé');
+
+        self::assertStringContainsString('<loc>https://sutom-commune.com/commune/honfleur-14333</loc>', $body);
+    }
+
+    public function testAllSitemapsArePubliclyCacheable(): void
+    {
+        foreach (['/sitemap.xml', '/sitemap-pages.xml', '/sitemap-communes.xml'] as $path) {
+            $this->client->request('GET', $path);
+            $cache = (string) $this->client->getResponse()->headers->get('Cache-Control');
+            self::assertStringContainsString('public', $cache, $path);
+            self::assertStringContainsString('max-age=3600', $cache, $path);
+        }
     }
 }

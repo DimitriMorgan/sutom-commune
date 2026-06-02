@@ -8,3 +8,9 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 );
+
+// Web Vitals terrain (LCP/CLS/INP/TTFB/FCP) → analytics. Prod only pour ne pas
+// polluer le dashboard avec les valeurs instables du serveur de dev.
+if (import.meta.env.PROD) {
+  void import('./webVitals').then((m) => m.initWebVitals());
+}

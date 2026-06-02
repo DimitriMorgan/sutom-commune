@@ -67,6 +67,14 @@ if (typeof window !== 'undefined') {
   window.addEventListener('pagehide', () => flush(true));
 }
 
+function scheduleFlush(): void {
+  if (timer !== null) return;
+  timer = window.setTimeout(() => {
+    timer = null;
+    flush();
+  }, FLUSH_INTERVAL_MS);
+}
+
 export function track(event: AnalyticsEvent): void {
   if (import.meta.env.DEV) {
     console.debug('[analytics]', event);
@@ -78,9 +86,27 @@ export function track(event: AnalyticsEvent): void {
   // Double envoi : Umami (dashboard cloud) en plus du backend maison.
   sendToUmami(type, payload as Record<string, unknown>);
 
-  if (timer !== null) return;
-  timer = window.setTimeout(() => {
-    timer = null;
-    flush();
-  }, FLUSH_INTERVAL_MS);
+  scheduleFlush();
+}
+
+/**
+ * Métrique Web Vitals (LCP, CLS, INP, TTFB, FCP). Bufferisée comme les autres
+ * events ; les valeurs finales arrivent souvent au pagehide → flush via beacon.
+ */
+export type WebVitalReport = {
+  name: string;
+  value: number;
+  rating: string;
+  id: string;
+  path: string;
+};
+
+export function reportWebVital(metric: WebVitalReport): void {
+  if (import.meta.env.DEV) {
+    console.debug('[web-vitals]', metric.name, Math.round(metric.value), metric.rating);
+  }
+
+  buffer.push({ type: 'web_vitals', payload: metric as unknown as Record<string, unknown> });
+  sendToUmami('web_vitals', metric as unknown as Record<string, unknown>);
+  scheduleFlush();
 }

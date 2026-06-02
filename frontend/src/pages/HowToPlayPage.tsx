@@ -1,6 +1,35 @@
 import { useEffect } from 'react';
 import { setSeo } from '../seo';
 
+/** Questions fréquentes — alimentent à la fois la section visible et le FAQPage JSON-LD. */
+const FAQ: Array<{ question: string; answer: string }> = [
+  {
+    question: "Combien d'essais pour deviner la commune ?",
+    answer:
+      'Vous disposez de 6 essais maximum par énigme. Chaque commune proposée vous indique la distance à vol d’oiseau, la direction cardinale et un code couleur de proximité.',
+  },
+  {
+    question: 'À quelle heure tombe la nouvelle énigme ?',
+    answer:
+      "Une nouvelle commune est tirée au sort chaque jour à minuit, heure de Paris. L’énigme est la même pour tous les joueurs.",
+  },
+  {
+    question: 'Quelles communes peuvent tomber ?',
+    answer:
+      'Toutes les communes françaises de plus de 5 000 habitants, soit environ 2 500 communes. Les plus peuplées sont les plus faciles, les plus petites les plus expertes.',
+  },
+  {
+    question: 'Rejouer une ancienne énigme casse-t-il ma série ?',
+    answer:
+      "Non. Les énigmes de l’archive sont rejouables librement et n’affectent jamais votre série (streak) du jour, qui ne dépend que de l’énigme quotidienne.",
+  },
+  {
+    question: 'Le jeu est-il gratuit et sans inscription ?',
+    answer:
+      'Oui, Sutom-Commune est entièrement gratuit, sans compte ni inscription. Votre progression et votre série sont sauvegardées localement dans votre navigateur, sans cookie de pistage.',
+  },
+];
+
 export function HowToPlayPage() {
   useEffect(() => {
     setSeo({
@@ -12,19 +41,30 @@ export function HowToPlayPage() {
         { name: 'Accueil', path: '/' },
         { name: 'Comment jouer', path: '/comment-jouer' },
       ],
-      extraJsonLd: {
-        '@context': 'https://schema.org',
-        '@type': 'HowTo',
-        name: 'Comment jouer à Sutom-Commune',
-        description: "Devinez la commune française du jour en 6 essais maximum.",
-        step: [
-          { '@type': 'HowToStep', position: 1, name: 'Lire la région et le département' },
-          { '@type': 'HowToStep', position: 2, name: 'Proposer une commune française' },
-          { '@type': 'HowToStep', position: 3, name: 'Lire la distance, la flèche et le tier coloré' },
-          { '@type': 'HowToStep', position: 4, name: 'Utiliser les indices progressifs (population, climat, patrimoine)' },
-          { '@type': 'HowToStep', position: 5, name: 'Partager la grille emoji style Wordle' },
-        ],
-      },
+      extraJsonLd: [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: 'Comment jouer à Sutom-Commune',
+          description: 'Devinez la commune française du jour en 6 essais maximum.',
+          step: [
+            { '@type': 'HowToStep', position: 1, name: 'Lire la région et le département' },
+            { '@type': 'HowToStep', position: 2, name: 'Proposer une commune française' },
+            { '@type': 'HowToStep', position: 3, name: 'Lire la distance, la flèche et le tier coloré' },
+            { '@type': 'HowToStep', position: 4, name: 'Utiliser les indices progressifs (population, climat, patrimoine)' },
+            { '@type': 'HowToStep', position: 5, name: 'Partager la grille emoji style Wordle' },
+          ],
+        },
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: FAQ.map((f) => ({
+            '@type': 'Question',
+            name: f.question,
+            acceptedAnswer: { '@type': 'Answer', text: f.answer },
+          })),
+        },
+      ],
     });
   }, []);
 
@@ -78,6 +118,18 @@ export function HowToPlayPage() {
           (streak) compte le nombre de jours consécutifs gagnés et est sauvegardée localement dans
           votre navigateur.
         </p>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="font-serif text-2xl text-atlas-navy">Questions fréquentes</h2>
+        <dl className="space-y-4">
+          {FAQ.map((f) => (
+            <div key={f.question} className="space-y-1">
+              <dt className="font-medium text-atlas-navy">{f.question}</dt>
+              <dd className="text-atlas-ink/90">{f.answer}</dd>
+            </div>
+          ))}
+        </dl>
       </section>
     </article>
   );

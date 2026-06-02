@@ -23,6 +23,30 @@ final class CommuneRepository extends ServiceEntityRepository
         return $this->findOneBy(['codeInsee' => $codeInsee]);
     }
 
+    public function findOneBySlug(string $slug): ?Commune
+    {
+        return $this->findOneBy(['nameSlug' => $slug]);
+    }
+
+    /**
+     * Communes jouables pour le sitemap : slug + date de dernière modif (lastmod).
+     * Triées par population décroissante pour donner un signal de priorité cohérent.
+     *
+     * @return list<array{nameSlug: string, updatedAt: \DateTimeImmutable}>
+     */
+    public function findPlayableForSitemap(): array
+    {
+        /** @var list<array{nameSlug: string, updatedAt: \DateTimeImmutable}> $rows */
+        $rows = $this->createQueryBuilder('c')
+            ->select('c.nameSlug AS nameSlug', 'c.updatedAt AS updatedAt')
+            ->where('c.isPlayable = true')
+            ->orderBy('c.population', 'DESC')
+            ->getQuery()
+            ->getArrayResult();
+
+        return $rows;
+    }
+
     /**
      * Recherche fuzzy basée sur l'extension PostgreSQL `pg_trgm`.
      * Seuil de similarité 0.25 (cf. brief). La requête utilise SET LOCAL

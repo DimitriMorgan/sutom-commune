@@ -1,5 +1,6 @@
 import type {
   ArchiveEntry,
+  CommuneDetail,
   CommuneSearchResult,
   GuessFeedback,
   PuzzleToday,
@@ -54,5 +55,9 @@ export const api = {
 
   getArchive(limit = 3): Promise<{ entries: ArchiveEntry[] }> {
     return get<{ entries: ArchiveEntry[] }>(`/puzzle/archive?limit=${limit}`);
+  },
+
+  getCommune(slug: string): Promise<CommuneDetail> {
+    return get<CommuneDetail>(`/commune/${encodeURIComponent(slug)}`);
   },
 };
