@@ -26,7 +26,10 @@ export function LegalPage() {
 
       <section className="space-y-2">
         <h2 className="font-serif text-2xl text-atlas-navy">Hébergement</h2>
-        <p>Hébergé en France métropolitaine.</p>
+        <p>
+          Hébergé par Hetzner Online GmbH (Industriestr. 25, 91710 Gunzenhausen, Allemagne), dans
+          son centre de données de Nuremberg (Allemagne, Union européenne).
+        </p>
       </section>
 
       <section className="space-y-2">
@@ -45,9 +48,16 @@ export function LegalPage() {
       <section className="space-y-2">
         <h2 className="font-serif text-2xl text-atlas-navy">RGPD</h2>
         <p>
-          Aucune donnée personnelle n'est collectée. Les analytics agrégées (nombre de joueurs,
-          distribution des essais) s'appuient sur un hash SHA-256 quotidien de votre IP tronquée
-          (/24 IPv4) qui ne permet pas votre identification ni votre suivi entre jours.
+          Aucun compte, aucune donnée personnelle demandée. Les analytics agrégées (nombre de
+          joueurs, distribution des essais) s'appuient sur un hash SHA-256 quotidien de votre IP
+          tronquée (/24 IPv4) qui ne permet pas votre identification ni votre suivi entre jours.
+        </p>
+        <p>
+          Comme tout site web, le serveur enregistre dans des journaux techniques l'adresse IP, la
+          date, la page demandée et le navigateur de chaque visite, pour la sécurité du service et
+          le diagnostic des pannes (intérêt légitime). Ces journaux ne sont accessibles qu'à
+          l'éditeur, ne sont transmis à personne et sont effacés automatiquement au bout de
+          14&nbsp;jours.
         </p>
         <p>
           Pour toute demande relative aux données, contactez l'éditeur.
